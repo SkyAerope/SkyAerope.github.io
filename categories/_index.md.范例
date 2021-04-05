@@ -1,0 +1,9 @@
+---
+title: "标题"                   # 标题
+description: "xx相关文章"       # 描述
+slug: "xx"                      # 链接
+image: "00.jpg"                 # 图片
+style:
+    background: "#adb5bd"
+    color: "#fff"
+---
