@@ -6,7 +6,440 @@
         <description>Recent content on 栗子</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 04 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://sllzy.sllzy.top/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 09 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://sllzy.sllzy.top/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Markdown语法教程</title>
+        <link>http://sllzy.sllzy.top/p/md-tutorial/</link>
+        <pubDate>Fri, 09 Apr 2021 00:00:00 +0000</pubDate>
+        
+        <guid>http://sllzy.sllzy.top/p/md-tutorial/</guid>
+        <description>&lt;img src="http://sllzy.sllzy.top/p/md-tutorial/md.png" alt="Featured image of post Markdown语法教程" /&gt;&lt;h1 id=&#34;markdown-标题&#34;&gt;Markdown 标题&lt;/h1&gt;
+&lt;p&gt;Markdown 标题有两种格式。&lt;/p&gt;
+&lt;h3 id=&#34;使用--和---标记一级和二级标题&#34;&gt;使用 = 和 - 标记一级和二级标题&lt;/h3&gt;
+&lt;p&gt;= 和 - 标记语法格式如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;我展示的是一级标题
+=================
+
+我展示的是二级标题
+-----------------
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;显示效果如下：&lt;/p&gt;
+&lt;h1 id=&#34;我展示的是一级标题&#34;&gt;我展示的是一级标题&lt;/h1&gt;
+&lt;h2 id=&#34;我展示的是二级标题&#34;&gt;我展示的是二级标题&lt;/h2&gt;
+&lt;h3 id=&#34;使用--号标记&#34;&gt;使用 # 号标记&lt;/h3&gt;
+&lt;p&gt;使用 &lt;strong&gt;#&lt;/strong&gt; 号可表示 1-6 级标题，一级标题对应一个 &lt;strong&gt;#&lt;/strong&gt; 号，二级标题对应两个 &lt;strong&gt;#&lt;/strong&gt; 号，以此类推。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;gh&#34;&gt;# 一级标题
+&lt;/span&gt;&lt;span class=&#34;gh&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gu&#34;&gt;## 二级标题
+&lt;/span&gt;&lt;span class=&#34;gu&#34;&gt;### 三级标题
+&lt;/span&gt;&lt;span class=&#34;gu&#34;&gt;#### 四级标题
+&lt;/span&gt;&lt;span class=&#34;gu&#34;&gt;##### 五级标题
+&lt;/span&gt;&lt;span class=&#34;gu&#34;&gt;###### 六级标题
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;显示效果如下：&lt;/p&gt;
+&lt;h1 id=&#34;一级标题&#34;&gt;一级标题&lt;/h1&gt;
+&lt;h2 id=&#34;二级标题&#34;&gt;二级标题&lt;/h2&gt;
+&lt;h3 id=&#34;三级标题&#34;&gt;三级标题&lt;/h3&gt;
+&lt;h4 id=&#34;四级标题&#34;&gt;四级标题&lt;/h4&gt;
+&lt;h5 id=&#34;五级标题&#34;&gt;五级标题&lt;/h5&gt;
+&lt;h6 id=&#34;六级标题&#34;&gt;六级标题&lt;/h6&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;markdown-段落&#34;&gt;Markdown 段落&lt;/h1&gt;
+&lt;p&gt;Markdown 段落没有特殊的格式，直接编写文字就好，&lt;strong&gt;段落的换行是使用两个以上空格加上回车&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;当然也可以在段落后面使用一个空行来表示重新开始一个段落。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;字体&#34;&gt;字体&lt;/h2&gt;
+&lt;p&gt;Markdown 可以使用以下几种字体：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;*斜体文本*
+&lt;span class=&#34;ge&#34;&gt;_斜体文本_&lt;/span&gt;
+**粗体文本**
+&lt;span class=&#34;gs&#34;&gt;__粗体文本__&lt;/span&gt;
+&lt;span class=&#34;gs&#34;&gt;***粗斜体文本**&lt;/span&gt;*
+&lt;span class=&#34;gs&#34;&gt;___粗斜体文本___&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;显示效果如下所示：&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;斜体文本&lt;/em&gt;&lt;br&gt;
+&lt;em&gt;斜体文本&lt;/em&gt;&lt;br&gt;
+&lt;strong&gt;粗体文本&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;粗体文本&lt;/strong&gt;&lt;br&gt;
+&lt;em&gt;&lt;strong&gt;粗斜体文本&lt;/strong&gt;&lt;/em&gt;&lt;br&gt;
+&lt;em&gt;&lt;strong&gt;粗斜体文本&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;分隔线&#34;&gt;分隔线&lt;/h2&gt;
+&lt;p&gt;你可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。下面每种写法都可以建立分隔线：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;***
+
+* * *
+
+*****
+
+- - -
+
+----------
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;显示效果如下所示：&lt;/p&gt;
+&lt;hr&gt;
+&lt;hr&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;删除线&#34;&gt;删除线&lt;/h2&gt;
+&lt;p&gt;如果段落上的文字要添加删除线，只需要在文字的两端加上两个波浪线 &lt;strong&gt;~~&lt;/strong&gt; 即可，实例如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;GOOGLE.COM
+&lt;span class=&#34;gd&#34;&gt;~~BAIDU.COM~~&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;显示效果如下所示：&lt;/p&gt;
+&lt;p&gt;GOOGLE.COM&lt;br&gt;
+&lt;del&gt;BAIDU.COM&lt;/del&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;下划线&#34;&gt;下划线&lt;/h2&gt;
+&lt;p&gt;下划线可以通过 HTML 的 &lt;strong&gt;&lt;!-- raw HTML omitted --&gt;&lt;/strong&gt; 标签来实现：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;带下划线文本&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;显示效果如下所示：&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;带下划线文本&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;脚注&#34;&gt;脚注&lt;/h2&gt;
+&lt;p&gt;脚注是对文本的补充说明。&lt;/p&gt;
+&lt;p&gt;Markdown 脚注的格式如下:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[^要注明的文本]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;以下实例演示了脚注的用法：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;创建脚注格式类似这样 [^Lizi]。
+
+[^Lizi]: 栗子：好耶！
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;演示效果如下：&lt;/p&gt;
+&lt;p&gt;创建脚注格式类似这样 &lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;markdown-列表&#34;&gt;Markdown 列表&lt;/h1&gt;
+&lt;p&gt;Markdown 支持有序列表和无序列表。&lt;/p&gt;
+&lt;p&gt;无序列表使用星号( * )、加号( &lt;strong&gt;+&lt;/strong&gt; )或是减号( &lt;strong&gt;-&lt;/strong&gt; )作为列表标记，这些标记后面要添加一个空格，然后再填写内容：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;k&#34;&gt;*&lt;/span&gt; 第一项
+&lt;span class=&#34;k&#34;&gt;*&lt;/span&gt; 第二项
+&lt;span class=&#34;k&#34;&gt;*&lt;/span&gt; 第三项
+
++ 第一项
++ 第二项
++ 第三项
+
+
+&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 第一项
+&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 第二项
+&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 第三项
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;显示结果如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;第一项&lt;/li&gt;
+&lt;li&gt;第二项&lt;/li&gt;
+&lt;li&gt;第三项&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;第一项&lt;/li&gt;
+&lt;li&gt;第二项&lt;/li&gt;
+&lt;li&gt;第三项&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;第一项&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;第二项&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;第三项&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;有序列表使用数字并加上 &lt;strong&gt;.&lt;/strong&gt; 号来表示，如：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;k&#34;&gt;1.&lt;/span&gt; 第一项
+&lt;span class=&#34;k&#34;&gt;2.&lt;/span&gt; 第二项
+&lt;span class=&#34;k&#34;&gt;3.&lt;/span&gt; 第三项
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;显示结果如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;第一项&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;第二项&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;第三项&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;列表嵌套&#34;&gt;列表嵌套&lt;/h3&gt;
+&lt;p&gt;列表嵌套只需在子列表中的选项前面添加四个空格即可：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;  1. 第一项：
+      - 第一项嵌套的第一个元素
+      - 第一项嵌套的第二个元素
+  2. 第二项：
+      - 第二项嵌套的第一个元素
+      - 第二项嵌套的第二个元素
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;显示结果如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;第一项：
+&lt;ul&gt;
+&lt;li&gt;第一项嵌套的第一个元素&lt;/li&gt;
+&lt;li&gt;第一项嵌套的第二个元素&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;第二项：
+&lt;ul&gt;
+&lt;li&gt;第二项嵌套的第一个元素&lt;/li&gt;
+&lt;li&gt;第二项嵌套的第二个元素&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;markdown-区块&#34;&gt;Markdown 区块&lt;/h1&gt;
+&lt;p&gt;Markdown 区块引用是在段落开头使用 &lt;strong&gt;&amp;gt;&lt;/strong&gt; 符号 ，然后后面紧跟一个&lt;strong&gt;空格&lt;/strong&gt;符号：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;k&#34;&gt;&amp;gt; &lt;/span&gt;&lt;span class=&#34;ge&#34;&gt;栗子
+&lt;/span&gt;&lt;span class=&#34;ge&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;&amp;gt; &lt;/span&gt;&lt;span class=&#34;ge&#34;&gt;好耶
+&lt;/span&gt;&lt;span class=&#34;ge&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;&amp;gt; &lt;/span&gt;&lt;span class=&#34;ge&#34;&gt;Foo
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;显示结果如下：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;栗子&lt;br&gt;
+好耶&lt;br&gt;
+Foo&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;另外区块是可以嵌套的，一个 &lt;strong&gt;&amp;gt;&lt;/strong&gt; 符号是最外层，两个 &lt;strong&gt;&amp;gt;&lt;/strong&gt; 符号是第一层嵌套，以此类推：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;k&#34;&gt;&amp;gt; &lt;/span&gt;&lt;span class=&#34;ge&#34;&gt;最外层
+&lt;/span&gt;&lt;span class=&#34;ge&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;&amp;gt; &lt;/span&gt;&lt;span class=&#34;ge&#34;&gt;&amp;gt; 第一层嵌套
+&lt;/span&gt;&lt;span class=&#34;ge&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;&amp;gt; &lt;/span&gt;&lt;span class=&#34;ge&#34;&gt;&amp;gt; &amp;gt; 第二层嵌套
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;显示结果如下：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;最外层&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;第一层嵌套&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;第二层嵌套&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;区块中使用列表&#34;&gt;区块中使用列表&lt;/h3&gt;
+&lt;p&gt;区块中使用列表实例如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;k&#34;&gt;&amp;gt; &lt;/span&gt;&lt;span class=&#34;ge&#34;&gt;区块中使用列表
+&lt;/span&gt;&lt;span class=&#34;ge&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;&amp;gt; &lt;/span&gt;&lt;span class=&#34;ge&#34;&gt;1. 第一项
+&lt;/span&gt;&lt;span class=&#34;ge&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;&amp;gt; &lt;/span&gt;&lt;span class=&#34;ge&#34;&gt;2. 第二项
+&lt;/span&gt;&lt;span class=&#34;ge&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;&amp;gt; &lt;/span&gt;&lt;span class=&#34;ge&#34;&gt;+ 第一项
+&lt;/span&gt;&lt;span class=&#34;ge&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;&amp;gt; &lt;/span&gt;&lt;span class=&#34;ge&#34;&gt;+ 第二项
+&lt;/span&gt;&lt;span class=&#34;ge&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;&amp;gt; &lt;/span&gt;&lt;span class=&#34;ge&#34;&gt;+ 第三项
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;显示结果如下：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;区块中使用列表&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;第一项&lt;/li&gt;
+&lt;li&gt;第二项&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;第一项&lt;/li&gt;
+&lt;li&gt;第二项&lt;/li&gt;
+&lt;li&gt;第三项&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;列表中使用区块&#34;&gt;列表中使用区块&lt;/h3&gt;
+&lt;p&gt;如果要在列表项目内放进区块，那么就需要在 &lt;strong&gt;&amp;gt;&lt;/strong&gt; 前添加四个空格的缩进。&lt;/p&gt;
+&lt;p&gt;列表中使用区块实例如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;* 第一项
+    &amp;gt; 菜鸟教程
+    &amp;gt; 学的不仅是技术更是梦想
+* 第二项
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;显示结果如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;第一项
+&lt;blockquote&gt;
+&lt;p&gt;菜鸟教程
+学的不仅是技术更是梦想&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;第二项&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;markdown-代码&#34;&gt;Markdown 代码&lt;/h1&gt;
+&lt;p&gt;如果是段落上的一个函数或片段的代码可以用反引号把它包起来（&lt;strong&gt;`&lt;/strong&gt;），例如：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;`printf()` 函数
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;显示结果如下：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;printf()&lt;/code&gt; 函数&lt;/p&gt;
+&lt;h3 id=&#34;代码区块&#34;&gt;代码区块&lt;/h3&gt;
+&lt;p&gt;代码区块使用 &lt;strong&gt;4 个空格&lt;/strong&gt;或者一个&lt;strong&gt;制表符（Tab 键）&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;实例如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;head&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+	&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;foo&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;head&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;你也可以用 &lt;strong&gt;```&lt;/strong&gt; 包裹一段代码，并指定一种语言（也可以不指定）：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;​```javascript
+$(document).ready(function () {
+    alert(&#39;Lizi&#39;);
+});
+​```
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;显示结果如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span class=&#34;nx&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;document&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;ready&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;nx&#34;&gt;alert&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Lizi&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h1 id=&#34;markdown-链接&#34;&gt;Markdown 链接&lt;/h1&gt;
+&lt;p&gt;链接使用方法如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[链接名称](链接地址)
+
+或者
+
+&amp;lt;链接地址&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;例如：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;这是一个链接 [&lt;span class=&#34;nt&#34;&gt;例子&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;http://exmaple.com/&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;显示结果如下：&lt;/p&gt;
+&lt;p&gt;这是一个链接 &lt;a class=&#34;link&#34; href=&#34;http://exmaple.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;例子&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;直接使用链接地址：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;http://exmaple.com/&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;显示结果如下：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://exmaple.com/&#34;&gt;http://exmaple.com/&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;高级链接&#34;&gt;高级链接&lt;/h3&gt;
+&lt;p&gt;我们可以通过变量来设置一个链接，变量赋值在文档末尾进行：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;这个链接用 1 作为网址变量 [Google][1]
+这个链接用 lizi 作为网址变量 [Lizi][lizi]
+然后在文档的结尾为变量赋值（网址）
+
+  [1]: http://www.google.com/
+  [lizi]: http://exmaple.com/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;显示结果如下：&lt;/p&gt;
+&lt;p&gt;这个链接用 1 作为网址变量 &lt;a class=&#34;link&#34; href=&#34;http://www.google.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Google&lt;/a&gt;&lt;br&gt;
+这个链接用 lizi 作为网址变量 &lt;a class=&#34;link&#34; href=&#34;http://exmaple.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Lizi&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;markdown-图片&#34;&gt;Markdown 图片&lt;/h1&gt;
+&lt;p&gt;Markdown 图片语法格式如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;![alt 属性文本](图片地址)
+
+![alt 属性文本](图片地址 &amp;quot;可选标题&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;开头一个感叹号 !&lt;/li&gt;
+&lt;li&gt;接着一个方括号，里面放上图片的替代文字&lt;/li&gt;
+&lt;li&gt;接着一个普通括号，里面放上图片的网址，最后还可以用引号包住并加上选择性的 &amp;lsquo;title&amp;rsquo; 属性的文字。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;使用实例：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;![&lt;span class=&#34;nt&#34;&gt;百度 图标&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png&lt;/span&gt;)
+
+![&lt;span class=&#34;nt&#34;&gt;百度 图标&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png &amp;#34;百度&amp;#34;&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;显示结果如下：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png&#34; alt=&#34;百度 图标&#34;  /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png&#34; alt=&#34;百度 图标&#34;  title=&#34;百度&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;当然，你也可以像网址那样对图片网址使用变量:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;这个链接用 2 作为网址变量 ![Baidu][2].
+然后在文档的结尾为变量赋值（网址）
+
+[2]: https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;显示结果如下：&lt;/p&gt;
+&lt;p&gt;这个链接用 2 作为网址变量 &lt;img src=&#34;https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png&#34; alt=&#34;Baidu&#34;  /&gt;.&lt;/p&gt;
+&lt;p&gt;Markdown 还没有办法指定图片的高度与宽度，如果你需要的话，你可以使用普通的 &lt;!-- raw HTML omitted --&gt; 标签。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;img&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;width&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;50%&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;显示结果如下：&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;markdown-表格&#34;&gt;Markdown 表格&lt;/h1&gt;
+&lt;p&gt;Markdown 制作表格使用 &lt;strong&gt;|&lt;/strong&gt; 来分隔不同的单元格，使用 &lt;strong&gt;-&lt;/strong&gt; 来分隔表头和其他行。&lt;/p&gt;
+&lt;p&gt;语法格式如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;|  表头   | 表头  |
+|  ----  | ----  |
+| 单元格  | 单元格 |
+| 单元格  | 单元格 |
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;以上代码显示结果如下：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;表头&lt;/th&gt;
+&lt;th&gt;表头&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;单元格&lt;/td&gt;
+&lt;td&gt;单元格&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;单元格&lt;/td&gt;
+&lt;td&gt;单元格&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;对齐方式&#34;&gt;对齐方式&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;我们可以设置表格的对齐方式：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;-:&lt;/strong&gt; 设置内容和标题栏居右对齐。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;:-&lt;/strong&gt; 设置内容和标题栏居左对齐。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;:-:&lt;/strong&gt; 设置内容和标题栏居中对齐。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;实例如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;| 左对齐 | 右对齐 | 居中对齐 |
+| :-----| ----: | :----: |
+| 单元格 | 单元格 | 单元格 |
+| 单元格 | 单元格 | 单元格 |
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;以上代码显示结果如下：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;左对齐&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;右对齐&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;居中对齐&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;单元格&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;单元格&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;单元格&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;单元格&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;单元格&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;单元格&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;markdown-高级技巧&#34;&gt;Markdown 高级技巧&lt;/h1&gt;
+&lt;h3 id=&#34;支持的-html-元素&#34;&gt;支持的 HTML 元素&lt;/h3&gt;
+&lt;p&gt;不在 Markdown 涵盖范围之内的标签，都可以直接在文档里面用 HTML 撰写。&lt;/p&gt;
+&lt;p&gt;目前支持的 HTML 元素有：&lt;code&gt;&amp;lt;kbd&amp;gt; &amp;lt;b&amp;gt; &amp;lt;i&amp;gt; &amp;lt;em&amp;gt; &amp;lt;sup&amp;gt; &amp;lt;sub&amp;gt; &amp;lt;br&amp;gt;&lt;/code&gt;等 ，如：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;使用 &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;kbd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;Ctrl&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;kbd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;+&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;kbd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;Alt&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;kbd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;+&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;kbd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;Del&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;kbd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; 重启电脑
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;输出结果为：&lt;/p&gt;
+&lt;p&gt;使用 &lt;!-- raw HTML omitted --&gt;Ctrl&lt;!-- raw HTML omitted --&gt;+&lt;!-- raw HTML omitted --&gt;Alt&lt;!-- raw HTML omitted --&gt;+&lt;!-- raw HTML omitted --&gt;Del&lt;!-- raw HTML omitted --&gt; 重启电脑&lt;/p&gt;
+&lt;h3 id=&#34;转义&#34;&gt;转义&lt;/h3&gt;
+&lt;p&gt;Markdown 使用了很多特殊符号来表示特定的意义，如果需要显示特定的符号则需要使用转义字符，Markdown 使用反斜杠转义特殊字符：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;**文本加粗** 
+\*\* 正常显示星号 \*\*
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;输出结果为：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;文本加粗&lt;/strong&gt;&lt;br&gt;
+** 正常显示星号 **&lt;/p&gt;
+&lt;p&gt;Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;\   反斜线
+`   反引号
+*   星号
+_   下划线
+{}  花括号
+[]  方括号
+()  小括号
+#   井字号
++   加号
+-   减号
+.   英文句点
+!   感叹号
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;公式&#34;&gt;公式&lt;/h3&gt;
+&lt;p&gt;当你需要在编辑器中插入数学公式时，可以使用两个美元符 $$ 包裹 TeX 或 LaTeX 格式的数学公式来实现。提交后，问答和文章页会根据需要加载 Mathjax 对数学公式进行渲染。如：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$$
+\mathbf{V}_1 \times \mathbf{V}_2 =  \begin{vmatrix} 
+\mathbf{i} &amp;amp; \mathbf{j} &amp;amp; \mathbf{k} \\
+\frac{\partial X}{\partial u} &amp;amp;  \frac{\partial Y}{\partial u} &amp;amp; 0 \\
+\frac{\partial X}{\partial v} &amp;amp;  \frac{\partial Y}{\partial v} &amp;amp; 0 \\
+\end{vmatrix}
+${$tep1}{\style{visibility:hidden}{(x+1)(x+1)}}
+$$
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;输出结果为：
+$$
+\mathbf{V}_1 \times \mathbf{V}_2 =  \begin{vmatrix} 
+\mathbf{i} &amp;amp; \mathbf{j} &amp;amp; \mathbf{k} \&lt;br&gt;
+\frac{\partial X}{\partial u} &amp;amp;  \frac{\partial Y}{\partial u} &amp;amp; 0 \&lt;br&gt;
+\frac{\partial X}{\partial v} &amp;amp;  \frac{\partial Y}{\partial v} &amp;amp; 0 \&lt;br&gt;
+\end{vmatrix}
+${$tep1}{\style{visibility:hidden}{(x+1)(x+1)}}
+$$&lt;/p&gt;
+&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;栗子：好耶！ &lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</description>
+        </item>
+        <item>
         <title>Hugo搭建参考资料</title>
         <link>http://sllzy.sllzy.top/p/create-hugo/</link>
         <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
