@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>教程 on 栗子</title>
-    <link>http://sllzy.sllzy.top/tags/%E6%95%99%E7%A8%8B/</link>
+    <link>https://skyaerope.github.io/tags/%E6%95%99%E7%A8%8B/</link>
     <description>Recent content in 教程 on 栗子</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 09 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://sllzy.sllzy.top/tags/%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 09 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://skyaerope.github.io/tags/%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Markdown语法教程</title>
-      <link>http://sllzy.sllzy.top/p/md-tutorial/</link>
+      <link>https://skyaerope.github.io/p/md-tutorial/</link>
       <pubDate>Fri, 09 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://sllzy.sllzy.top/p/md-tutorial/</guid>
+      <guid>https://skyaerope.github.io/p/md-tutorial/</guid>
       <description>Markdown 标题 Markdown 标题有两种格式。
 使用 = 和 - 标记一级和二级标题 = 和 - 标记语法格式如下：
 我展示的是一级标题 ================= 我展示的是二级标题 ----------------- 显示效果如下：
@@ -20,18 +20,19 @@
 # 一级标题 ## 二级标题 ### 三级标题 #### 四级标题 ##### 五级标题 ###### 六级标题 显示效果如下：
 一级标题 二级标题 三级标题 四级标题 五级标题 六级标题  Markdown 段落 Markdown 段落没有特殊的格式，直接编写文字就好，段落的换行是使用两个以上空格加上回车。
 当然也可以在段落后面使用一个空行来表示重新开始一个段落。
- 字体 Markdown 可以使用以下几种字体：
+字体 Markdown 可以使用以下几种字体：
 *斜体文本* _斜体文本_ **粗体文本** __粗体文本__ ***粗斜体文本*** ___粗斜体文本___ 显示效果如下所示：
 斜体文本
-斜体文本</description>
+斜体文本
+粗体文本</description>
     </item>
     
     <item>
       <title>Minecraft 黑卡获取教程</title>
-      <link>http://sllzy.sllzy.top/p/mc-combo/</link>
+      <link>https://skyaerope.github.io/p/mc-combo/</link>
       <pubDate>Sat, 21 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://sllzy.sllzy.top/p/mc-combo/</guid>
+      <guid>https://skyaerope.github.io/p/mc-combo/</guid>
       <description>黑卡获取教程：   我们先打开浏览器~
   第一步，在浏览器里安装谷歌访问助手插件，打开官网 ggfwzs.com，在&amp;quot;在线安装2.1.9&amp;quot;点击你的浏览器，提示激活不用管【如果没有此插件后面几步将无法进行】
    上面解决方案不可用，目前另外的可用解决方案： https://googlehelper.net/
