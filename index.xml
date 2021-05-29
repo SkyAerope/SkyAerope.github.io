@@ -110,9 +110,9 @@
 &lt;p&gt;Markdown 脚注的格式如下:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;[^要注明的文本]
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;以下实例演示了脚注的用法：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;创建脚注格式类似这样 [^Lizi]。
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;创建脚注格式类似这样 [^Mtpd]。
 
-[^Lizi]: 栗子：好耶！
+[^Mtpd]: 薄荷布丁：好耶！
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;演示效果如下：&lt;/p&gt;
 &lt;p&gt;创建脚注格式类似这样 &lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
 &lt;hr&gt;
@@ -195,12 +195,12 @@
 &lt;hr&gt;
 &lt;h1 id=&#34;markdown-区块&#34;&gt;Markdown 区块&lt;/h1&gt;
 &lt;p&gt;Markdown 区块引用是在段落开头使用 &lt;strong&gt;&amp;gt;&lt;/strong&gt; 符号 ，然后后面紧跟一个&lt;strong&gt;空格&lt;/strong&gt;符号：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;k&#34;&gt;&amp;gt; &lt;/span&gt;&lt;span class=&#34;ge&#34;&gt;栗子
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;k&#34;&gt;&amp;gt; &lt;/span&gt;&lt;span class=&#34;ge&#34;&gt;薄荷布丁
 &lt;/span&gt;&lt;span class=&#34;ge&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;&amp;gt; &lt;/span&gt;&lt;span class=&#34;ge&#34;&gt;好耶
 &lt;/span&gt;&lt;span class=&#34;ge&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;&amp;gt; &lt;/span&gt;&lt;span class=&#34;ge&#34;&gt;Foo
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;显示结果如下：&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;栗子&lt;br&gt;
+&lt;p&gt;薄荷布丁&lt;br&gt;
 好耶&lt;br&gt;
 Foo&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -271,12 +271,12 @@ Foo&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;你也可以用 &lt;strong&gt;```&lt;/strong&gt; 包裹一段代码，并指定一种语言（也可以不指定）：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;​```javascript
 $(document).ready(function () {
-    alert(&#39;Lizi&#39;);
+    alert(&#39;Mtpd&#39;);
 });
 ​```
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;显示结果如下：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span class=&#34;nx&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;document&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;ready&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;nx&#34;&gt;alert&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Lizi&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+    &lt;span class=&#34;nx&#34;&gt;alert&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Mtpd&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;});&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
 &lt;h1 id=&#34;markdown-链接&#34;&gt;Markdown 链接&lt;/h1&gt;
@@ -298,16 +298,16 @@ $(document).ready(function () {
 &lt;h3 id=&#34;高级链接&#34;&gt;高级链接&lt;/h3&gt;
 &lt;p&gt;我们可以通过变量来设置一个链接，变量赋值在文档末尾进行：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;这个链接用 1 作为网址变量 [Google][1]
-这个链接用 lizi 作为网址变量 [Lizi][lizi]
+这个链接用 Mtpd 作为网址变量 [Mtpd][Mtpd]
 然后在文档的结尾为变量赋值（网址）
 
   [1]: http://www.google.com/
-  [lizi]: http://exmaple.com/
+  [Mtpd]: http://exmaple.com/
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;显示结果如下：&lt;/p&gt;
 &lt;p&gt;这个链接用 1 作为网址变量 &lt;a class=&#34;link&#34; href=&#34;http://www.google.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Google&lt;/a&gt;&lt;br&gt;
-这个链接用 lizi 作为网址变量 &lt;a class=&#34;link&#34; href=&#34;http://exmaple.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Lizi&lt;/a&gt;&lt;/p&gt;
+这个链接用 Mtpd 作为网址变量 &lt;a class=&#34;link&#34; href=&#34;http://exmaple.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Mtpd&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;markdown-图片&#34;&gt;Markdown 图片&lt;/h1&gt;
 &lt;p&gt;Markdown 图片语法格式如下：&lt;/p&gt;
@@ -449,7 +449,7 @@ $$&lt;/p&gt;
 &lt;hr&gt;
 &lt;ol&gt;
 &lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
-&lt;p&gt;栗子：好耶！ &lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;薄荷布丁：好耶！ &lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/section&gt;
