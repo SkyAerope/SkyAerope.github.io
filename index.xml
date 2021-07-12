@@ -17,7 +17,7 @@
 
 Linux:         ~/.klei/DoNotStarve/client.ini 
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;找到 settings.ini 然后用记事本打开。找到 section 部分，并确保在下面有&lt;code&gt;ENABLECONSOLE = true。如果它它被设置为 false&lt;/code&gt; ，将它改为 true 并保存。然后在游戏中打开控制台，英文键盘下默认按 &amp;ldquo;~&amp;rdquo; 键。这可以随时在控制菜单中修改。&lt;/p&gt;
-&lt;p&gt;&lt;figure style=&#34;flex-grow: 784; flex-basis: 1882px&#34;&gt;
+&lt;p&gt;本地命令模式&lt;figure style=&#34;flex-grow: 784; flex-basis: 1882px&#34;&gt;
 		&lt;a href=&#34;https://skyaerope.github.io/p/dstcmd/01.png&#34; data-size=&#34;400x51&#34;&gt;&lt;img src=&#34;https://skyaerope.github.io/p/dstcmd/01.png&#34;
 				srcset=&#34;https://skyaerope.github.io/p/dstcmd/01_hu37088104accd09b67dd9873be102cc5d_27117_480x0_resize_box_2.png 480w, https://skyaerope.github.io/p/dstcmd/01_hu37088104accd09b67dd9873be102cc5d_27117_1024x0_resize_box_2.png 1024w&#34;
 				width=&#34;400&#34;
@@ -32,7 +32,7 @@ Linux:         ~/.klei/DoNotStarve/client.ini 
 &lt;li&gt;Lua 支持可变数量参数的函数，例如，你只想生成一个野牛的预设，你可以不填 &amp;ldquo;amount&amp;rdquo; 参数：&amp;ldquo;c_spawn(&amp;lsquo;beefalo&amp;rsquo;)&amp;quot;。&lt;/li&gt;
 &lt;li&gt;如果你不是主机（或者它是一个专用服务器，你是这个服务器的管理员），大部分命令需要远程执行。在控制台中按 Ctrl 来切换远程命令模式。一小部分命令（例如显示地图）仍然可以在本地模式下完成。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;figure style=&#34;flex-grow: 740; flex-basis: 1777px&#34;&gt;
+&lt;p&gt;远程命令模式&lt;figure style=&#34;flex-grow: 740; flex-basis: 1777px&#34;&gt;
 		&lt;a href=&#34;https://skyaerope.github.io/p/dstcmd/02.png&#34; data-size=&#34;400x54&#34;&gt;&lt;img src=&#34;https://skyaerope.github.io/p/dstcmd/02.png&#34;
 				srcset=&#34;https://skyaerope.github.io/p/dstcmd/02_huaa67f16f4482e1c5bf605554d5f89a7e_29818_480x0_resize_box_2.png 480w, https://skyaerope.github.io/p/dstcmd/02_huaa67f16f4482e1c5bf605554d5f89a7e_29818_1024x0_resize_box_2.png 1024w&#34;
 				width=&#34;400&#34;
