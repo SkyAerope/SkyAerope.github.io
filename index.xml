@@ -6,7 +6,411 @@
         <description>Recent content on 薄荷布丁</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 10 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://skyaerope.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 12 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://skyaerope.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>饥荒联机版中的命令</title>
+        <link>https://skyaerope.github.io/p/dstcmd/</link>
+        <pubDate>Mon, 12 Jul 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://skyaerope.github.io/p/dstcmd/</guid>
+        <description>&lt;img src="https://skyaerope.github.io/p/dstcmd/00.png" alt="Featured image of post 饥荒联机版中的命令" /&gt;&lt;p&gt;&lt;strong&gt;命令控制台&lt;/strong&gt;默认是启用状态。如果它因为任何原因没有处于开启状态，你首先要做的就是调整你存档中的 settings.ini 文件。它可以在 &amp;ldquo;DoNotStarveTogether&amp;rdquo; 文件夹里被找到，位于以下路径：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Windows, Mac: &amp;lt;Documents&amp;gt;\Klei\DoNotStarveTogether\client.ini
+
+Linux:         ~/.klei/DoNotStarve/client.ini 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;找到 settings.ini 然后用记事本打开。找到 section 部分，并确保在下面有&lt;code&gt;ENABLECONSOLE = true。如果它它被设置为 false&lt;/code&gt; ，将它改为 true 并保存。然后在游戏中打开控制台，英文键盘下默认按 &amp;ldquo;~&amp;rdquo; 键。这可以随时在控制菜单中修改。&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://static.wikia.nocookie.net/dont-starve-game/images/5/5c/%E6%9C%AC%E5%9C%B0%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F.png/revision/latest?cb=20170211060951&amp;amp;path-prefix=zh&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://static.wikia.nocookie.net/dont-starve-game/images/5/5c/%E6%9C%AC%E5%9C%B0%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F.png/revision/latest/scale-to-width-down/400?cb=20170211060951&amp;amp;path-prefix=zh&#34; alt=&#34;&#34;  /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;本地命令模式&lt;/p&gt;
+&lt;p&gt;注：   * 你在重新加载世界后必须重新输入每一个命令。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Lua 支持可变数量参数的函数，例如，你只想生成一个野牛的预设，你可以不填 &amp;ldquo;amount&amp;rdquo; 参数：&amp;ldquo;c_spawn(&amp;lsquo;beefalo&amp;rsquo;)&amp;quot;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果你不是主机（或者它是一个专用服务器，你是这个服务器的管理员），大部分命令需要远程执行。在控制台中按 Ctrl 来切换远程命令模式。一小部分命令（例如显示地图）仍然可以在本地模式下完成。 &lt;a class=&#34;link&#34; href=&#34;https://static.wikia.nocookie.net/dont-starve-game/images/f/f4/%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F.png/revision/latest?cb=20170211061703&amp;amp;path-prefix=zh&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://static.wikia.nocookie.net/dont-starve-game/images/f/f4/%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F.png/revision/latest/scale-to-width-down/400?cb=20170211061703&amp;amp;path-prefix=zh&#34; alt=&#34;&#34;  /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;远程命令模式&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;许多&lt;a class=&#34;link&#34; href=&#34;https://dontstarve.fandom.com/zh/wiki/%E6%8E%A7%E5%88%B6%E5%8F%B0/%E6%8C%87%E4%BB%A4&#34;  title=&#34;控制台/指令&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;饥荒命令&lt;/a&gt; 仍然在 DST（多人版饥荒）中可用，因此你仍然可以阅读它。&lt;/p&gt;
+&lt;h2 id=&#34;简单命令&#34;&gt;简单命令&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;生成实例&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;c_spawn(&amp;quot;prefab&amp;quot;,amount)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;利用 DebugSpawn(&amp;ldquo;预设&amp;rdquo;) 命令，在鼠标所指处生成一定数量被指定的 &amp;ldquo;预设&amp;rdquo;。&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;获得物品&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;c_give(&amp;quot;prefab&amp;quot;,amount)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;在你的物品栏中生成一定数量被指定的 &amp;ldquo;预设&amp;rdquo;。只适用于可以被储存在物品栏的&lt;a class=&#34;link&#34; href=&#34;https://dontstarve.fandom.com/zh/wiki/%E8%83%8C%E5%8C%85&#34;  title=&#34;背包&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;背包&lt;/a&gt; 和&lt;a class=&#34;link&#34; href=&#34;https://dontstarve.fandom.com/zh/wiki/%E7%89%A9%E5%93%81&#34;  title=&#34;物品&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;物品&lt;/a&gt; 。&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;脚本（未测试）&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;c_doscenario(scenario)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;应用一个选择的脚本并执行它。&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;生命值&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;c_sethea​lth(percent)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;用百分比设置你的生命值。注：使用分数 0.90 = 90%&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;理智值&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;c_setsanit​y(percent)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;用百分比设置你的理智值。注：使用分数 0.90 = 90%&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;饥饿值&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;c_sethunger(pe​rcent)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;用百分比设置你的饥饿值。注：使用分数 0.90 = 90%&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;湿度&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;c_setmoisture(pe​rcent)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;用百分比设置你的湿度。注：使用分数 0.90 = 90%&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;温度&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;c_settemperature(degrees)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;用百分比设置你的温度。注：使用分数 0.90 = 90%&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;上帝模式&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;c_godmode() 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;玩家的&lt;a class=&#34;link&#34; href=&#34;https://dontstarve.fandom.com/zh/wiki/%E7%90%86%E6%99%BA&#34;  title=&#34;理智&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;理智&lt;/a&gt;值、&lt;a class=&#34;link&#34; href=&#34;https://dontstarve.fandom.com/zh/wiki/%E9%A3%A2%E9%A4%93&#34;  title=&#34;饥饿&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;饥饿&lt;/a&gt;值和被攻击时&lt;a class=&#34;link&#34; href=&#34;https://dontstarve.fandom.com/zh/wiki/%E7%94%9F%E5%91%BD&#34;  title=&#34;生命&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;生命&lt;/a&gt;值不再下降。上帝模式下，你不能用命令改变的你统计数据。如果处于死亡状态，将会复活你（通过 c_godmode() 复活后不会将你置于上帝模式）。再次使用命令停用上帝模式。&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;超级上帝模式&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;c_supergodmode()
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;和上帝模式一样但会将你的各项统计数据设置为满，即使你将它关闭。与 c_godmode() 相似,，它也会复活你（通过 c_supergodmode() 复活后不会将你置于上帝模式）。再次使用命令停用上帝模式。&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;设置额外的移动速度&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;c_speedmult(multiplier)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;标准额外的移动速度为 1。设置为 2 使你以两倍的速度移动，设置为 20 可以让你轻松地穿过墙和 &amp;ldquo;越过&amp;rdquo; 水。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;这儿有其他一些命令，但是它们很难使用而且用处不大。&lt;/p&gt;
+&lt;h2 id=&#34;玩家命令&#34;&gt;玩家命令&lt;/h2&gt;
+&lt;p&gt;**注：**如果你不是管理员的客户端发送远程命令，那么大多数命令将不会有效（按 Ctrl 键切换控制台远程命令模式）。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;动作预测&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;ThePlayer:EnableMovementPrediction(true)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;默认情况下为开启状态，将  true 改为  false  可以关闭动作预测，关闭动作预测通常对战斗有一些帮助。该命令只有客户端执行才有效，主机或服务器执行将不会有效。（&lt;strong&gt;必须在控制台的本地模式下执行该命令才有效，也就是必须关闭控制台的远程命令模式&lt;/strong&gt;&lt;/em&gt;）&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;**译者注：**动作预测也可以直接在游戏设置中关闭，&lt;strong&gt;设置&lt;/strong&gt; &amp;ndash;&amp;gt; &lt;strong&gt;滞后的奖励&lt;/strong&gt;（&lt;strong&gt;Lag Compensation&lt;/strong&gt;），将其修改为 &lt;strong&gt;无&lt;/strong&gt;（&lt;strong&gt;None&lt;/strong&gt;）就可以关闭动作预测。&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;创造模式&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;ThePlayer.components.builder:GiveAllRecipes()
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;你可以合成任何东西。&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;生命值上限&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;ThePlayer.components.health:SetMaxHealth(value)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;改变你的&lt;a class=&#34;link&#34; href=&#34;https://dontstarve.fandom.com/zh/wiki/%E8%A7%92%E8%89%B2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;角色&lt;/a&gt; 的&lt;a class=&#34;link&#34; href=&#34;https://dontstarve.fandom.com/zh/wiki/%E7%94%9F%E5%91%BD&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;生命&lt;/a&gt; 值上限&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;理智值上限&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;ThePlayer.components.sanity:SetMax(value)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;改变你的&lt;a class=&#34;link&#34; href=&#34;https://dontstarve.fandom.com/zh/wiki/%E8%A7%92%E8%89%B2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;角色&lt;/a&gt; 的&lt;a class=&#34;link&#34; href=&#34;https://dontstarve.fandom.com/zh/wiki/%E7%90%86%E6%99%BA&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;理智&lt;/a&gt; 值上限&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;饥饿值上限&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;ThePlayer.components.hunger:SetMax(value)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;改变你的&lt;a class=&#34;link&#34; href=&#34;https://dontstarve.fandom.com/zh/wiki/%E8%A7%92%E8%89%B2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;角色&lt;/a&gt; 的&lt;a class=&#34;link&#34; href=&#34;https://dontstarve.fandom.com/zh/wiki/%E9%A5%A5%E9%A5%BF&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;饥饿&lt;/a&gt; 值上限&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;暂停饥饿&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;ThePlayer.components.hunger:Pause(true)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;你的&lt;a class=&#34;link&#34; href=&#34;https://dontstarve.fandom.com/zh/wiki/%E8%A7%92%E8%89%B2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;角色&lt;/a&gt; 不再降低饥饿值。&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;伤害倍数&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;ThePlayer.components.combat.damagemultiplier = value
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;改变你的&lt;a class=&#34;link&#34; href=&#34;https://dontstarve.fandom.com/zh/wiki/%E8%A7%92%E8%89%B2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;角色&lt;/a&gt; 的伤害倍数&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;海狸&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;ThePlayer.components.beaverness:SetPercent(.01)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;把&lt;a class=&#34;link&#34; href=&#34;https://dontstarve.fandom.com/zh/wiki/%E4%BC%8D%E8%BF%AA&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;伍迪&lt;/a&gt; 变成&lt;a class=&#34;link&#34; href=&#34;https://dontstarve.fandom.com/zh/wiki/%E4%BC%8D%E8%BF%AA#%E6%B5%B7%E7%8B%B8&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;海狸&lt;/a&gt; 。把 .01 改为 1 可以让你变回伍迪。&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;其他玩家命令-编辑httpsdontstarvefandomcomzhwikie68ea7e588b6e58fb0e5a49ae4babae78988e9a591e88d92e4b8ade79a84e591bde4bba4veactioneditsection3-编辑章节其他玩家命令--编辑源代码httpsdontstarvefandomcomzhwikie68ea7e588b6e58fb0e5a49ae4babae78988e9a591e88d92e4b8ade79a84e591bde4bba4section3veactioneditsource-编辑章节其他玩家命令&#34;&gt;其他玩家命令 [&lt;a class=&#34;link&#34; href=&#34;https://dontstarve.fandom.com/zh/wiki/%E6%8E%A7%E5%88%B6%E5%8F%B0/%E5%A4%9A%E4%BA%BA%E7%89%88%E9%A5%91%E8%8D%92%E4%B8%AD%E7%9A%84%E5%91%BD%E4%BB%A4?veaction=edit&amp;amp;section=3&#34;  title=&#34;编辑章节：其他玩家命令&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;编辑&lt;/a&gt; | &lt;a class=&#34;link&#34; href=&#34;https://dontstarve.fandom.com/zh/wiki/%E6%8E%A7%E5%88%B6%E5%8F%B0/%E5%A4%9A%E4%BA%BA%E7%89%88%E9%A5%91%E8%8D%92%E4%B8%AD%E7%9A%84%E5%91%BD%E4%BB%A4?section=3&amp;amp;veaction=editsource&#34;  title=&#34;编辑章节：其他玩家命令&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;编辑源代码&lt;/a&gt;]&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;注：下面许多命令通常用于玩家，像 c_godmode() 或者 c_sethealth(1)，通过先使用 c_select(AllPlayers[number]) 可以对其他玩家执行命令。所以你需要一个玩家列表来知道各个玩家的编号（number ）：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;列出所有玩家的用户名和编号&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;c_listallplayers()
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;取一个玩家&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;AllPlayers[number]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;AllPlayers[1] 取的是主机玩家。其他玩家的编号显示在记分板上（某些情况下编号有可能是错的，你可以先用 c_listallplayers() 来查看每个用户编号的用户名和角色）。大部分玩家命令可以用 AllPlayers[number] 代替 ThePlayer。&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;对所有玩家使用同一命令&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;for k,v in pairs(AllPlayers) do command end
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;只修改 command，用其他命令代替 command，使用 &amp;ldquo;v&amp;rdquo; 代替命令中的 AllPlayers[number]。例如， &amp;ldquo;for k,v in pairs(AllPlayers) do c_move(v) end&amp;rdquo; 将会把所有玩家都移动到鼠标所指的位置。&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;移动一个玩家&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;c_move(AllPlayers[number])
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;移动玩家到鼠标所指的位置。&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;杀死一个玩家&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;AllPlayers[number]:PushEvent(&#39;death&#39;)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;杀死玩家。&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;复活玩家&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;AllPlayers[number]:PushEvent(&#39;respawnfromghost&#39;)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;复活玩家。&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;传送至玩家&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;c_goto(AllPlayers[number])
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;传送到对应编号的玩家，玩家编号可以通过 c_listallplayers() 获取。&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;丢掉玩家物品栏的物品&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;AllPlayers[number].components.inventory:DropEverything()
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;丢掉对应编号的玩家物品栏的所有物品，玩家编号可以通过 c_listallplayers() 获取。&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;让玩家重新选择角色&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;c_despawn(AllPlayers[number])
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;使用该命令将会删除玩家物品栏的物品而不会掉落，所以推荐你先让玩家的物品丢掉他们的物品，或者使用上一条命令 DropEverthing()。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;截至 2016 年 6 月 25 日，增加了一个新的命令来指定玩家。你可以通过一个玩家名 UserToPlayer(&amp;lsquo;玩家名&amp;rsquo;) 来指定一个玩家而不是使用玩家编号。例如，杀死一名叫做 &amp;ldquo;PlayerA&amp;rdquo; 的玩家，他的用户编号为 5，你可以执行：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;AllPlayers[5]:PushEvent(&#39;death&#39;)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;但在此之前你必须先运行 c_listallplayers() 来知道玩家编号，十分麻烦。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;为了简单一点地执行命令，你可以把命令改成：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;UserToPlayer(&#39;PlayerA&#39;):PushEvent(&#39;death&#39;)
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;世界命令&#34;&gt;世界命令&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;传送到预设&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;c_gonext(&amp;quot;prefab&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;输入该命令后，你将被传送到第一个预设的实体. 如果存在多个预设的实体，控制台日志将会显示实体数量的列表，再次执行相同的命令将会传送玩家到下一个在世界中生成的预设的实体。&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;删除鼠标下的实体&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;ConsoleWorldEntityUnderMouse():Remove()
+c_select():Remove() 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;输入该命令后，将会删除你鼠标下的物品。在专用服务器上使用第二个命令，因为第一个不能在专用服务器上使用。&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;显示地图&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;minimap = TheSim:FindFirstEntityWithTag(&amp;quot;mini­map&amp;quot;)
+TheWorld.minimap.MiniMap:ShowArea (0,0,0,10000)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;这是一个本地命令，且客户端不可用。&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;跳过一天&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;TheWorld:PushEvent(&amp;quot;ms_nextcycle&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;跳过时间&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;TheWorld.net.components.clock:OnUpdate(16*30*x) 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;跳过 x 天。将 x 修改为所要跳的天数（例如，16&lt;em&gt;30&lt;/em&gt;4.5 为跳过 4.5 天）&lt;/em&gt;  _&lt;strong&gt;警告&lt;/strong&gt;：_数值太大可能会冻结游戏。（&lt;strong&gt;取决于电脑的运算速度&lt;/strong&gt;）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;跳过时间单元并更新&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;LongUpdate(X)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;对世界对象执行 &amp;ldquo;LongUpdate&amp;rdquo; 事件并跳过 X 个时间单元&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;_&lt;strong&gt;注：&lt;/strong&gt;_每一个时间部分有 30 个时间单元。想要跳过一天可以使用 LongUpdate(480) 或者用乘法计算，例如 LongUpdate(X&lt;em&gt;16&lt;/em&gt;30) 或者 LongUpdate(X*TUNING.TOTAL_DAY_TIME) X 为想要跳过的天数。&lt;/p&gt;
+&lt;p&gt;_&lt;strong&gt;译者注：&lt;/strong&gt;_每天有 16 个小部分，每部分有 30 个时间单元，每单元为现实中的一秒，所以一天为现实中的 8 分钟。（详见日夜周期 ）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;跳过时钟阶段&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;TheWorld:PushEvent(&amp;quot;ms_nextphase&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;跳过当前时钟阶段。&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;设置时钟阶段&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;TheWorld:PushEvent(&amp;quot;ms_setclocksegs&amp;quot;, {day=x,dusk=y,night=z})
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;设置每个时钟阶段的时间部分的数量。如果 x + y + z 加起来超过 16 将会产生错误。注意这样的修改第二天会复原。&lt;/em&gt;&lt;br&gt;
+例子：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;TheWorld:PushEvent(&amp;quot;ms_setclocksegs&amp;quot;, {day=14,dusk=1,night=1})
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;非常长的白天，非常短的黄昏和夜晚（只给黄昏一个时间部分和夜晚一个时间部分）&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;设置季节的时钟阶段&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;TheWorld:PushEvent(&amp;quot;ms_setseasonclocksegs&amp;quot;, {summer={day=sx,dusk=sy,night=sz}, winter={day=wx,dusk=wy,night=wz}}) 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;为指定季节设置每个时钟阶段的时间部分的数量。如果 x + y + z 加起来超过 16 将会产生错误。不像设置时钟阶段一样，该设置是永久性的。&lt;/em&gt;&lt;br&gt;
+例子：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;TheWorld:PushEvent(&amp;quot;ms_setseasonclocksegs&amp;quot;, {summer={day=14,dusk=1,night=1}, winter={day=13,dusk=1,night=2}})
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;非常长的白天，非常短的黄昏和夜晚（夏天：只给黄昏一个时间部分和夜晚一个时间部分，冬天：只给黄昏一个时间部分和夜晚两个个时间部分）&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;设置季节长度&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;TheWorld:PushEvent(&amp;quot;ms_setseasonlength&amp;quot;, {season=&amp;quot;summer&amp;quot;, length=15})
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;设置季节的长度。&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;进入夏季&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;TheWorld:PushEvent(&amp;quot;ms_setseason&amp;quot;, &amp;quot;summer&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;进入夏季&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;进入冬季&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;TheWorld:PushEvent(&amp;quot;ms_setseason&amp;quot;, &amp;quot;winter&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;进入冬季&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;当添加了巨人的统治 DLC，会有额外的命令 TheWorld:PushEvent(&amp;ldquo;ms_setseason&amp;rdquo;, &amp;ldquo;spring&amp;rdquo;)​ 和 TheWorld:PushEvent(&amp;ldquo;ms_setseason&amp;rdquo;, &amp;ldquo;autumn&amp;rdquo;)​&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;开始下雨&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;TheWorld:PushEvent(&amp;quot;ms_forceprecipitation&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;开始下雨&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;停止下雨&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;TheWorld:PushEvent(&amp;quot;ms_forceprecipitation&amp;quot;, false) 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;停止下雨。这包括&lt;a class=&#34;link&#34; href=&#34;https://dontstarve.fandom.com/zh/wiki/%E9%9B%A8%E5%A4%A9#.E9.9D.92.E8.9B.99.E9.9B.A8&#34;  title=&#34;雨天&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;青蛙雨&lt;/a&gt; 。&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;生成闪电&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;TheWorld:PushEvent(&amp;quot;ms_sendlightningstrike&amp;quot;, ConsoleWorldPosition())
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;闪电击中玩家，如果靠近避雷针的话，则击中避雷针。&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;陨星撞击&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;c_spawn(&amp;quot;shadowmeteor&amp;quot;, 1)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;陨星撞击在鼠标的位置。随机生成不同类型的岩石。&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;激活所有的事件&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;for k, v in pairs(SPECIAL_EVENTS) do if v ~= SPECIAL_EVENTS.NONE then local tech = TECH[k] if tech ~= nil then tech.SCIENCE = 0 end end end function IsSpecialEventActive(event) return true end
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;同一事件内激活所有事件 。&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;测量距离&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;print(math.sqrt(ThePlayer:GetDistanceSqToInst(ConsoleWorldEntityUnderMouse())))
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;在控制台日志中输出玩家和鼠标指着的物体的距离（默认情况下按 Ctrl + L 显示控制台日志）。&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;网络--服务器命令&#34;&gt;网络 / 服务器命令&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;踢 / 封禁一个玩家&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;TheNet:Kick(userid)
+TheNet:Ban(userid)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;注意，这可以通过记分板更简单得完成。userid 可以通过 AllPlayers 表来获取，先找到你想要踢出服务器的玩家的编号（见上面的&lt;a class=&#34;link&#34; href=&#34;https://dontstarve.fandom.com/zh/wiki/%E6%8E%A7%E5%88%B6%E5%8F%B0/%E5%A4%9A%E4%BA%BA%E7%89%88%E9%A5%A5%E8%8D%92%E4%B8%AD%E7%9A%84%E5%91%BD%E4%BB%A4#.E5.85.B6.E4.BB.96.E7.8E.A9.E5.AE.B6.E5.91.BD.E4.BB.A4&#34;  title=&#34;控制台/多人版饥荒中的命令&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;其他玩家命令&lt;/a&gt; 部分），然后使用 AllPlayers[#].userid。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;例子：&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;c_listallplayers()&lt;br&gt;
+[1] (KU_aabbccdd) Player1 &lt;!-- raw HTML omitted --&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;[2] (KU_AABBCCDD) Player2 &lt;!-- raw HTML omitted --&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;如果想要在服务器上封禁 Player2，控制台中输入命令&lt;/em&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;_TheNet:Ban(AllPlayers[2].userid)_
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;或者&lt;/em&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;_TheNet:Ban(&amp;quot;KU_AABBCCDD&amp;quot;)_
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;临时封禁一个玩家&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;TheNet:BanForTime(userid,time_in_seconds)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;可以短时间内封禁玩家。userid 为将要被封禁的玩家的 KU id。获取到它后，它可以被放到这种格式里：&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;TheNet:BanForTime(&lt;em&gt;&amp;ldquo;KU_aabbccdd&amp;rdquo;&lt;/em&gt;, 120).&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;执行后会封禁相应 KU id 的玩家 120 秒。如果你的服务器拥有多个世界（洞穴和上层世界），这个命令需要在两个服务端都输入。&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;连接服务器&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;c_connect(&amp;quot;IP address&amp;quot;, port, &amp;quot;password&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;如果无法进行常规的连接，可以使用该命令直接连接一个 IP 地址。默认情况下，端口是 10999。如果服务器没有密码的话，你可以不填密码参数：c_connect(&amp;ldquo;10.0.0.8&amp;rdquo;, 10999)&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;重新加载世界&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;c_reset()
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;不保存游戏并重载世界（也就是重载到上一个储存点）。如果你是一个客户端的话，该命令可能会造成你的游戏崩溃（除非你用远程命令模式发送该命令）。&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;重新生成世界&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;c_regenerateworld()
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;重生生成世界。&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;重新生成世界碎片&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;c_regenerateshard()
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;重新生成世界碎片。&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;保存&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;c_save()
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;强制服务器立即保存。（服务器通常在夜晚结束的时候自动保存）&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;关闭服务器&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;c_shutdown( true / false)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;true 会保存游戏，false 不会保存游戏。 c_shutdown() 和 c_shutdown(true) 是一样的。&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;回档&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;c_rollback(count)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;回档服务器一定次数。 c_rollback() 会回档一次，c_rollback(3) 会回档三次。&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;启用 / 禁用新玩家加入&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;TheNet:SetAllowIncomingConnections( true / false )
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;默认情况下设置为 true （新玩家可以加入）。设置为 false 将禁止玩家进入。&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;发送一个服务器公告&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;c_announce(&amp;quot;announcement&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;可以发送一个公告给玩家，例如即将关闭 / 重启服务器，让玩家知道即将断线。&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;杂项命令&#34;&gt;杂项命令&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;清空停尸间（讣告）&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;ErasePersistentString(&amp;quot;morgue&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;清空停尸间，需要关闭并重启游戏才能看到清空效果。&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;计算预设的数量&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;c_countprefabs(&amp;quot;prefab&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;在专用服务器上计数结果将会输出在控制台上&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;生成虫洞&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;没有只用一行的命令，请逐步输入&lt;/li&gt;
+&lt;li&gt;用这个命令生成虫洞 1： worm1 = c_spawn(&amp;ldquo;wormhole&amp;rdquo;)&lt;/li&gt;
+&lt;li&gt;用这个命令生成虫洞 2： worm2 = c_spawn(&amp;ldquo;wormhole&amp;rdquo;)&lt;/li&gt;
+&lt;li&gt;创建虫洞 1 到虫洞 2 之间的连接： worm1.components.teleporter.targetTeleporter = worm2&lt;/li&gt;
+&lt;li&gt;还有回来的连接： worm2.components.teleporter.targetTeleporter = worm1&lt;/li&gt;
+&lt;li&gt;完成！&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;生成一只被驯化了的牛&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;local beef = c_spawn(&amp;quot;beefalo&amp;quot;); beef.components.hunger:DoDelta(400); beef.components.domesticatable:DeltaTendency(&amp;quot;DEFAULT&amp;quot;, 1); beef:SetTendency(); beef.components.domesticatable.domestication = 1; beef.components.domesticatable:BecomeDomesticated(); 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;_用下面的值替换 DEFAULT 来改变牛的特征。&amp;quot;_RIDER&amp;rdquo;,&amp;ldquo;ORNERY&amp;rdquo;,&amp;ldquo;PUDGY&amp;rdquo;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>布丁盘盘</title>
         <link>https://skyaerope.github.io/p/dibox/</link>
         <pubDate>Sat, 10 Apr 2021 00:00:00 +0000</pubDate>
@@ -483,97 +887,6 @@ $ hugo server &amp;ndash;theme=hugo-theme-stack&lt;/p&gt;
 &lt;p&gt;标题：&amp;ldquo;通过 Hugo+Nginx 部署静态网页&amp;rdquo;： &lt;a href=&#34;https://blog.csdn.net/Homography/article/details/106168190&#34;&gt;https://blog.csdn.net/Homography/article/details/106168190&lt;/a&gt;&lt;br&gt;
 完全使用过程： &lt;a href=&#34;https://www.jianshu.com/p/f1b02e00f206&#34;&gt;https://www.jianshu.com/p/f1b02e00f206&lt;/a&gt;&lt;br&gt;
 markdown教程： &lt;a href=&#34;https://www.runoob.com/markdown/md-tutorial.html&#34;&gt;https://www.runoob.com/markdown/md-tutorial.html&lt;/a&gt;&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>IceArana Server赞助</title>
-        <link>https://skyaerope.github.io/p/ias/</link>
-        <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
-        
-        <guid>https://skyaerope.github.io/p/ias/</guid>
-        <description>&lt;img src="https://skyaerope.github.io/p/ias/ias.jpg" alt="Featured image of post IceArana Server赞助" /&gt;&lt;h2 id=&#34;赞助二维码&#34;&gt;赞助二维码&lt;/h2&gt;
-&lt;p&gt;&lt;figure style=&#34;flex-grow: 64; flex-basis: 154px&#34;&gt;
-		&lt;a href=&#34;https://skyaerope.github.io/p/ias/lzali.jpg&#34; data-size=&#34;1080x1680&#34;&gt;&lt;img src=&#34;https://skyaerope.github.io/p/ias/lzali.jpg&#34;
-				srcset=&#34;https://skyaerope.github.io/p/ias/lzali_hu0f81677ca53754b440b5703bcb9bd355_253334_480x0_resize_q75_box.jpg 480w, https://skyaerope.github.io/p/ias/lzali_hu0f81677ca53754b440b5703bcb9bd355_253334_1024x0_resize_q75_box.jpg 1024w&#34;
-				width=&#34;1080&#34;
-				height=&#34;1680&#34;
-				loading=&#34;lazy&#34;
-				alt=&#34;SkyAerope（栗子） 支付宝&#34;&gt;
-		&lt;/a&gt;
-		
-		&lt;figcaption&gt;SkyAerope（栗子） 支付宝&lt;/figcaption&gt;
-		
-	&lt;/figure&gt;&lt;figure style=&#34;flex-grow: 100; flex-basis: 240px&#34;&gt;
-		&lt;a href=&#34;https://skyaerope.github.io/p/ias/mmvx.jpg&#34; data-size=&#34;1037x1037&#34;&gt;&lt;img src=&#34;https://skyaerope.github.io/p/ias/mmvx.jpg&#34;
-				srcset=&#34;https://skyaerope.github.io/p/ias/mmvx_hu1a483403752b02c6f3606e14459c6ab7_55536_480x0_resize_q75_box.jpg 480w, https://skyaerope.github.io/p/ias/mmvx_hu1a483403752b02c6f3606e14459c6ab7_55536_1024x0_resize_q75_box.jpg 1024w&#34;
-				width=&#34;1037&#34;
-				height=&#34;1037&#34;
-				loading=&#34;lazy&#34;
-				alt=&#34;KazariAalto（喵喵子） 微信&#34;&gt;
-		&lt;/a&gt;
-		
-		&lt;figcaption&gt;KazariAalto（喵喵子） 微信&lt;/figcaption&gt;
-		
-	&lt;/figure&gt;&lt;/p&gt;
-&lt;h2 id=&#34;赞助名单&#34;&gt;赞助名单&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;赞助者&lt;/th&gt;
-&lt;th&gt;金额（元）&lt;/th&gt;
-&lt;th&gt;赞助时间&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;喵喵子&lt;/td&gt;
-&lt;td&gt;300.00&lt;/td&gt;
-&lt;td&gt;2021/02/15&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;南天&lt;/td&gt;
-&lt;td&gt;256.00&lt;/td&gt;
-&lt;td&gt;2021/03/08&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Areasta0207&lt;/td&gt;
-&lt;td&gt;20.40&lt;/td&gt;
-&lt;td&gt;2021/03/08&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;破晓之光&lt;/td&gt;
-&lt;td&gt;12.00&lt;/td&gt;
-&lt;td&gt;2021/03/08&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;（服务器挖XMR收益）&lt;/td&gt;
-&lt;td&gt;100.00&lt;/td&gt;
-&lt;td&gt;2021/03/21&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&#34;说明&#34;&gt;说明&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;所有服务器成员及非服务器成员均可以向服务器赞助/打赏，赞助/打赏后的资金支付给SkyAerope（栗子）仅用于支持服务器运营。所有赞助/打赏均以自愿为前提，并不附带任何特殊性质或权力。官号直播抽取比率日后再议。&lt;/li&gt;
-&lt;li&gt;上面放有SkyAerope（栗子）的支付宝收款码和KazariAalto（喵喵子）的微信收款码，赞助请扫。&lt;/li&gt;
-&lt;li&gt;赞助名单为人工编写，不会即时呈现。赞助后请在群内喊一声，群内消息过多可以私聊。&lt;/li&gt;
-&lt;li&gt;由于阿里云只能使用支付宝付款，所以使用微信赞助，赞助款需要通过KazariAalto（喵喵子）进行周转，写入赞助名单会略有延迟。&lt;/li&gt;
-&lt;/ol&gt;
 </description>
         </item>
         <item>
