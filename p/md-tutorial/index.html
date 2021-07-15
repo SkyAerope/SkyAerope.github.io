@@ -491,19 +491,19 @@ $(document).ready(function () {
 <p><strong>文本加粗</strong><br>
 ** 正常显示星号 **</p>
 <p>Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号：</p>
-<pre><code>\   反斜线
+<div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">\   反斜线
 `   反引号
-*   星号
-_   下划线
+<span class="ge">*   星号
+</span><span class="ge">_</span>   下划线
 {}  花括号
 []  方括号
 ()  小括号
-#   井字号
-+   加号
--   减号
+<span class="gh">#   井字号
+</span><span class="gh"></span>+   加号
+<span class="k">-</span>   减号
 .   英文句点
 !   感叹号
-</code></pre><h3 id="公式">公式</h3>
+</code></pre></div><h3 id="公式">公式</h3>
 <p>当你需要在编辑器中插入数学公式时，可以使用两个美元符 $$ 包裹 TeX 或 LaTeX 格式的数学公式来实现。提交后，问答和文章页会根据需要加载 Mathjax 对数学公式进行渲染。如：</p>
 <pre><code>$$
 \mathbf{V}_1 \times \mathbf{V}_2 =  \begin{vmatrix} 
@@ -559,6 +559,29 @@ $$</p>
     </section>
     </footer>
 
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3&#43;Aro6EYUG4&#43;cU&#43;KJWu/X"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"integrity="sha384-g7c&#43;Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI&#43;sEnkvrMWph2EDg4"crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC&#43;Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa"crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.querySelector(`.article-content`), {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ]
+        });})
+</script>
     
 </article>
 

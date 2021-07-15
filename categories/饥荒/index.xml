@@ -8,13 +8,24 @@
     <language>en-us</language>
     <lastBuildDate>Mon, 12 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://skyaerope.github.io/categories/%E9%A5%A5%E8%8D%92/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>烹饪锅食谱</title>
+      <link>https://skyaerope.github.io/p/dstcrockpot/</link>
+      <pubDate>Mon, 12 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://skyaerope.github.io/p/dstcrockpot/</guid>
+      <description>以下是烹饪锅食谱的列表：
+   食物 名称 DLC       需要食材* 食材限制      芦笋汤  +20 +18.75 +5 15 10 10 ×1×0.5(×1.5) ()    培根蛋  +20 +75 +5 20 40 10 × 1.5 × 2.0 No     香蕉冰棒  +20 +12.5 +33 10 10 20 ( ) × 1 × 1 × 1 No     浓汤  +60 +18.</description>
+    </item>
+    
+    <item>
       <title>饥荒联机版中的命令</title>
       <link>https://skyaerope.github.io/p/dstcmd/</link>
       <pubDate>Mon, 12 Jul 2021 00:00:00 +0000</pubDate>
       
       <guid>https://skyaerope.github.io/p/dstcmd/</guid>
       <description>命令控制台默认是启用状态。如果它因为任何原因没有处于开启状态，你首先要做的就是调整你存档中的 settings.ini 文件。它可以在 &amp;ldquo;DoNotStarveTogether&amp;rdquo; 文件夹里被找到，位于以下路径：
-Windows, Mac: &amp;lt;Documents&amp;gt;\Klei\DoNotStarveTogether\client.ini Linux: ~/.klei/DoNotStarve/client.ini 找到 settings.ini 然后用记事本打开。找到 section 部分，并确保在下面有ENABLECONSOLE = true。如果它它被设置为 false ，将它改为 true 并保存。然后在游戏中打开控制台，英文键盘下默认按 &amp;ldquo;~&amp;rdquo; 键。这可以随时在控制菜单中修改。
+ Windows, Mac: \Klei\DoNotStarveTogether\client.ini
+Linux: ~/.klei/DoNotStarve/client.ini  找到 settings.ini 然后用记事本打开。找到 section 部分，并确保在下面有ENABLECONSOLE = true。如果它它被设置为 false ，将它改为 true 并保存。然后在游戏中打开控制台，英文键盘下默认按 &amp;ldquo;~&amp;rdquo; 键。这可以随时在控制菜单中修改。
 本地命令模式 
 注： * 你在重新加载世界后必须重新输入每一个命令。
  Lua 支持可变数量参数的函数，例如，你只想生成一个野牛的预设，你可以不填 &amp;ldquo;amount&amp;rdquo; 参数：&amp;ldquo;c_spawn(&amp;lsquo;beefalo&amp;rsquo;)&amp;quot;。 如果你不是主机（或者它是一个专用服务器，你是这个服务器的管理员），大部分命令需要远程执行。在控制台中按 Ctrl 来切换远程命令模式。一小部分命令（例如显示地图）仍然可以在本地模式下完成。  远程命令模式 
@@ -22,7 +33,7 @@ Windows, Mac: &amp;lt;Documents&amp;gt;\Klei\DoNotStarveTogether\client.ini Linu
 简单命令  生成实例  c_spawn(&amp;quot;prefab&amp;quot;,amount) 利用 DebugSpawn(&amp;ldquo;预设&amp;rdquo;) 命令，在鼠标所指处生成一定数量被指定的 &amp;ldquo;预设&amp;rdquo;。
  获得物品  c_give(&amp;quot;prefab&amp;quot;,amount) 在你的物品栏中生成一定数量被指定的 &amp;ldquo;预设&amp;rdquo;。只适用于可以被储存在物品栏的背包 和物品 。
  脚本（未测试）  c_doscenario(scenario) 应用一个选择的脚本并执行它。
- 生命值  c_sethea​lth(percent) 用百分比设置你的生命值。注：使用分数 0.90 = 90%</description>
+ 生命值  c_sethea​lth(percent) 用百分比设置你的生命值。注：使用分数 0.</description>
     </item>
     
   </channel>
