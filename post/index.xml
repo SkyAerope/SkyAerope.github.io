@@ -26,14 +26,14 @@
       <description>命令控制台默认是启用状态。如果它因为任何原因没有处于开启状态，你首先要做的就是调整你存档中的 settings.ini 文件。它可以在 &amp;ldquo;DoNotStarveTogether&amp;rdquo; 文件夹里被找到，位于以下路径：
  Windows, Mac: \Klei\DoNotStarveTogether\client.ini
 Linux: ~/.klei/DoNotStarve/client.ini  找到 settings.ini 然后用记事本打开。找到 section 部分，并确保在下面有ENABLECONSOLE = true。如果它它被设置为 false ，将它改为 true 并保存。然后在游戏中打开控制台，英文键盘下默认按 &amp;ldquo;~&amp;rdquo; 键。这可以随时在控制菜单中修改。
-本地命令模式 
+本地命令模式
 注： * 你在重新加载世界后必须重新输入每一个命令。
- Lua 支持可变数量参数的函数，例如，你只想生成一个野牛的预设，你可以不填 &amp;ldquo;amount&amp;rdquo; 参数：&amp;ldquo;c_spawn(&amp;lsquo;beefalo&amp;rsquo;)&amp;quot;。 如果你不是主机（或者它是一个专用服务器，你是这个服务器的管理员），大部分命令需要远程执行。在控制台中按 Ctrl 来切换远程命令模式。一小部分命令（例如显示地图）仍然可以在本地模式下完成。  远程命令模式 
+ Lua 支持可变数量参数的函数，例如，你只想生成一个野牛的预设，你可以不填 &amp;ldquo;amount&amp;rdquo; 参数：&amp;ldquo;c_spawn(&amp;lsquo;beefalo&amp;rsquo;)&amp;quot;。 如果你不是主机（或者它是一个专用服务器，你是这个服务器的管理员），大部分命令需要远程执行。在控制台中按 Ctrl 来切换远程命令模式。一小部分命令（例如显示地图）仍然可以在本地模式下完成。  远程命令模式
 许多饥荒命令 仍然在 DST（多人版饥荒）中可用，因此你仍然可以阅读它。
-简单命令  生成实例  c_spawn(&amp;quot;prefab&amp;quot;,amount) 利用 DebugSpawn(&amp;ldquo;预设&amp;rdquo;) 命令，在鼠标所指处生成一定数量被指定的 &amp;ldquo;预设&amp;rdquo;。
- 获得物品  c_give(&amp;quot;prefab&amp;quot;,amount) 在你的物品栏中生成一定数量被指定的 &amp;ldquo;预设&amp;rdquo;。只适用于可以被储存在物品栏的背包 和物品 。
- 脚本（未测试）  c_doscenario(scenario) 应用一个选择的脚本并执行它。
- 生命值  c_sethea​lth(percent) 用百分比设置你的生命值。注：使用分数 0.</description>
+简单命令  生成实例  c_spawn(&amp;quot;prefab&amp;quot;,amount)利用 DebugSpawn(&amp;ldquo;预设&amp;rdquo;) 命令，在鼠标所指处生成一定数量被指定的 &amp;ldquo;预设&amp;rdquo;。
+ 获得物品  c_give(&amp;quot;prefab&amp;quot;,amount)在你的物品栏中生成一定数量被指定的 &amp;ldquo;预设&amp;rdquo;。只适用于可以被储存在物品栏的背包 和物品 。
+ 脚本（未测试）  c_doscenario(scenario)应用一个选择的脚本并执行它。
+ 生命值  c_sethea​lth(percent)用百分比设置你的生命值。注：使用分数 0.</description>
     </item>
     
     <item>
@@ -94,7 +94,7 @@ markdown教程： https://www.runoob.com/markdown/md-tutorial.html</description>
       <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://skyaerope.github.io/p/ias/</guid>
-      <description>赞助二维码  SkyAerope（栗子） 支付宝  KazariAalto（喵喵子） 微信 
+      <description>赞助二维码 SkyAerope（栗子） 支付宝KazariAalto（喵喵子） 微信
 赞助名单    赞助者 金额（元） 赞助时间     喵喵子 300.00 2021/02/15   南天 256.00 2021/03/08   Areasta0207 20.40 2021/03/08   破晓之光 12.00 2021/03/08   （服务器挖XMR收益） 100.00 2021/03/21                   说明  所有服务器成员及非服务器成员均可以向服务器赞助/打赏，赞助/打赏后的资金支付给SkyAerope（栗子）仅用于支持服务器运营。所有赞助/打赏均以自愿为前提，并不附带任何特殊性质或权力。官号直播抽取比率日后再议。 上面放有SkyAerope（栗子）的支付宝收款码和KazariAalto（喵喵子）的微信收款码，赞助请扫。 赞助名单为人工编写，不会即时呈现。赞助后请在群内喊一声，群内消息过多可以私聊。 由于阿里云只能使用支付宝付款，所以使用微信赞助，赞助款需要通过KazariAalto（喵喵子）进行周转，写入赞助名单会略有延迟。  </description>
     </item>
     
