@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>解决方案 on 薄荷布丁</title>
+    <link>https://skyaerope.github.io/tags/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link>
+    <description>Recent content in 解决方案 on 薄荷布丁</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 13 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://skyaerope.github.io/tags/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux 报错 Certificate verification failed The certificate is NOT trusted.</title>
+      <link>https://skyaerope.github.io/p/linux-apt-error/</link>
+      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://skyaerope.github.io/p/linux-apt-error/</guid>
+      <description>原因为未安装 ca-certificates
+可以先编辑 /etc/apt/sources.list 文件临时使用 http 源
+nano /etc/apt/sources.list 或者
+vim /etc/apt/sources.list 粘贴或者更改源（https:// 到 http://)
+deb http://mirrors.tuna.tsinghua.edu.cn/debian/ buster main contrib non-free deb http://mirrors.tuna.tsinghua.edu.cn/debian/ buster-updates main contrib non-free deb http://mirrors.tuna.tsinghua.edu.cn/debian/ buster-backports main contrib non-free deb http://mirrors.tuna.tsinghua.edu.cn/debian-security buster/updates main contrib non-free  vim使用方法请自行查资料
+ 然后安装 ca-certificates 包（注意：看到有的文章将源改为http便无下文，建议继续执行以下步骤改回https，使用http将大幅度提高网络风险）
+apt update apt install ca-certificates 安装完成后编辑源 /etc/apt/sources.list
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster main contrib non-free deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-updates main contrib non-free deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-backports main contrib non-free deb https://mirrors.</description>
+    </item>
+    
+  </channel>
+</rss>

