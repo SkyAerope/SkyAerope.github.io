@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Linux on 薄荷布丁</title>
+    <title>Linux on ^薄荷布丁^</title>
     <link>https://skyaerope.github.io/tags/linux/</link>
-    <description>Recent content in Linux on 薄荷布丁</description>
+    <description>Recent content in Linux on ^薄荷布丁^</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 13 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://skyaerope.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
@@ -53,10 +53,10 @@ ncat/nc 既是一个端口扫描工具，也是一款安全工具，还是一款
 yum install nmap-ncat -y 系统管理员可以用它来审计系统安全，用它来找出开放的端口然后保护这些端口。 管理员还能用它作为客户端来审计 Web 服务器、telnet 服务器、邮件服务器等， 通过 nc 我们可以控制发送的每个字符，也可以查看对方的回应。
 我们还可以用它捕获客户端发送的数据以此来了解这些客户端是做什么的。
 在本文中，我们会通过下面这些例子来学习如何使用 nc 命令。
-1) 监听入站连接 通过 -l 选项，ncat 可以进入监听模式，使我们可以在指定端口监听入站连接。 完整的命令是这样的：
+1. 监听入站连接 通过 -l 选项，ncat 可以进入监听模式，使我们可以在指定端口监听入站连接。 完整的命令是这样的：
 ncat -l port_number 比如
 ncat -l 8080 服务器就会开始在 8080 端口监听入站连接。
-2) 连接远程系统 使用下面命令可以用 nc 来连接远程系统
+2. 连接远程系统 使用下面命令可以用 nc 来连接远程系统
 ncat IP_address port_number 我们来看个例子
 ncat 192.168.1.100 80 这会创建一个连接，连接到 IP 为 192.</description>
     </item>
