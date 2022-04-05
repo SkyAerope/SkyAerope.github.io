@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="zh-cn">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='教你如何使用ncat'><title>ncat(nc) 命令使用方法</title>
 
-<link rel='canonical' href='https://skyaerope.github.io/p/ncat/'>
+<link rel='canonical' href='https://skae.top/p/ncat/'>
 
 <link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='ncat(nc) 命令使用方法'>
 <meta property='og:description' content='教你如何使用ncat'>
-<meta property='og:url' content='https://skyaerope.github.io/p/ncat/'>
+<meta property='og:url' content='https://skae.top/p/ncat/'>
 <meta property='og:site_name' content='^薄荷布丁^'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Linux' /><meta property='article:tag' content='教程' /><meta property='article:published_time' content='2021-11-13T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2021-11-13T00:00:00&#43;00:00'/>
-<meta name="twitter:title" content="ncat(nc) 命令使用方法">
+<meta name="twitter:site" content="@SAerope">
+    <meta name="twitter:creator" content="@SAerope"><meta name="twitter:title" content="ncat(nc) 命令使用方法">
 <meta name="twitter:description" content="教你如何使用ncat">
     <link rel="shortcut icon" href="https://box.sllzy.top/favicon.ico" />
 
@@ -47,7 +48,7 @@
 ">
     
         <div id="article-toolbar">
-            <a href="https://skyaerope.github.io" class="back-home">
+            <a href="https://skae.top" class="back-home">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <polyline points="15 6 9 12 15 18" />
@@ -99,79 +100,79 @@
     <p><code>ncat</code> 或者说 <code>nc</code> 是一款功能类似 <code>cat</code> 的工具，但是是用于网络的。它是一款拥有多种功能的 <code>CLI</code> 工具，可以用来在网络上读、写以及重定向数据。 它被设计成可以被脚本或其他程序调用的可靠的后端工具。同时由于它能创建任意所需的连接，因此也是一个很好的网络调试工具。</p>
 <p><code>ncat</code>/<code>nc</code> 既是一个端口扫描工具，也是一款安全工具，还是一款监测工具，甚至可以做为一个简单的 <code>TCP</code> 代理。 由于有这么多的功能，它被誉为是网络界的瑞士军刀。 这是每个系统管理员都应该知道并且掌握它。</p>
 <p>在大多数 <code>Debian</code> 发行版中，<code>nc</code> 是默认可用的，它会在安装系统的过程中自动被安装。 但是在 <code>CentOS 7/RHEL 7</code> 的最小化安装中，<code>nc</code> 并不会默认被安装。 你需要用下列命令手工安装。</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">yum install nmap-ncat -y
-</code></pre></div><p>系统管理员可以用它来审计系统安全，用它来找出开放的端口然后保护这些端口。 管理员还能用它作为客户端来审计 <code>Web</code> 服务器、<code>telnet</code> 服务器、邮件服务器等， 通过 <code>nc</code> 我们可以控制发送的每个字符，也可以查看对方的回应。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">yum install nmap-ncat -y
+</span></span></code></pre></div><p>系统管理员可以用它来审计系统安全，用它来找出开放的端口然后保护这些端口。 管理员还能用它作为客户端来审计 <code>Web</code> 服务器、<code>telnet</code> 服务器、邮件服务器等， 通过 <code>nc</code> 我们可以控制发送的每个字符，也可以查看对方的回应。</p>
 <p>我们还可以用它捕获客户端发送的数据以此来了解这些客户端是做什么的。</p>
 <p>在本文中，我们会通过下面这些例子来学习如何使用 <code>nc</code> 命令。</p>
 <h2 id="1-监听入站连接">1. 监听入站连接</h2>
 <p>通过 <code>-l</code> 选项，<code>ncat</code> 可以进入监听模式，使我们可以在指定端口监听入站连接。 完整的命令是这样的：</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">ncat -l port_number
-</code></pre></div><p>比如</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">ncat -l <span class="m">8080</span>
-</code></pre></div><p>服务器就会开始在 <code>8080</code> 端口监听入站连接。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat -l port_number
+</span></span></code></pre></div><p>比如</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat -l <span class="m">8080</span>
+</span></span></code></pre></div><p>服务器就会开始在 <code>8080</code> 端口监听入站连接。</p>
 <h2 id="2-连接远程系统">2. 连接远程系统</h2>
 <p>使用下面命令可以用 <code>nc</code> 来连接远程系统</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">ncat IP_address port_number
-</code></pre></div><p>我们来看个例子</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">ncat 192.168.1.100 <span class="m">80</span>
-</code></pre></div><p>这会创建一个连接，连接到 IP 为 <code>192.168.1.100</code> 的服务器上的 <code>80</code> 端口，然后我们就可以向服务器发送指令了。 比如我们可以输入下面内容来获取完整的网页内容</p>
-<div class="highlight"><pre class="chroma"><code class="language-http" data-lang="http"><span class="nf">GET</span> <span class="nn">/</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-</code></pre></div><p>或者获取页面名称</p>
-<div class="highlight"><pre class="chroma"><code class="language-http" data-lang="http"><span class="nf">GET</span> <span class="nn">/</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-</code></pre></div><p>或者我们可以通过以下方式获得操作系统指纹标识</p>
-<div class="highlight"><pre class="chroma"><code class="language-http" data-lang="http"><span class="nf">HEAD</span> <span class="nn">/</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-</code></pre></div><p>这会告诉我们使用的是什么软件来运行这个 <code>web</code> 服务器的</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat IP_address port_number
+</span></span></code></pre></div><p>我们来看个例子</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat 192.168.1.100 <span class="m">80</span>
+</span></span></code></pre></div><p>这会创建一个连接，连接到 IP 为 <code>192.168.1.100</code> 的服务器上的 <code>80</code> 端口，然后我们就可以向服务器发送指令了。 比如我们可以输入下面内容来获取完整的网页内容</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-http" data-lang="http"><span class="line"><span class="cl"><span class="nf">GET</span> <span class="nn">/</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</span></span></code></pre></div><p>或者获取页面名称</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-http" data-lang="http"><span class="line"><span class="cl"><span class="nf">GET</span> <span class="nn">/</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</span></span></code></pre></div><p>或者我们可以通过以下方式获得操作系统指纹标识</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-http" data-lang="http"><span class="line"><span class="cl"><span class="nf">HEAD</span> <span class="nn">/</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</span></span></code></pre></div><p>这会告诉我们使用的是什么软件来运行这个 <code>web</code> 服务器的</p>
 <h2 id="3-连接-udp-端口">3. 连接 UDP 端口</h2>
 <p>默认情况下，<code>nc</code> 创建连接时只会连接 <code>TCP</code> 端口。 不过我们可以使用 <code>-u</code> 选项来连接到 <code>UDP</code> 端口</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">ncat -l -u <span class="m">1234</span>
-</code></pre></div><p>现在我们的系统会开始监听 <code>UDP</code> 的 <code>1234</code> 端口，我们可以使用下面的 <code>netstat</code> 命令来验证这一点</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">netstat -tunlp <span class="p">|</span> grep <span class="m">1234</span>
-udp           <span class="m">0</span>          <span class="m">0</span> 0.0.0.0:1234                 0.0.0.0:*               17341/nc
-udp6          <span class="m">0</span>          <span class="m">0</span> :::1234                      :::*                    17341/nc
-</code></pre></div><p>假设我们想发送或者说测试某个远程主机 <code>UDP</code> 端口的连通性，我们可以使用下面命令</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">ncat -v -u <span class="o">{</span>host-ip<span class="o">}</span> <span class="o">{</span>udp-port<span class="o">}</span>
-</code></pre></div><p>比如</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">ncat -v -u 192.168.105.150 <span class="m">53</span>
-Ncat: Version 6.40 <span class="o">(</span> http://nmap.org/ncat <span class="o">)</span>
-Ncat: Connected to 192.168.105.150:53
-</code></pre></div><h2 id="4-将-nc-作为聊天工具">4. 将 <code>nc</code> 作为聊天工具</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat -l -u <span class="m">1234</span>
+</span></span></code></pre></div><p>现在我们的系统会开始监听 <code>UDP</code> 的 <code>1234</code> 端口，我们可以使用下面的 <code>netstat</code> 命令来验证这一点</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">netstat -tunlp <span class="p">|</span> grep <span class="m">1234</span>
+</span></span><span class="line"><span class="cl">udp           <span class="m">0</span>          <span class="m">0</span> 0.0.0.0:1234                 0.0.0.0:*               17341/nc
+</span></span><span class="line"><span class="cl">udp6          <span class="m">0</span>          <span class="m">0</span> :::1234                      :::*                    17341/nc
+</span></span></code></pre></div><p>假设我们想发送或者说测试某个远程主机 <code>UDP</code> 端口的连通性，我们可以使用下面命令</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat -v -u <span class="o">{</span>host-ip<span class="o">}</span> <span class="o">{</span>udp-port<span class="o">}</span>
+</span></span></code></pre></div><p>比如</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat -v -u 192.168.105.150 <span class="m">53</span>
+</span></span><span class="line"><span class="cl">Ncat: Version 6.40 <span class="o">(</span> http://nmap.org/ncat <span class="o">)</span>
+</span></span><span class="line"><span class="cl">Ncat: Connected to 192.168.105.150:53
+</span></span></code></pre></div><h2 id="4-将-nc-作为聊天工具">4. 将 <code>nc</code> 作为聊天工具</h2>
 <p><code>nc</code> 也可以作为聊天工具来用，我们可以配置服务器监听某个端口，然后从远程主机上连接到服务器的这个端口，就可以开始发送消息了。 在服务器这端运行：</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">ncat -l <span class="m">8080</span>
-</code></pre></div><p>在远程客户端主机上运行：</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">ncat 192.168.1.100 <span class="m">8080</span>
-</code></pre></div><p>之后开始发送消息，这些消息会在服务器终端上显示出来。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat -l <span class="m">8080</span>
+</span></span></code></pre></div><p>在远程客户端主机上运行：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat 192.168.1.100 <span class="m">8080</span>
+</span></span></code></pre></div><p>之后开始发送消息，这些消息会在服务器终端上显示出来。</p>
 <h2 id="5-将-nc-作为代理">5. 将 <code>nc</code> 作为代理</h2>
 <p><code>nc</code> 也可以用来做代理。比如下面这个例子</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">ncat -l <span class="m">8080</span> <span class="p">|</span> ncat 192.168.1.200 <span class="m">80</span>
-</code></pre></div><p>所有发往我们服务器 <code>8080</code> 端口的连接都会自动转发到 <code>192.168.1.200</code> 上的 <code>80</code> 端口。 不过由于我们使用了管道，数据只能被单向传输。 要同时能够接受返回的数据，我们需要创建一个双向管道。 使用下面命令可以做到这点</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">mkfifo 2way
-ncat -l <span class="m">8080</span> 0&lt;2way <span class="p">|</span> ncat 192.168.1.200 <span class="m">80</span> 1&gt;2way
-</code></pre></div><p>现在你可以通过 <code>nc</code> 代理来收发数据了</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat -l <span class="m">8080</span> <span class="p">|</span> ncat 192.168.1.200 <span class="m">80</span>
+</span></span></code></pre></div><p>所有发往我们服务器 <code>8080</code> 端口的连接都会自动转发到 <code>192.168.1.200</code> 上的 <code>80</code> 端口。 不过由于我们使用了管道，数据只能被单向传输。 要同时能够接受返回的数据，我们需要创建一个双向管道。 使用下面命令可以做到这点</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">mkfifo 2way
+</span></span><span class="line"><span class="cl">ncat -l <span class="m">8080</span> 0&lt;2way <span class="p">|</span> ncat 192.168.1.200 <span class="m">80</span> 1&gt;2way
+</span></span></code></pre></div><p>现在你可以通过 <code>nc</code> 代理来收发数据了</p>
 <h2 id="6-使用-nc-拷贝文件">6. 使用 <code>nc</code> 拷贝文件</h2>
 <p><code>nc</code> 还能用来在系统间拷贝文件，虽然这么做并不推荐，因为绝大多数系统默认都安装了 <code>ssh</code>/<code>scp</code>。 不过如果你恰好遇见个没有 <code>ssh</code>/<code>scp</code> 的系统的话， 你可以用 <code>nc</code> 来作最后的努力。</p>
 <p>在要接受数据的机器上启动 <code>nc</code> 并让它进入监听模式：</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">ncat -l  <span class="m">8080</span> &gt; file.txt
-</code></pre></div><p>现在去要被拷贝数据的机器上运行下面命令：</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">ncat 192.168.1.100 <span class="m">8080</span> --send-only &lt; data.txt
-</code></pre></div><p>这里，<code>data.txt</code> 是要发送的文件。 <code>-–send-only</code> 选项会在文件拷贝完后立即关闭连接。 如果不加该选项， 我们需要手工按下 <code>ctrl+c</code> 来关闭连接。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat -l  <span class="m">8080</span> &gt; file.txt
+</span></span></code></pre></div><p>现在去要被拷贝数据的机器上运行下面命令：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat 192.168.1.100 <span class="m">8080</span> --send-only &lt; data.txt
+</span></span></code></pre></div><p>这里，<code>data.txt</code> 是要发送的文件。 <code>-–send-only</code> 选项会在文件拷贝完后立即关闭连接。 如果不加该选项， 我们需要手工按下 <code>ctrl+c</code> 来关闭连接。</p>
 <p>我们也可以用这种方法拷贝整个磁盘分区，不过请一定要小心</p>
 <h2 id="7-通过-nc-创建后门">7. 通过 <code>nc</code> 创建后门</h2>
 <p><code>nc</code> 命令还可以用来在系统中创建后门，并且这种技术也确实被黑客大量使用。 为了保护我们的系统，我们需要知道它是怎么做的。 创建后门的命令为：</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">ncat -l <span class="m">10000</span> -e /bin/bash
-</code></pre></div><p><code>-e</code> 标志将一个 <code>bash</code> 与端口 <code>10000</code> 相连。现在客户端只要连接到服务器上的 <code>10000</code> 端口就能通过 <code>bash</code> 获取我们系统的完整访问权限：</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">ncat 192.168.1.100 <span class="m">10000</span>
-</code></pre></div><h2 id="8-通过-nc-进行端口转发">8. 通过 <code>nc</code> 进行端口转发</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat -l <span class="m">10000</span> -e /bin/bash
+</span></span></code></pre></div><p><code>-e</code> 标志将一个 <code>bash</code> 与端口 <code>10000</code> 相连。现在客户端只要连接到服务器上的 <code>10000</code> 端口就能通过 <code>bash</code> 获取我们系统的完整访问权限：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat 192.168.1.100 <span class="m">10000</span>
+</span></span></code></pre></div><h2 id="8-通过-nc-进行端口转发">8. 通过 <code>nc</code> 进行端口转发</h2>
 <p>我们通过选项 <code>-c</code> 来用 <code>nc</code> 进行端口转发，实现端口转发的语法为：</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">ncat -u -l  <span class="m">80</span> -c  <span class="s1">&#39;ncat -u -l 8080&#39;</span>
-</code></pre></div><p>这样，所有连接到 <code>80</code> 端口的连接都会转发到 <code>8080</code> 端口</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat -u -l  <span class="m">80</span> -c  <span class="s1">&#39;ncat -u -l 8080&#39;</span>
+</span></span></code></pre></div><p>这样，所有连接到 <code>80</code> 端口的连接都会转发到 <code>8080</code> 端口</p>
 <h2 id="9-设置连接超时">9. 设置连接超时</h2>
 <p><code>nc</code> 的监听模式会一直运行，直到手工终止。 不过我们可以通过选项 <code>-w</code> 设置超时时间:</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">ncat -w <span class="m">10</span> 192.168.1.100 <span class="m">8080</span>
-</code></pre></div><p>这会导致连接 <code>10</code> 秒后终止，不过这个选项只能用于客户端而不是服务端。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat -w <span class="m">10</span> 192.168.1.100 <span class="m">8080</span>
+</span></span></code></pre></div><p>这会导致连接 <code>10</code> 秒后终止，不过这个选项只能用于客户端而不是服务端。</p>
 <h2 id="10-使用--k-选项强制-nc-待命">10. 使用 <code>-k</code> 选项强制 <code>nc</code> 待命</h2>
 <p>当客户端从服务端断开连接后，过一段时间服务端也会停止监听。 但通过选项 <code>-k</code> 我们可以强制服务器保持连接并继续监听端口。 命令如下：</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">ncat -l -k <span class="m">8080</span>
-</code></pre></div><p>现在即使来自客户端的连接断了也依然会处于待命状态</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat -l -k <span class="m">8080</span>
+</span></span></code></pre></div><p>现在即使来自客户端的连接断了也依然会处于待命状态</p>
 <blockquote>
 <p>本文由 <a class="link" href="http://ksria.com/simpread/"  target="_blank" rel="noopener"
     >简悦 SimpRead</a> 转码， 原文地址 <a class="link" href="https://www.cnblogs.com/ECJTUACM-873284962/p/9712882.html"  target="_blank" rel="noopener"
@@ -240,6 +241,28 @@ ncat -l <span class="m">8080</span> 0&lt;2way <span class="p">|</span> ncat 192.
             <div class="flex article-list--tile">
                 
                     
+<article class="has-image">
+    <a href="/p/shell-chinese/">
+        
+        
+            <div class="article-image">
+                <img src="/p/shell-chinese/00.a1387487bd6e03411167b9bf5fbfcebc_huefc9290d81713b319ab68a7f845bb37c_267518_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="shell-chinese" 
+                        data-hash="md5-oTh0h71uA0ERZ7m/X7/OvA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Ubuntu改语言为中文</h2>
+        </div>
+    </a>
+</article>
+                
+                    
 <article class="">
     <a href="/p/linux-apt-error/">
         
@@ -264,13 +287,23 @@ ncat -l <span class="m">8080</span> 0&lt;2way <span class="p">|</span> ncat 192.
 </article>
                 
                     
-<article class="">
-    <a href="/p/shell-chinese/">
+<article class="has-image">
+    <a href="/p/mcsvspeedup/">
         
+        
+            <div class="article-image">
+                <img src="/p/mcsvspeedup/00.2c6ef59afe74c903befe2329e8023919_hu63aa5994080ad5065e8069b1db94e92d_1600379_250x150_fill_q75_box_smart1.jpeg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="mcsvspeedup" 
+                        data-hash="md5-LG71mv50yQO&#43;/iMp6AI5GQ==">
+                
+            </div>
         
 
         <div class="article-details">
-            <h2 class="article-title">shell 中改语言为中文</h2>
+            <h2 class="article-title">《我的世界》服务器优化教程</h2>
         </div>
     </a>
 </article>
@@ -281,7 +314,7 @@ ncat -l <span class="m">8080</span> 0&lt;2way <span class="p">|</span> ncat 192.
         
         
             <div class="article-image">
-                <img src="/p/dstcrockpot/00.bf744c9169afd89aa7eaa9cedd7191b7_hu59df01dd9cfb485ca1960cb6f6bf535d_181785_250x150_fill_box_smart1_2.png" 
+                <img src="/p/dstcrockpot/00.bf744c9169afd89aa7eaa9cedd7191b7_hu59df01dd9cfb485ca1960cb6f6bf535d_181785_250x150_fill_box_smart1_3.png" 
                         width="250" 
                         height="150" 
                         loading="lazy" 
@@ -293,28 +326,6 @@ ncat -l <span class="m">8080</span> 0&lt;2way <span class="p">|</span> ncat 192.
 
         <div class="article-details">
             <h2 class="article-title">烹饪锅食谱</h2>
-        </div>
-    </a>
-</article>
-                
-                    
-<article class="has-image">
-    <a href="/p/dstcmd/">
-        
-        
-            <div class="article-image">
-                <img src="/p/dstcmd/00.f93e76c6db2b3e0c0d927428570cfdeb_hu98af69dd04e5bb722241122ff4aea059_205115_250x150_fill_box_smart1_2.png" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy" 
-                        data-key="dstcmd" 
-                        data-hash="md5-&#43;T52xtsrPgwNknQoVwz96w==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">饥荒联机版中的命令</h2>
         </div>
     </a>
 </article>
@@ -444,7 +455,7 @@ ncat -l <span class="m">8080</span> 0&lt;2way <span class="p">|</span> ncat 192.
                 
                 <div class="widget--toc">
                     <nav id="TableOfContents">
-  <ul>
+  <ol>
     <li><a href="#1-监听入站连接">1. 监听入站连接</a></li>
     <li><a href="#2-连接远程系统">2. 连接远程系统</a></li>
     <li><a href="#3-连接-udp-端口">3. 连接 UDP 端口</a></li>
@@ -455,7 +466,7 @@ ncat -l <span class="m">8080</span> 0&lt;2way <span class="p">|</span> ncat 192.
     <li><a href="#8-通过-nc-进行端口转发">8. 通过 <code>nc</code> 进行端口转发</a></li>
     <li><a href="#9-设置连接超时">9. 设置连接超时</a></li>
     <li><a href="#10-使用--k-选项强制-nc-待命">10. 使用 <code>-k</code> 选项强制 <code>nc</code> 待命</a></li>
-  </ul>
+  </ol>
 </nav>
                 </div>
             </section>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>markdown on ^薄荷布丁^</title>
-    <link>https://skyaerope.github.io/tags/markdown/</link>
+    <link>https://skae.top/tags/markdown/</link>
     <description>Recent content in markdown on ^薄荷布丁^</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 09 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://skyaerope.github.io/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 09 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://skae.top/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Markdown语法教程</title>
-      <link>https://skyaerope.github.io/p/md-tutorial/</link>
+      <link>https://skae.top/p/md-tutorial/</link>
       <pubDate>Fri, 09 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://skyaerope.github.io/p/md-tutorial/</guid>
+      <guid>https://skae.top/p/md-tutorial/</guid>
       <description>Markdown 标题 Markdown 标题有两种格式。
 使用 = 和 - 标记一级和二级标题 = 和 - 标记语法格式如下：
 我展示的是一级标题 ================= 我展示的是二级标题 ----------------- 显示效果如下：
@@ -29,10 +29,10 @@
     
     <item>
       <title>Hugo搭建参考资料</title>
-      <link>https://skyaerope.github.io/p/create-hugo/</link>
+      <link>https://skae.top/p/create-hugo/</link>
       <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://skyaerope.github.io/p/create-hugo/</guid>
+      <guid>https://skae.top/p/create-hugo/</guid>
       <description>参考资料 主题： https://github.com/CaiJimmy/hugo-theme-stack
 主题官方文档： https://docs.stack.jimmycai.com/v/zh-cn/
  安装主题后，启动一个临时服务器（不要正式使用）

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>优化 on ^薄荷布丁^</title>
+    <link>https://skae.top/tags/%E4%BC%98%E5%8C%96/</link>
+    <description>Recent content in 优化 on ^薄荷布丁^</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 05 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://skae.top/tags/%E4%BC%98%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>《我的世界》服务器优化教程</title>
+      <link>https://skae.top/p/mcsvspeedup/</link>
+      <pubDate>Tue, 05 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://skae.top/p/mcsvspeedup/</guid>
+      <description>系统的选择 　（网页后台可以跳过本段）关于系统的选择，Linux 类系统（Centos、Redhat 等）固然高效、稳定，但选择系统也一定要考虑到自己的熟悉程度和学习能力。不要盲目为了高效而选择一个自己完全不熟悉甚至从未使用过的系统，一旦出现了突发情况，原本只需要几分钟解决的问题由于不熟悉系统的操作用几个小时来解决，这样真的合适么？在内存足够使用的情况下，Windows 和 Linux 开服的性能差距几乎可以忽略。但是如果你熟悉 Linux 的操作，我依然会推荐你使用 Linux 系统，毕竟大服需要的 Mysql、Redis 在 Linux 下的性能往往高过 Windows 不少。如果你有较强的学习能力，打算入坑 Linux 开服，我会推荐你使用 Centos6.6（稳定性突出、可靠性不俗、大量教程和文档）。
+JVM 版本的选择 　（网页后台可以跳过本段）JVM（Java Virtual Machine）也就是 Java 虚拟机，俗称 Java 运行环境。关于选择 JRE 还是 JDK 的选择，我推荐使用 JDK，JDK 包括运行环境（JRE），在此基础上增加了一些性能调优工具如 VisualVM。而 JVM 的版本，非常不推荐使用 Java6，因为有不少插件已经放弃了 Java6 的支持。Java7 和 Java8 则是不错的选择，如果不是模组服务器，推荐使用 Java8，Java8 相比 Java7 主要的性能提升便在于 HashMap 上，而无论 Minecraft 服务端本身还是插件都大量使用了 HashMap。所以对于 Minecraft 服务器来说，使用 Java8 带来的性能提升还是比较可观的。
+服务端的选择 　从服务端的选择开始就注定了性能优劣的起步水平，现在依然有不少人认为 CraftBukkit（水桶服）的兼容性、稳定性要远远好于 Spigot（水龙头）。然而这是一个误区，Spigot 是在 CraftBukkit 基础上优化而来的，几乎 100% 兼容原有的插件 API，所以可以认为只要同版本水桶服能用的插件就可以在 Spigot 上运行。如果你选择使用 1.</description>
+    </item>
+    
+  </channel>
+</rss>

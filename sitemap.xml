@@ -2,128 +2,140 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://skyaerope.github.io/</loc>
+    <loc>https://skae.top/</loc>
+    <lastmod>2022-04-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://skae.top/categories/</loc>
+    <lastmod>2022-04-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://skae.top/tags/linux/</loc>
+    <lastmod>2022-04-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://skae.top/tags/mc/</loc>
+    <lastmod>2022-04-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://skae.top/categories/minecraft/</loc>
+    <lastmod>2022-04-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://skae.top/post/</loc>
+    <lastmod>2022-04-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://skae.top/tags/</loc>
+    <lastmod>2022-04-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://skae.top/p/shell-chinese/</loc>
+    <lastmod>2022-04-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://skae.top/p/mcsvspeedup/</loc>
+    <lastmod>2022-04-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://skae.top/tags/%E4%BC%98%E5%8C%96/</loc>
+    <lastmod>2022-04-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://skae.top/tags/%E5%8A%A0%E9%80%9F/</loc>
+    <lastmod>2022-04-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://skae.top/tags/%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2022-04-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://skae.top/categories/%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2022-04-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://skae.top/p/linux-apt-error/</loc>
     <lastmod>2021-11-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://skyaerope.github.io/categories/</loc>
+    <loc>https://skae.top/p/linux-bucket/</loc>
     <lastmod>2021-11-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://skyaerope.github.io/tags/linux/</loc>
+    <loc>https://skae.top/p/ncat/</loc>
     <lastmod>2021-11-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://skyaerope.github.io/p/linux-apt-error/</loc>
+    <loc>https://skae.top/tags/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</loc>
     <lastmod>2021-11-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://skyaerope.github.io/p/linux-bucket/</loc>
-    <lastmod>2021-11-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://skyaerope.github.io/p/ncat/</loc>
-    <lastmod>2021-11-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://skyaerope.github.io/post/</loc>
-    <lastmod>2021-11-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://skyaerope.github.io/p/shell-chinese/</loc>
-    <lastmod>2021-11-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://skyaerope.github.io/tags/</loc>
-    <lastmod>2021-11-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://skyaerope.github.io/tags/%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2021-11-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://skyaerope.github.io/categories/%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2021-11-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://skyaerope.github.io/tags/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</loc>
-    <lastmod>2021-11-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://skyaerope.github.io/tags/ias/</loc>
+    <loc>https://skae.top/tags/ias/</loc>
     <lastmod>2021-08-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://skyaerope.github.io/categories/ias/</loc>
+    <loc>https://skae.top/categories/ias/</loc>
     <lastmod>2021-08-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://skyaerope.github.io/p/iasv/</loc>
+    <loc>https://skae.top/p/iasv/</loc>
     <lastmod>2021-08-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://skyaerope.github.io/tags/mc/</loc>
+    <loc>https://skae.top/categories/mc/</loc>
     <lastmod>2021-08-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://skyaerope.github.io/categories/mc/</loc>
-    <lastmod>2021-08-25T00:00:00+00:00</lastmod>
+    <loc>https://skae.top/p/dstcrockpot/</loc>
+    <lastmod>2022-04-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://skyaerope.github.io/p/dstcrockpot/</loc>
-    <lastmod>2021-07-15T00:00:00+00:00</lastmod>
+    <loc>https://skae.top/tags/%E9%A5%A5%E8%8D%92/</loc>
+    <lastmod>2022-04-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://skyaerope.github.io/tags/%E9%A5%A5%E8%8D%92/</loc>
-    <lastmod>2021-07-15T00:00:00+00:00</lastmod>
+    <loc>https://skae.top/categories/%E9%A5%A5%E8%8D%92/</loc>
+    <lastmod>2022-04-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://skyaerope.github.io/categories/%E9%A5%A5%E8%8D%92/</loc>
-    <lastmod>2021-07-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://skyaerope.github.io/p/dstcmd/</loc>
+    <loc>https://skae.top/p/dstcmd/</loc>
     <lastmod>2021-07-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://skyaerope.github.io/page/</loc>
+    <loc>https://skae.top/page/</loc>
     <lastmod>2021-04-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://skyaerope.github.io/%E5%85%B3%E4%BA%8E/</loc>
+    <loc>https://skae.top/%E5%85%B3%E4%BA%8E/</loc>
     <lastmod>2021-04-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://skyaerope.github.io/p/dibox/</loc>
+    <loc>https://skae.top/p/dibox/</loc>
     <lastmod>2021-04-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://skyaerope.github.io/tags/%E7%BD%91%E7%9B%98/</loc>
+    <loc>https://skae.top/tags/%E7%BD%91%E7%9B%98/</loc>
     <lastmod>2021-04-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://skyaerope.github.io/tags/%E8%B5%84%E6%BA%90/</loc>
+    <loc>https://skae.top/tags/%E8%B5%84%E6%BA%90/</loc>
     <lastmod>2021-04-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://skyaerope.github.io/categories/zy/</loc>
+    <loc>https://skae.top/categories/zy/</loc>
     <lastmod>2021-04-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://skyaerope.github.io/tags/markdown/</loc>
+    <loc>https://skae.top/tags/markdown/</loc>
     <lastmod>2021-04-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://skyaerope.github.io/p/md-tutorial/</loc>
+    <loc>https://skae.top/p/md-tutorial/</loc>
     <lastmod>2021-04-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://skyaerope.github.io/categories/jc/</loc>
+    <loc>https://skae.top/categories/jc/</loc>
     <lastmod>2021-04-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://skyaerope.github.io/categories/hugo/</loc>
+    <loc>https://skae.top/categories/hugo/</loc>
     <lastmod>2021-04-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://skyaerope.github.io/tags/hugo/</loc>
+    <loc>https://skae.top/tags/hugo/</loc>
     <lastmod>2021-04-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://skyaerope.github.io/p/create-hugo/</loc>
+    <loc>https://skae.top/p/create-hugo/</loc>
     <lastmod>2021-04-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://skyaerope.github.io/p/ias/</loc>
+    <loc>https://skae.top/p/ias/</loc>
     <lastmod>2021-04-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://skyaerope.github.io/p/teracloud/</loc>
+    <loc>https://skae.top/p/teracloud/</loc>
     <lastmod>2021-02-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://skyaerope.github.io/tags/%E5%85%8D%E8%B4%B9/</loc>
+    <loc>https://skae.top/tags/%E5%85%8D%E8%B4%B9/</loc>
     <lastmod>2021-02-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://skyaerope.github.io/p/jepvp/</loc>
+    <loc>https://skae.top/p/jepvp/</loc>
     <lastmod>2020-11-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://skyaerope.github.io/p/mc-combo/</loc>
+    <loc>https://skae.top/p/mc-combo/</loc>
     <lastmod>2020-11-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://skyaerope.github.io/index.xml</loc>
+    <loc>https://skae.top/index.xml</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://skyaerope.github.io/archives/</loc>
+    <loc>https://skae.top/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://skyaerope.github.io/categories/test/</loc>
+    <loc>https://skae.top/categories/test/</loc>
   </url><url>
-    <loc>https://skyaerope.github.io/search/</loc>
+    <loc>https://skae.top/search/</loc>
   </url>
 </urlset>

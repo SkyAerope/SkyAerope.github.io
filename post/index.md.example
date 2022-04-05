@@ -1,0 +1,20 @@
+---
+
+title: "文章标题"           # 文章标题
+author: "作者"              # 文章作者
+description : "描述信息"    # 文章描述信息
+date: 2021-04-04            # 文章编写日期
+lastmod: 2021-04-04         # 文章修改日期
+slug: something             # 网址后面的
+image: 同目录图片名.jpg     # 文章图片
+tags: 
+    - 标签1
+categories:
+    - 分类1
+keywords: 
+    - 关键字1
+next: /p/slug               # 下一篇博客地址
+prev: /p/slug               # 上一篇博客地址
+---
+
+Markdown正文

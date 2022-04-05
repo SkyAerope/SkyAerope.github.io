@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="zh-cn">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='一些..桶？'><title>Linux中的虚拟设备/dev/null、/dev/zero、/dev/random和/dev/urandom</title>
 
-<link rel='canonical' href='https://skyaerope.github.io/p/linux-bucket/'>
+<link rel='canonical' href='https://skae.top/p/linux-bucket/'>
 
 <link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Linux中的虚拟设备/dev/null、/dev/zero、/dev/random和/dev/urandom'>
 <meta property='og:description' content='一些..桶？'>
-<meta property='og:url' content='https://skyaerope.github.io/p/linux-bucket/'>
+<meta property='og:url' content='https://skae.top/p/linux-bucket/'>
 <meta property='og:site_name' content='^薄荷布丁^'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Linux' /><meta property='article:tag' content='教程' /><meta property='article:published_time' content='2021-11-13T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2021-11-13T00:00:00&#43;00:00'/>
-<meta name="twitter:title" content="Linux中的虚拟设备/dev/null、/dev/zero、/dev/random和/dev/urandom">
+<meta name="twitter:site" content="@SAerope">
+    <meta name="twitter:creator" content="@SAerope"><meta name="twitter:title" content="Linux中的虚拟设备/dev/null、/dev/zero、/dev/random和/dev/urandom">
 <meta name="twitter:description" content="一些..桶？">
     <link rel="shortcut icon" href="https://box.sllzy.top/favicon.ico" />
 
@@ -71,7 +72,7 @@
                 
             </figure>
         
-        <h1 class="site-name"><a href="https://skyaerope.github.io">^薄荷布丁^</a></h1>
+        <h1 class="site-name"><a href="https://skae.top">^薄荷布丁^</a></h1>
         <h2 class="site-description">谁会用薄荷做布丁呢？</h2>
     </header>
 
@@ -239,28 +240,28 @@
 <p>下面介绍三个常用的虚拟设备：</p>
 <p><strong>/dev/null</strong><br>
 “空”设备，也有人称它为黑洞。任何输入到这个 “设备” 的数据都将被直接丢弃。最常用的用法是把不需要的输出重定向到这个文件。例如：</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ run.sh 1&gt;/dev/null 2&gt;<span class="p">&amp;</span><span class="m">1</span>  <span class="c1">#将标准输出和错误输出重定向到/dev/null，运行这个脚本不会输出任何信息到终端</span>
-</code></pre></div><p><strong>/dev/zero</strong><br>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ run.sh 1&gt;/dev/null 2&gt;<span class="p">&amp;</span><span class="m">1</span>  <span class="c1">#将标准输出和错误输出重定向到/dev/null，运行这个脚本不会输出任何信息到终端</span>
+</span></span></code></pre></div><p><strong>/dev/zero</strong><br>
 “零” 设备，可以无限的提供空字符（0x00，ASCII 代码 NUL）。常用来生成一个特定大小的文件。例如：</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ dd <span class="k">if</span><span class="o">=</span>/dev/zero <span class="nv">of</span><span class="o">=</span>./output.txt <span class="nv">bs</span><span class="o">=</span><span class="m">1024</span> <span class="nv">count</span><span class="o">=</span><span class="m">1</span> <span class="c1">#产生一个1k大小的文件output.txt</span>
-</code></pre></div><p><strong>/dev/random 和 / dev/urandom</strong><br>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ dd <span class="k">if</span><span class="o">=</span>/dev/zero <span class="nv">of</span><span class="o">=</span>./output.txt <span class="nv">bs</span><span class="o">=</span><span class="m">1024</span> <span class="nv">count</span><span class="o">=</span><span class="m">1</span> <span class="c1">#产生一个1k大小的文件output.txt</span>
+</span></span></code></pre></div><p><strong>/dev/random 和 / dev/urandom</strong><br>
 随机数设备，提供不间断的随机字节流。二者的区别是 / dev/random 产生随机数据依赖系统中断，当系统中断不足时，/dev/random 设备会 “挂起”，因而产生数据速度较慢，但随机性好；/dev/urandom 不依赖系统中断，数据产生速度快，但随机性较低。<br>
 读取这两个文件的输出如下：</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ cat /dev/random <span class="p">|</span> od -x
-<span class="m">0000000</span> 34fa b5ea <span class="m">0901</span> b7e0 27a9 623a <span class="m">0879</span> d9eb
-<span class="m">0000020</span> d212 4f6f d928 <span class="m">6637</span> 84a4 8ec5 fc2c <span class="m">4896</span>
-$ cat /dev/urandom <span class="p">|</span> od -x <span class="p">|</span> head -n <span class="m">5</span>
-<span class="m">0000000</span> <span class="m">8048</span> 4dbd 07c9 <span class="m">2119</span> 02d0 221b 89ba af7f
-<span class="m">0000020</span> 3d6f 6a72 <span class="m">3752</span> 4a09 5a47 a3fb dc98 ed9f
-<span class="m">0000040</span> f3e8 e82d <span class="m">6748</span> 2e14 de80 <span class="m">7554</span> bb52 f56c
-<span class="m">0000060</span> de73 0e51 262f 5a63 af69 b45c ee49 c1bf
-<span class="m">0000100</span> 76b4 6db5 4e5b e438 70fb d207 a28c 04a8
-</code></pre></div><p>在上面的例子中，读取 / dev/random 文件在输出了两行之后就停住了（系统中断不足），而 / dev/urandom 产生数据速度很快，没有任何停顿。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ cat /dev/random <span class="p">|</span> od -x
+</span></span><span class="line"><span class="cl"><span class="m">0000000</span> 34fa b5ea <span class="m">0901</span> b7e0 27a9 623a <span class="m">0879</span> d9eb
+</span></span><span class="line"><span class="cl"><span class="m">0000020</span> d212 4f6f d928 <span class="m">6637</span> 84a4 8ec5 fc2c <span class="m">4896</span>
+</span></span><span class="line"><span class="cl">$ cat /dev/urandom <span class="p">|</span> od -x <span class="p">|</span> head -n <span class="m">5</span>
+</span></span><span class="line"><span class="cl"><span class="m">0000000</span> <span class="m">8048</span> 4dbd 07c9 <span class="m">2119</span> 02d0 221b 89ba af7f
+</span></span><span class="line"><span class="cl"><span class="m">0000020</span> 3d6f 6a72 <span class="m">3752</span> 4a09 5a47 a3fb dc98 ed9f
+</span></span><span class="line"><span class="cl"><span class="m">0000040</span> f3e8 e82d <span class="m">6748</span> 2e14 de80 <span class="m">7554</span> bb52 f56c
+</span></span><span class="line"><span class="cl"><span class="m">0000060</span> de73 0e51 262f 5a63 af69 b45c ee49 c1bf
+</span></span><span class="line"><span class="cl"><span class="m">0000100</span> 76b4 6db5 4e5b e438 70fb d207 a28c 04a8
+</span></span></code></pre></div><p>在上面的例子中，读取 / dev/random 文件在输出了两行之后就停住了（系统中断不足），而 / dev/urandom 产生数据速度很快，没有任何停顿。</p>
 <p>下面这个例子，利用 / dev/urandom 设备产生一个 128 位的随机字符串：</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ <span class="nv">str</span><span class="o">=</span><span class="k">$(</span>cat /dev/urandom <span class="p">|</span> od -x <span class="p">|</span> tr -d <span class="s1">&#39; &#39;</span> <span class="p">|</span> head -n 1<span class="k">)</span>
-$ <span class="nb">echo</span> <span class="si">${</span><span class="nv">str</span><span class="p">:</span><span class="nv">7</span><span class="si">}</span>
-17539187d2e8b8e26d49bec90465c14d
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ <span class="nv">str</span><span class="o">=</span><span class="k">$(</span>cat /dev/urandom <span class="p">|</span> od -x <span class="p">|</span> tr -d <span class="s1">&#39; &#39;</span> <span class="p">|</span> head -n 1<span class="k">)</span>
+</span></span><span class="line"><span class="cl">$ <span class="nb">echo</span> <span class="si">${</span><span class="nv">str</span><span class="p">:</span><span class="nv">7</span><span class="si">}</span>
+</span></span><span class="line"><span class="cl">17539187d2e8b8e26d49bec90465c14d
+</span></span></code></pre></div><blockquote>
 <p>本文由 <a class="link" href="http://ksria.com/simpread/"  target="_blank" rel="noopener"
     >简悦 SimpRead</a> 转码， 原文地址 <a class="link" href="https://blog.csdn.net/sinat_26058371/article/details/86754683"  target="_blank" rel="noopener"
     >blog.csdn.net</a></p>
@@ -328,6 +329,28 @@ $ <span class="nb">echo</span> <span class="si">${</span><span class="nv">str</s
             <div class="flex article-list--tile">
                 
                     
+<article class="has-image">
+    <a href="/p/shell-chinese/">
+        
+        
+            <div class="article-image">
+                <img src="/p/shell-chinese/00.a1387487bd6e03411167b9bf5fbfcebc_huefc9290d81713b319ab68a7f845bb37c_267518_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="shell-chinese" 
+                        data-hash="md5-oTh0h71uA0ERZ7m/X7/OvA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Ubuntu改语言为中文</h2>
+        </div>
+    </a>
+</article>
+                
+                    
 <article class="">
     <a href="/p/linux-apt-error/">
         
@@ -352,13 +375,23 @@ $ <span class="nb">echo</span> <span class="si">${</span><span class="nv">str</s
 </article>
                 
                     
-<article class="">
-    <a href="/p/shell-chinese/">
+<article class="has-image">
+    <a href="/p/mcsvspeedup/">
         
+        
+            <div class="article-image">
+                <img src="/p/mcsvspeedup/00.2c6ef59afe74c903befe2329e8023919_hu63aa5994080ad5065e8069b1db94e92d_1600379_250x150_fill_q75_box_smart1.jpeg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="mcsvspeedup" 
+                        data-hash="md5-LG71mv50yQO&#43;/iMp6AI5GQ==">
+                
+            </div>
         
 
         <div class="article-details">
-            <h2 class="article-title">shell 中改语言为中文</h2>
+            <h2 class="article-title">《我的世界》服务器优化教程</h2>
         </div>
     </a>
 </article>
@@ -369,7 +402,7 @@ $ <span class="nb">echo</span> <span class="si">${</span><span class="nv">str</s
         
         
             <div class="article-image">
-                <img src="/p/dstcrockpot/00.bf744c9169afd89aa7eaa9cedd7191b7_hu59df01dd9cfb485ca1960cb6f6bf535d_181785_250x150_fill_box_smart1_2.png" 
+                <img src="/p/dstcrockpot/00.bf744c9169afd89aa7eaa9cedd7191b7_hu59df01dd9cfb485ca1960cb6f6bf535d_181785_250x150_fill_box_smart1_3.png" 
                         width="250" 
                         height="150" 
                         loading="lazy" 
@@ -381,28 +414,6 @@ $ <span class="nb">echo</span> <span class="si">${</span><span class="nv">str</s
 
         <div class="article-details">
             <h2 class="article-title">烹饪锅食谱</h2>
-        </div>
-    </a>
-</article>
-                
-                    
-<article class="has-image">
-    <a href="/p/dstcmd/">
-        
-        
-            <div class="article-image">
-                <img src="/p/dstcmd/00.f93e76c6db2b3e0c0d927428570cfdeb_hu98af69dd04e5bb722241122ff4aea059_205115_250x150_fill_box_smart1_2.png" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy" 
-                        data-key="dstcmd" 
-                        data-hash="md5-&#43;T52xtsrPgwNknQoVwz96w==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">饥荒联机版中的命令</h2>
         </div>
     </a>
 </article>

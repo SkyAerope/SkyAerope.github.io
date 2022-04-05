@@ -2,17 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on ^薄荷布丁^</title>
-    <link>https://skyaerope.github.io/post/</link>
+    <link>https://skae.top/post/</link>
     <description>Recent content in Posts on ^薄荷布丁^</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 13 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://skyaerope.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 05 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://skae.top/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ubuntu改语言为中文</title>
+      <link>https://skae.top/p/shell-chinese/</link>
+      <pubDate>Tue, 05 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://skae.top/p/shell-chinese/</guid>
+      <description>1. 首先安装中文字体支持的软件包 sudo apt-get install -y ttf-wqy-zenhei language-pack-zh-hant language-pack-zh-hans 2. 然后用编辑器修改/etc/environment sudo vim /etc/environment 被修改的文件没有后缀名，请注意
+你可以看到第1行有如下内容
+PATH=&amp;#34;/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games&amp;#34; 接下来要做就是，按i进入编辑模式，在这一行下面添加
+LANG=&amp;#34;zh_CN.UTF-8&amp;#34; LANGUAGE=&amp;#34;zh_CN:zh:en_US:en&amp;#34; ESC，:wq或者ZZ保存
+3. 最后执行 sudo dpkg-reconfigure locales 一直点回车，直到他那个[more]变成了你选择的提示框
+然后输入487与488 ，回车
+在第2个界面输入5，回车
+重启一下
+至此，中文语言切换完毕</description>
+    </item>
+    
+    <item>
+      <title>《我的世界》服务器优化教程</title>
+      <link>https://skae.top/p/mcsvspeedup/</link>
+      <pubDate>Tue, 05 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://skae.top/p/mcsvspeedup/</guid>
+      <description>系统的选择 　（网页后台可以跳过本段）关于系统的选择，Linux 类系统（Centos、Redhat 等）固然高效、稳定，但选择系统也一定要考虑到自己的熟悉程度和学习能力。不要盲目为了高效而选择一个自己完全不熟悉甚至从未使用过的系统，一旦出现了突发情况，原本只需要几分钟解决的问题由于不熟悉系统的操作用几个小时来解决，这样真的合适么？在内存足够使用的情况下，Windows 和 Linux 开服的性能差距几乎可以忽略。但是如果你熟悉 Linux 的操作，我依然会推荐你使用 Linux 系统，毕竟大服需要的 Mysql、Redis 在 Linux 下的性能往往高过 Windows 不少。如果你有较强的学习能力，打算入坑 Linux 开服，我会推荐你使用 Centos6.6（稳定性突出、可靠性不俗、大量教程和文档）。
+JVM 版本的选择 　（网页后台可以跳过本段）JVM（Java Virtual Machine）也就是 Java 虚拟机，俗称 Java 运行环境。关于选择 JRE 还是 JDK 的选择，我推荐使用 JDK，JDK 包括运行环境（JRE），在此基础上增加了一些性能调优工具如 VisualVM。而 JVM 的版本，非常不推荐使用 Java6，因为有不少插件已经放弃了 Java6 的支持。Java7 和 Java8 则是不错的选择，如果不是模组服务器，推荐使用 Java8，Java8 相比 Java7 主要的性能提升便在于 HashMap 上，而无论 Minecraft 服务端本身还是插件都大量使用了 HashMap。所以对于 Minecraft 服务器来说，使用 Java8 带来的性能提升还是比较可观的。
+服务端的选择 　从服务端的选择开始就注定了性能优劣的起步水平，现在依然有不少人认为 CraftBukkit（水桶服）的兼容性、稳定性要远远好于 Spigot（水龙头）。然而这是一个误区，Spigot 是在 CraftBukkit 基础上优化而来的，几乎 100% 兼容原有的插件 API，所以可以认为只要同版本水桶服能用的插件就可以在 Spigot 上运行。如果你选择使用 1.</description>
+    </item>
+    
     <item>
       <title>Linux 报错 Certificate verification failed The certificate is NOT trusted.</title>
-      <link>https://skyaerope.github.io/p/linux-apt-error/</link>
+      <link>https://skae.top/p/linux-apt-error/</link>
       <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://skyaerope.github.io/p/linux-apt-error/</guid>
+      <guid>https://skae.top/p/linux-apt-error/</guid>
       <description>原因为未安装 ca-certificates
 可以先编辑 /etc/apt/sources.list 文件临时使用 http 源
 nano /etc/apt/sources.list 或者
@@ -25,10 +53,10 @@ deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster main contrib non-free de
     
     <item>
       <title>Linux中的虚拟设备/dev/null、/dev/zero、/dev/random和/dev/urandom</title>
-      <link>https://skyaerope.github.io/p/linux-bucket/</link>
+      <link>https://skae.top/p/linux-bucket/</link>
       <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://skyaerope.github.io/p/linux-bucket/</guid>
+      <guid>https://skae.top/p/linux-bucket/</guid>
       <description>Unix/Linux 将每一个设备都当成一个文件，放在 / dev 目录下。这些文件有的对应着一个真实存在的物理设备；有的则代表一个虚拟设备，提供一些特定的功能。
 下面介绍三个常用的虚拟设备：
 /dev/null
@@ -43,10 +71,10 @@ $ cat /dev/random | od -x 0000000 34fa b5ea 0901 b7e0 27a9 623a 0879 d9eb 000002
     
     <item>
       <title>ncat(nc) 命令使用方法</title>
-      <link>https://skyaerope.github.io/p/ncat/</link>
+      <link>https://skae.top/p/ncat/</link>
       <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://skyaerope.github.io/p/ncat/</guid>
+      <guid>https://skae.top/p/ncat/</guid>
       <description>ncat 或者说 nc 是一款功能类似 cat 的工具，但是是用于网络的。它是一款拥有多种功能的 CLI 工具，可以用来在网络上读、写以及重定向数据。 它被设计成可以被脚本或其他程序调用的可靠的后端工具。同时由于它能创建任意所需的连接，因此也是一个很好的网络调试工具。
 ncat/nc 既是一个端口扫描工具，也是一款安全工具，还是一款监测工具，甚至可以做为一个简单的 TCP 代理。 由于有这么多的功能，它被誉为是网络界的瑞士军刀。 这是每个系统管理员都应该知道并且掌握它。
 在大多数 Debian 发行版中，nc 是默认可用的，它会在安装系统的过程中自动被安装。 但是在 CentOS 7/RHEL 7 的最小化安装中，nc 并不会默认被安装。 你需要用下列命令手工安装。
@@ -62,40 +90,31 @@ ncat 192.168.1.100 80 这会创建一个连接，连接到 IP 为 192.</descript
     </item>
     
     <item>
-      <title>shell 中改语言为中文</title>
-      <link>https://skyaerope.github.io/p/shell-chinese/</link>
-      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://skyaerope.github.io/p/shell-chinese/</guid>
-      <description>LANG=zh_CN.GB18030 </description>
-    </item>
-    
-    <item>
       <title>IceArana Server</title>
-      <link>https://skyaerope.github.io/p/iasv/</link>
+      <link>https://skae.top/p/iasv/</link>
       <pubDate>Wed, 25 Aug 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://skyaerope.github.io/p/iasv/</guid>
+      <guid>https://skae.top/p/iasv/</guid>
       <description>IceArana Server IceArana Server，冰月生电服，简称IAS，是由服主喵喵子与镜花水月于2020.7.1共同发起的项目。该服务期旨在为我的世界基岩版红石，建筑，生存同好玩家提供一个可供游玩，拥有良好氛围的服务器。
 成员列表    玩家代号（Xbox id） 玩家代号（Xbox id）     kazariAalto Arguedknight777   Sanwu Qian SkyCloud2007193   huiyulanse CHARLIY_EX   SkyAerope Spring Leaf Ec   postcardB soliloquy20   KJLuoQing BudgetGnad9879   TenOfSpades7387 mnllhh   UnabatedAtol952 McCold snowy650   Areasta0207 chaowufangnai   Polaris of u Dio zillk   Repforce2     赞助 打开赞助链接</description>
     </item>
     
     <item>
       <title>烹饪锅食谱</title>
-      <link>https://skyaerope.github.io/p/dstcrockpot/</link>
+      <link>https://skae.top/p/dstcrockpot/</link>
       <pubDate>Thu, 15 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://skyaerope.github.io/p/dstcrockpot/</guid>
-      <description>以下是烹饪锅食谱的列表：
-   食物 名称 DLC       需要食材* 食材限制      芦笋汤  +20 +18.75 +5 15 10 10 ×1×0.5(×1.5) ()    培根蛋  +20 +75 +5 20 40 10 × 1.5 × 2.0 No     香蕉冰棒  +20 +12.5 +33 10 10 20 ( ) × 1 × 1 × 1 No     浓汤  +60 +18.</description>
+      <guid>https://skae.top/p/dstcrockpot/</guid>
+      <description>烹饪锅食谱 以下是烹饪锅食谱的列表：
+   食物 名称 DLC       需要食材 1 食材限制      芦笋汤  +20 +18.75 +5 15 10 10 ×1×0.5(×1.5) ()    培根蛋  +20 +75 +5 20 40 10 × 1.5 × 2.0 No     香蕉冰棒  +20 +12.5 +33 10 10 20 ( ) × 1 × 1 × 1 No     浓汤  +60 +18.</description>
     </item>
     
     <item>
       <title>饥荒联机版中的命令</title>
-      <link>https://skyaerope.github.io/p/dstcmd/</link>
+      <link>https://skae.top/p/dstcmd/</link>
       <pubDate>Mon, 12 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://skyaerope.github.io/p/dstcmd/</guid>
+      <guid>https://skae.top/p/dstcmd/</guid>
       <description>命令控制台默认是启用状态。如果它因为任何原因没有处于开启状态，你首先要做的就是调整你存档中的 settings.ini 文件。它可以在 &amp;ldquo;DoNotStarveTogether&amp;rdquo; 文件夹里被找到，位于以下路径：
  Windows, Mac: \Klei\DoNotStarveTogether\client.ini
 Linux: ~/.klei/DoNotStarve/client.ini  找到 settings.ini 然后用记事本打开。找到 section 部分，并确保在下面有ENABLECONSOLE = true。如果它它被设置为 false ，将它改为 true 并保存。然后在游戏中打开控制台，英文键盘下默认按 &amp;ldquo;~&amp;rdquo; 键。这可以随时在控制菜单中修改。
@@ -103,18 +122,18 @@ Linux: ~/.klei/DoNotStarve/client.ini  找到 settings.ini 然后用记事本�
 注： * 你在重新加载世界后必须重新输入每一个命令。
  Lua 支持可变数量参数的函数，例如，你只想生成一个野牛的预设，你可以不填 &amp;ldquo;amount&amp;rdquo; 参数：&amp;ldquo;c_spawn(&amp;lsquo;beefalo&amp;rsquo;)&amp;quot;。 如果你不是主机（或者它是一个专用服务器，你是这个服务器的管理员），大部分命令需要远程执行。在控制台中按 Ctrl 来切换远程命令模式。一小部分命令（例如显示地图）仍然可以在本地模式下完成。  远程命令模式
 许多饥荒命令 仍然在 DST（多人版饥荒）中可用，因此你仍然可以阅读它。
-简单命令  生成实例  c_spawn(&amp;quot;prefab&amp;quot;,amount)利用 DebugSpawn(&amp;ldquo;预设&amp;rdquo;) 命令，在鼠标所指处生成一定数量被指定的 &amp;ldquo;预设&amp;rdquo;。
- 获得物品  c_give(&amp;quot;prefab&amp;quot;,amount)在你的物品栏中生成一定数量被指定的 &amp;ldquo;预设&amp;rdquo;。只适用于可以被储存在物品栏的背包 和物品 。
- 脚本（未测试）  c_doscenario(scenario)应用一个选择的脚本并执行它。
- 生命值  c_sethea​lth(percent)用百分比设置你的生命值。注：使用分数 0.</description>
+简单命令  生成实例  c_spawn(&amp;#34;prefab&amp;#34;,amount) 利用 DebugSpawn(&amp;ldquo;预设&amp;rdquo;) 命令，在鼠标所指处生成一定数量被指定的 &amp;ldquo;预设&amp;rdquo;。
+ 获得物品  c_give(&amp;#34;prefab&amp;#34;,amount) 在你的物品栏中生成一定数量被指定的 &amp;ldquo;预设&amp;rdquo;。只适用于可以被储存在物品栏的背包 和物品 。
+ 脚本（未测试）  c_doscenario(scenario) 应用一个选择的脚本并执行它。
+ 生命值  c_sethea​lth(percent) 用百分比设置你的生命值。注：使用分数 0.</description>
     </item>
     
     <item>
       <title>布丁盘盘</title>
-      <link>https://skyaerope.github.io/p/dibox/</link>
+      <link>https://skae.top/p/dibox/</link>
       <pubDate>Sat, 10 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://skyaerope.github.io/p/dibox/</guid>
+      <guid>https://skae.top/p/dibox/</guid>
       <description>https://box.sllzy.top/
 注册送5G
  不限速 分享文件等基本功能 离线下载 在线压缩 在线解压 打包下载 WebDav  </description>
@@ -122,10 +141,10 @@ Linux: ~/.klei/DoNotStarve/client.ini  找到 settings.ini 然后用记事本�
     
     <item>
       <title>Markdown语法教程</title>
-      <link>https://skyaerope.github.io/p/md-tutorial/</link>
+      <link>https://skae.top/p/md-tutorial/</link>
       <pubDate>Fri, 09 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://skyaerope.github.io/p/md-tutorial/</guid>
+      <guid>https://skae.top/p/md-tutorial/</guid>
       <description>Markdown 标题 Markdown 标题有两种格式。
 使用 = 和 - 标记一级和二级标题 = 和 - 标记语法格式如下：
 我展示的是一级标题 ================= 我展示的是二级标题 ----------------- 显示效果如下：
@@ -142,10 +161,10 @@ Linux: ~/.klei/DoNotStarve/client.ini  找到 settings.ini 然后用记事本�
     
     <item>
       <title>Hugo搭建参考资料</title>
-      <link>https://skyaerope.github.io/p/create-hugo/</link>
+      <link>https://skae.top/p/create-hugo/</link>
       <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://skyaerope.github.io/p/create-hugo/</guid>
+      <guid>https://skae.top/p/create-hugo/</guid>
       <description>参考资料 主题： https://github.com/CaiJimmy/hugo-theme-stack
 主题官方文档： https://docs.stack.jimmycai.com/v/zh-cn/
  安装主题后，启动一个临时服务器（不要正式使用）
@@ -163,20 +182,20 @@ markdown教程： https://www.runoob.com/markdown/md-tutorial.html</description>
     
     <item>
       <title>IceArana Server赞助</title>
-      <link>https://skyaerope.github.io/p/ias/</link>
+      <link>https://skae.top/p/ias/</link>
       <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://skyaerope.github.io/p/ias/</guid>
+      <guid>https://skae.top/p/ias/</guid>
       <description>赞助二维码 SkyAerope（栗子） 支付宝KazariAalto（喵喵子） 微信
 赞助名单    赞助者 金额（元） 赞助时间     喵喵子 300.00 2021/02/15   南天 256.00 2021/03/08   Areasta0207 20.40 2021/03/08   破晓之光 12.00 2021/03/08   （服务器挖XMR收益） 100.00 2021/03/21                   说明  所有服务器成员及非服务器成员均可以向服务器赞助/打赏，赞助/打赏后的资金支付给SkyAerope（栗子）仅用于支持服务器运营。所有赞助/打赏均以自愿为前提，并不附带任何特殊性质或权力。官号直播抽取比率日后再议。 上面放有SkyAerope（栗子）的支付宝收款码和KazariAalto（喵喵子）的微信收款码，赞助请扫。 赞助名单为人工编写，不会即时呈现。赞助后请在群内喊一声，群内消息过多可以私聊。 由于阿里云只能使用支付宝付款，所以使用微信赞助，赞助款需要通过KazariAalto（喵喵子）进行周转，写入赞助名单会略有延迟。  </description>
     </item>
     
     <item>
       <title>TeraCLOUD网盘，免费10G，支持webdav</title>
-      <link>https://skyaerope.github.io/p/teracloud/</link>
+      <link>https://skae.top/p/teracloud/</link>
       <pubDate>Sun, 14 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://skyaerope.github.io/p/teracloud/</guid>
+      <guid>https://skae.top/p/teracloud/</guid>
       <description>网址：https://teracloud.jp/en/
 有点卡所以要多等一会
  注册填写邀请码【WN8WP】可以多得5G空间
@@ -189,10 +208,10 @@ markdown教程： https://www.runoob.com/markdown/md-tutorial.html</description>
     
     <item>
       <title>Java版PVP材质包</title>
-      <link>https://skyaerope.github.io/p/jepvp/</link>
+      <link>https://skae.top/p/jepvp/</link>
       <pubDate>Fri, 27 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://skyaerope.github.io/p/jepvp/</guid>
+      <guid>https://skae.top/p/jepvp/</guid>
       <description>16x PvP Pack:  Henry&amp;rsquo;s 1.14Default Edit: https://lanzous.com/ic8y4pi
 Emma&amp;rsquo;s Default edit: https://lanzous.com/ibjrbxg
 idyl 16x: https://lanzous.com/ib9o06f
@@ -216,10 +235,10 @@ Sprint 32x:
     
     <item>
       <title>Minecraft 黑卡获取教程</title>
-      <link>https://skyaerope.github.io/p/mc-combo/</link>
+      <link>https://skae.top/p/mc-combo/</link>
       <pubDate>Sat, 21 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://skyaerope.github.io/p/mc-combo/</guid>
+      <guid>https://skae.top/p/mc-combo/</guid>
       <description>黑卡获取教程：   我们先打开浏览器~
   第一步，在浏览器里安装谷歌访问助手插件，打开官网 ggfwzs.com，在&amp;quot;在线安装2.1.9&amp;quot;点击你的浏览器，提示激活不用管【如果没有此插件后面几步将无法进行】
    上面解决方案不可用，目前另外的可用解决方案： https://googlehelper.net/

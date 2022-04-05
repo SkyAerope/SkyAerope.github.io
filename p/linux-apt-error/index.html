@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="zh-cn">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='报错的解决方案'><title>Linux 报错 Certificate verification failed The certificate is NOT trusted.</title>
 
-<link rel='canonical' href='https://skyaerope.github.io/p/linux-apt-error/'>
+<link rel='canonical' href='https://skae.top/p/linux-apt-error/'>
 
 <link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Linux 报错 Certificate verification failed The certificate is NOT trusted.'>
 <meta property='og:description' content='报错的解决方案'>
-<meta property='og:url' content='https://skyaerope.github.io/p/linux-apt-error/'>
+<meta property='og:url' content='https://skae.top/p/linux-apt-error/'>
 <meta property='og:site_name' content='^薄荷布丁^'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Linux' /><meta property='article:tag' content='教程' /><meta property='article:tag' content='解决方案' /><meta property='article:published_time' content='2021-11-13T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2021-11-13T00:00:00&#43;00:00'/>
-<meta name="twitter:title" content="Linux 报错 Certificate verification failed The certificate is NOT trusted.">
+<meta name="twitter:site" content="@SAerope">
+    <meta name="twitter:creator" content="@SAerope"><meta name="twitter:title" content="Linux 报错 Certificate verification failed The certificate is NOT trusted.">
 <meta name="twitter:description" content="报错的解决方案">
     <link rel="shortcut icon" href="https://box.sllzy.top/favicon.ico" />
 
@@ -71,7 +72,7 @@
                 
             </figure>
         
-        <h1 class="site-name"><a href="https://skyaerope.github.io">^薄荷布丁^</a></h1>
+        <h1 class="site-name"><a href="https://skae.top">^薄荷布丁^</a></h1>
         <h2 class="site-description">谁会用薄荷做布丁呢？</h2>
     </header>
 
@@ -236,11 +237,11 @@
     <section class="article-content">
     <p>原因为未安装 ca-certificates</p>
 <p>可以先编辑 <code>/etc/apt/sources.list</code> 文件临时使用 http 源</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">nano /etc/apt/sources.list
-</code></pre></div><p>或者</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">vim /etc/apt/sources.list
-</code></pre></div><p>粘贴或者更改源（<code>https://</code> 到 <code>http://</code>)</p>
-<pre><code>deb http://mirrors.tuna.tsinghua.edu.cn/debian/ buster main contrib non-free
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">nano /etc/apt/sources.list
+</span></span></code></pre></div><p>或者</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">vim /etc/apt/sources.list
+</span></span></code></pre></div><p>粘贴或者更改源（<code>https://</code> 到 <code>http://</code>)</p>
+<pre tabindex="0"><code>deb http://mirrors.tuna.tsinghua.edu.cn/debian/ buster main contrib non-free
 deb http://mirrors.tuna.tsinghua.edu.cn/debian/ buster-updates main contrib non-free
 deb http://mirrors.tuna.tsinghua.edu.cn/debian/ buster-backports main contrib non-free
 deb http://mirrors.tuna.tsinghua.edu.cn/debian-security buster/updates main contrib non-free
@@ -248,10 +249,10 @@ deb http://mirrors.tuna.tsinghua.edu.cn/debian-security buster/updates main cont
 <p>vim使用方法请自行查资料</p>
 </blockquote>
 <p>然后安装 ca-certificates 包（<strong><code>注意：看到有的文章将源改为http便无下文，建议继续执行以下步骤改回https，使用http将大幅度提高网络风险</code></strong>）</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">apt update
-apt install ca-certificates
-</code></pre></div><p>安装完成后编辑源 <code>/etc/apt/sources.list</code></p>
-<pre><code>deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster main contrib non-free
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">apt update
+</span></span><span class="line"><span class="cl">apt install ca-certificates
+</span></span></code></pre></div><p>安装完成后编辑源 <code>/etc/apt/sources.list</code></p>
+<pre tabindex="0"><code>deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster main contrib non-free
 deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-updates main contrib non-free
 deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-backports main contrib non-free
 deb https://mirrors.tuna.tsinghua.edu.cn/debian-security buster/updates main contrib non-free
@@ -326,6 +327,28 @@ deb https://mirrors.tuna.tsinghua.edu.cn/debian-security buster/updates main con
             <div class="flex article-list--tile">
                 
                     
+<article class="has-image">
+    <a href="/p/shell-chinese/">
+        
+        
+            <div class="article-image">
+                <img src="/p/shell-chinese/00.a1387487bd6e03411167b9bf5fbfcebc_huefc9290d81713b319ab68a7f845bb37c_267518_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="shell-chinese" 
+                        data-hash="md5-oTh0h71uA0ERZ7m/X7/OvA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Ubuntu改语言为中文</h2>
+        </div>
+    </a>
+</article>
+                
+                    
 <article class="">
     <a href="/p/linux-bucket/">
         
@@ -350,13 +373,23 @@ deb https://mirrors.tuna.tsinghua.edu.cn/debian-security buster/updates main con
 </article>
                 
                     
-<article class="">
-    <a href="/p/shell-chinese/">
+<article class="has-image">
+    <a href="/p/mcsvspeedup/">
         
+        
+            <div class="article-image">
+                <img src="/p/mcsvspeedup/00.2c6ef59afe74c903befe2329e8023919_hu63aa5994080ad5065e8069b1db94e92d_1600379_250x150_fill_q75_box_smart1.jpeg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="mcsvspeedup" 
+                        data-hash="md5-LG71mv50yQO&#43;/iMp6AI5GQ==">
+                
+            </div>
         
 
         <div class="article-details">
-            <h2 class="article-title">shell 中改语言为中文</h2>
+            <h2 class="article-title">《我的世界》服务器优化教程</h2>
         </div>
     </a>
 </article>
@@ -367,7 +400,7 @@ deb https://mirrors.tuna.tsinghua.edu.cn/debian-security buster/updates main con
         
         
             <div class="article-image">
-                <img src="/p/dstcrockpot/00.bf744c9169afd89aa7eaa9cedd7191b7_hu59df01dd9cfb485ca1960cb6f6bf535d_181785_250x150_fill_box_smart1_2.png" 
+                <img src="/p/dstcrockpot/00.bf744c9169afd89aa7eaa9cedd7191b7_hu59df01dd9cfb485ca1960cb6f6bf535d_181785_250x150_fill_box_smart1_3.png" 
                         width="250" 
                         height="150" 
                         loading="lazy" 
@@ -379,28 +412,6 @@ deb https://mirrors.tuna.tsinghua.edu.cn/debian-security buster/updates main con
 
         <div class="article-details">
             <h2 class="article-title">烹饪锅食谱</h2>
-        </div>
-    </a>
-</article>
-                
-                    
-<article class="has-image">
-    <a href="/p/dstcmd/">
-        
-        
-            <div class="article-image">
-                <img src="/p/dstcmd/00.f93e76c6db2b3e0c0d927428570cfdeb_hu98af69dd04e5bb722241122ff4aea059_205115_250x150_fill_box_smart1_2.png" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy" 
-                        data-key="dstcmd" 
-                        data-hash="md5-&#43;T52xtsrPgwNknQoVwz96w==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">饥荒联机版中的命令</h2>
         </div>
     </a>
 </article>
