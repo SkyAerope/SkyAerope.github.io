@@ -1,27 +1,88 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>解决方案 on ^薄荷布丁^</title>
-    <link>https://skae.top/tags/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link>
-    <description>Recent content in 解决方案 on ^薄荷布丁^</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Sat, 13 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://skae.top/tags/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Linux 报错 Certificate verification failed The certificate is NOT trusted.</title>
-      <link>https://skae.top/p/linux-apt-error/</link>
-      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://skae.top/p/linux-apt-error/</guid>
-      <description>原因为未安装 ca-certificates
-可以先编辑 /etc/apt/sources.list 文件临时使用 http 源
-nano /etc/apt/sources.list 或者
-vim /etc/apt/sources.list 粘贴或者更改源（https:// 到 http://)
-deb http://mirrors.tuna.tsinghua.edu.cn/debian/ buster main contrib non-free deb http://mirrors.tuna.tsinghua.edu.cn/debian/ buster-updates main contrib non-free deb http://mirrors.tuna.tsinghua.edu.cn/debian/ buster-backports main contrib non-free deb http://mirrors.tuna.tsinghua.edu.cn/debian-security buster/updates main contrib non-free  vim使用方法请自行查资料
- 然后安装 ca-certificates 包（注意：看到有的文章将源改为http便无下文，建议继续执行以下步骤改回https，使用http将大幅度提高网络风险）
-apt update apt install ca-certificates 安装完成后编辑源 /etc/apt/sources.list
-deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster main contrib non-free deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-updates main contrib non-free deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-backports main contrib non-free deb https://mirrors.</description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>解决方案 on ^薄荷布丁^</title>
+        <link>https://skae.top/tags/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link>
+        <description>Recent content in 解决方案 on ^薄荷布丁^</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Sat, 13 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://skae.top/tags/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Linux 报错 Certificate verification failed The certificate is NOT trusted.</title>
+        <link>https://skae.top/p/linux-apt-error/</link>
+        <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://skae.top/p/linux-apt-error/</guid>
+        <description>&lt;p&gt;原因为未安装 ca-certificates&lt;/p&gt;
+&lt;p&gt;可以先编辑 &lt;code&gt;/etc/apt/sources.list&lt;/code&gt; 文件临时使用 http 源&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nano /etc/apt/sources.list
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;或者&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vim /etc/apt/sources.list
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;粘贴或者更改源（&lt;code&gt;https://&lt;/code&gt; 到 &lt;code&gt;http://&lt;/code&gt;)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deb http://mirrors.tuna.tsinghua.edu.cn/debian/ buster main contrib non-free
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deb http://mirrors.tuna.tsinghua.edu.cn/debian/ buster-updates main contrib non-free
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deb http://mirrors.tuna.tsinghua.edu.cn/debian/ buster-backports main contrib non-free
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deb http://mirrors.tuna.tsinghua.edu.cn/debian-security buster/updates main contrib non-free
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;vim使用方法请自行查资料&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;然后安装 ca-certificates 包（&lt;strong&gt;&lt;code&gt;注意：看到有的文章将源改为http便无下文，建议继续执行以下步骤改回https，使用http将大幅度提高网络风险&lt;/code&gt;&lt;/strong&gt;）&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apt update
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apt install ca-certificates
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;安装完成后编辑源 &lt;code&gt;/etc/apt/sources.list&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster main contrib non-free
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-updates main contrib non-free
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-backports main contrib non-free
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deb https://mirrors.tuna.tsinghua.edu.cn/debian-security buster/updates main contrib non-free
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;执行&lt;code&gt;apt update&lt;/code&gt;更新，完成&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本文由 &lt;a class=&#34;link&#34; href=&#34;http://ksria.com/simpread/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;简悦 SimpRead&lt;/a&gt; 转码， 原文地址 &lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/qq_19729599/article/details/114682507&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;blog.csdn.net&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

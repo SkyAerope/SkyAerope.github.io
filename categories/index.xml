@@ -1,92 +1,83 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Categories on ^薄荷布丁^</title>
-    <link>https://skae.top/categories/</link>
-    <description>Recent content in Categories on ^薄荷布丁^</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Tue, 05 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://skae.top/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Minecraft</title>
-      <link>https://skae.top/categories/minecraft/</link>
-      <pubDate>Tue, 05 Apr 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://skae.top/categories/minecraft/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>教程</title>
-      <link>https://skae.top/categories/%E6%95%99%E7%A8%8B/</link>
-      <pubDate>Tue, 05 Apr 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://skae.top/categories/%E6%95%99%E7%A8%8B/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>IceArana Server</title>
-      <link>https://skae.top/categories/ias/</link>
-      <pubDate>Wed, 25 Aug 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://skae.top/categories/ias/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Minecraft</title>
-      <link>https://skae.top/categories/mc/</link>
-      <pubDate>Wed, 25 Aug 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://skae.top/categories/mc/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>饥荒</title>
-      <link>https://skae.top/categories/%E9%A5%A5%E8%8D%92/</link>
-      <pubDate>Thu, 15 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://skae.top/categories/%E9%A5%A5%E8%8D%92/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>资源</title>
-      <link>https://skae.top/categories/zy/</link>
-      <pubDate>Sat, 10 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://skae.top/categories/zy/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>教程</title>
-      <link>https://skae.top/categories/jc/</link>
-      <pubDate>Fri, 09 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://skae.top/categories/jc/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hugo</title>
-      <link>https://skae.top/categories/hugo/</link>
-      <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://skae.top/categories/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Test</title>
-      <link>https://skae.top/categories/test/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://skae.top/categories/test/</guid>
-      <description></description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>Categories on ^薄荷布丁^</title>
+        <link>https://skae.top/categories/</link>
+        <description>Recent content in Categories on ^薄荷布丁^</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Tue, 05 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://skae.top/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Minecraft</title>
+        <link>https://skae.top/categories/minecraft/</link>
+        <pubDate>Tue, 05 Apr 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://skae.top/categories/minecraft/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>教程</title>
+        <link>https://skae.top/categories/%E6%95%99%E7%A8%8B/</link>
+        <pubDate>Tue, 05 Apr 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://skae.top/categories/%E6%95%99%E7%A8%8B/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>IceArana Server</title>
+        <link>https://skae.top/categories/ias/</link>
+        <pubDate>Wed, 25 Aug 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://skae.top/categories/ias/</guid>
+        <description>&lt;img src="https://skae.top/categories/ias/ias.jpg" alt="Featured image of post IceArana Server" /&gt;</description>
+        </item>
+        <item>
+        <title>Minecraft</title>
+        <link>https://skae.top/categories/mc/</link>
+        <pubDate>Wed, 25 Aug 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://skae.top/categories/mc/</guid>
+        <description>&lt;img src="https://skae.top/categories/mc/home-hero-1200x600.jpg" alt="Featured image of post Minecraft" /&gt;</description>
+        </item>
+        <item>
+        <title>饥荒</title>
+        <link>https://skae.top/categories/%E9%A5%A5%E8%8D%92/</link>
+        <pubDate>Thu, 15 Jul 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://skae.top/categories/%E9%A5%A5%E8%8D%92/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>资源</title>
+        <link>https://skae.top/categories/zy/</link>
+        <pubDate>Sat, 10 Apr 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://skae.top/categories/zy/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>教程</title>
+        <link>https://skae.top/categories/jc/</link>
+        <pubDate>Fri, 09 Apr 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://skae.top/categories/jc/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Hugo</title>
+        <link>https://skae.top/categories/hugo/</link>
+        <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://skae.top/categories/hugo/</guid>
+        <description>&lt;img src="https://skae.top/categories/hugo/hugo-logo-wide.svg" alt="Featured image of post Hugo" /&gt;</description>
+        </item>
+        <item>
+        <title>Test</title>
+        <link>https://skae.top/categories/test/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://skae.top/categories/test/</guid>
+        <description>&lt;img src="https://skae.top/categories/test/hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg" alt="Featured image of post Test" /&gt;</description>
+        </item>
+        
+    </channel>
 </rss>

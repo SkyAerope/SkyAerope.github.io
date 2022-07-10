@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='一些..桶？'><title>Linux中的虚拟设备/dev/null、/dev/zero、/dev/random和/dev/urandom</title>
 
 <link rel='canonical' href='https://skae.top/p/linux-bucket/'>
 
-<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Linux中的虚拟设备/dev/null、/dev/zero、/dev/random和/dev/urandom'>
+<link rel="stylesheet" href="/scss/style.min.fe253589db5a54c99fe6b16bfbaf0243d856d34f8c07f3534613b39ed043b738.css"><meta property='og:title' content='Linux中的虚拟设备/dev/null、/dev/zero、/dev/random和/dev/urandom'>
 <meta property='og:description' content='一些..桶？'>
 <meta property='og:url' content='https://skae.top/p/linux-bucket/'>
 <meta property='og:site_name' content='^薄荷布丁^'>
@@ -17,8 +17,8 @@
 
     </head>
     <body class="
-    article-page 
-">
+    article-page
+    ">
     <script>
         (function() {
             const colorSchemeKey = 'StackColorScheme';
@@ -41,22 +41,18 @@
         }
     })();
 </script>
-<div class="container main-container flex 
-    
-        on-phone--column extended
-    
-">
-    
-        <aside class="sidebar left-sidebar sticky">
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
     <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
         </span>
     </button>
 
-    <header class="site-info">
+    <header>
         
+            
             <figure class="site-avatar">
+                <a href="/">
                 
                     
                     
@@ -66,23 +62,48 @@
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
-
+                </a>
                 
                     <span class="emoji">🍮</span>
                 
             </figure>
+            
         
-        <h1 class="site-name"><a href="https://skae.top">^薄荷布丁^</a></h1>
-        <h2 class="site-description">谁会用薄荷做布丁呢？</h2>
-    </header>
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">^薄荷布丁^</a></h1>
+            <h2 class="site-description">谁会用薄荷做布丁呢？</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/skyaerope'
+                        target="_blank"
+                        title="GitHub"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
 
-    <ol class="menu" id="main-menu">
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
         
         
         
 
         <li >
-            <a href='/'>
+            <a href='/' >
+                
+                
                 
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
@@ -94,14 +115,16 @@
 
 
                 
-                <span>主页</span>
+                <span>Home</span>
             </a>
         </li>
         
         
 
         <li >
-            <a href='/%E5%85%B3%E4%BA%8E/'>
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
                 
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
@@ -119,7 +142,9 @@
         
 
         <li >
-            <a href='/archives/'>
+            <a href='/archives/' >
+                
+                
                 
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
@@ -138,7 +163,9 @@
         
 
         <li >
-            <a href='/search/'>
+            <a href='/search/' >
+                
+                
                 
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
@@ -156,7 +183,9 @@
         
 
         <li >
-            <a href='/index.xml'>
+            <a href='/index.xml' >
+                
+                
                 
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
@@ -175,7 +204,9 @@
         
 
         <li >
-            <a href='https://travellings.link'>
+            <a href='https://travellings.link' target="_blank">
+                
+                
                 
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-train" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -193,9 +224,11 @@
         </li>
         
 
-        
-            <li id="dark-mode-toggle">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="8" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -203,7 +236,7 @@
 
 
 
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="16" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -211,13 +244,12 @@
 
 
 
-                <span>暗色模式</span>
-            </li>
-        
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
     </ol>
 </aside>
-
-    
 <main class="main full-width">
     <article class="main-article">
     <header class="article-header">
@@ -233,16 +265,38 @@
     </header>
     
 
-    <h2 class="article-title">
-        <a href="/p/linux-bucket/">Linux中的虚拟设备/dev/null、/dev/zero、/dev/random和/dev/urandom</a>
-    </h2>
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/linux-bucket/">Linux中的虚拟设备/dev/null、/dev/zero、/dev/random和/dev/urandom</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            一些..桶？
+        </h3>
+        
+    </div>
 
     
-    <h3 class="article-subtitle">
-        一些..桶？
-    </h3>
     <footer class="article-time">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Nov 13, 2021</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="12" cy="12" r="9" />
   <polyline points="12 7 12 12 15 15" />
@@ -250,24 +304,61 @@
 
 
 
-        <time class="article-time--published">Nov 13, 2021</time>
-    </footer></div>
+                <time class="article-time--reading">
+                    阅读时长: 2 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
 </header>
 
     <section class="article-content">
+    
+    
     <p>Unix/<a class="link" href="https://so.csdn.net/so/search?from=pc_blog_highlight&amp;q=Linux"  target="_blank" rel="noopener"
     >Linux</a> 将每一个设备都当成一个文件，放在 / dev 目录下。这些文件有的对应着一个真实存在的物理设备；有的则代表一个虚拟设备，提供一些特定的功能。</p>
 <p>下面介绍三个常用的虚拟设备：</p>
 <p><strong>/dev/null</strong><br>
 “空”设备，也有人称它为黑洞。任何输入到这个 “设备” 的数据都将被直接丢弃。最常用的用法是把不需要的输出重定向到这个文件。例如：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ run.sh 1&gt;/dev/null 2&gt;<span class="p">&amp;</span><span class="m">1</span>  <span class="c1">#将标准输出和错误输出重定向到/dev/null，运行这个脚本不会输出任何信息到终端</span>
-</span></span></code></pre></div><p><strong>/dev/zero</strong><br>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ run.sh 1&gt;/dev/null 2&gt;<span class="p">&amp;</span><span class="m">1</span>  <span class="c1">#将标准输出和错误输出重定向到/dev/null，运行这个脚本不会输出任何信息到终端</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>/dev/zero</strong><br>
 “零” 设备，可以无限的提供空字符（0x00，ASCII 代码 NUL）。常用来生成一个特定大小的文件。例如：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ dd <span class="k">if</span><span class="o">=</span>/dev/zero <span class="nv">of</span><span class="o">=</span>./output.txt <span class="nv">bs</span><span class="o">=</span><span class="m">1024</span> <span class="nv">count</span><span class="o">=</span><span class="m">1</span> <span class="c1">#产生一个1k大小的文件output.txt</span>
-</span></span></code></pre></div><p><strong>/dev/random 和 / dev/urandom</strong><br>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ dd <span class="k">if</span><span class="o">=</span>/dev/zero <span class="nv">of</span><span class="o">=</span>./output.txt <span class="nv">bs</span><span class="o">=</span><span class="m">1024</span> <span class="nv">count</span><span class="o">=</span><span class="m">1</span> <span class="c1">#产生一个1k大小的文件output.txt</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>/dev/random 和 / dev/urandom</strong><br>
 随机数设备，提供不间断的随机字节流。二者的区别是 / dev/random 产生随机数据依赖系统中断，当系统中断不足时，/dev/random 设备会 “挂起”，因而产生数据速度较慢，但随机性好；/dev/urandom 不依赖系统中断，数据产生速度快，但随机性较低。<br>
 读取这两个文件的输出如下：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ cat /dev/random <span class="p">|</span> od -x
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ cat /dev/random <span class="p">|</span> od -x
 </span></span><span class="line"><span class="cl"><span class="m">0000000</span> 34fa b5ea <span class="m">0901</span> b7e0 27a9 623a <span class="m">0879</span> d9eb
 </span></span><span class="line"><span class="cl"><span class="m">0000020</span> d212 4f6f d928 <span class="m">6637</span> 84a4 8ec5 fc2c <span class="m">4896</span>
 </span></span><span class="line"><span class="cl">$ cat /dev/urandom <span class="p">|</span> od -x <span class="p">|</span> head -n <span class="m">5</span>
@@ -276,12 +367,23 @@
 </span></span><span class="line"><span class="cl"><span class="m">0000040</span> f3e8 e82d <span class="m">6748</span> 2e14 de80 <span class="m">7554</span> bb52 f56c
 </span></span><span class="line"><span class="cl"><span class="m">0000060</span> de73 0e51 262f 5a63 af69 b45c ee49 c1bf
 </span></span><span class="line"><span class="cl"><span class="m">0000100</span> 76b4 6db5 4e5b e438 70fb d207 a28c 04a8
-</span></span></code></pre></div><p>在上面的例子中，读取 / dev/random 文件在输出了两行之后就停住了（系统中断不足），而 / dev/urandom 产生数据速度很快，没有任何停顿。</p>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>在上面的例子中，读取 / dev/random 文件在输出了两行之后就停住了（系统中断不足），而 / dev/urandom 产生数据速度很快，没有任何停顿。</p>
 <p>下面这个例子，利用 / dev/urandom 设备产生一个 128 位的随机字符串：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ <span class="nv">str</span><span class="o">=</span><span class="k">$(</span>cat /dev/urandom <span class="p">|</span> od -x <span class="p">|</span> tr -d <span class="s1">&#39; &#39;</span> <span class="p">|</span> head -n 1<span class="k">)</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ <span class="nv">str</span><span class="o">=</span><span class="k">$(</span>cat /dev/urandom <span class="p">|</span> od -x <span class="p">|</span> tr -d <span class="s1">&#39; &#39;</span> <span class="p">|</span> head -n 1<span class="k">)</span>
 </span></span><span class="line"><span class="cl">$ <span class="nb">echo</span> <span class="si">${</span><span class="nv">str</span><span class="p">:</span><span class="nv">7</span><span class="si">}</span>
 </span></span><span class="line"><span class="cl">17539187d2e8b8e26d49bec90465c14d
-</span></span></code></pre></div><blockquote>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
 <p>本文由 <a class="link" href="http://ksria.com/simpread/"  target="_blank" rel="noopener"
     >简悦 SimpRead</a> 转码， 原文地址 <a class="link" href="https://blog.csdn.net/sinat_26058371/article/details/86754683"  target="_blank" rel="noopener"
     >blog.csdn.net</a></p>
@@ -315,17 +417,18 @@
     </section>
     </footer>
 
+
     
         <link 
                 rel="stylesheet" 
                 href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3&#43;Aro6EYUG4&#43;cU&#43;KJWu/X"crossorigin="anonymous"
             ><script 
                 src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"integrity="sha384-g7c&#43;Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI&#43;sEnkvrMWph2EDg4"crossorigin="anonymous"
-                defer="true"
+                defer
                 >
             </script><script 
                 src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC&#43;Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa"crossorigin="anonymous"
-                defer="true"
+                defer
                 >
             </script><script>
     window.addEventListener("DOMContentLoaded", () => {
@@ -341,14 +444,16 @@
     
 </article>
 
-    <aside class="related-contents--wrapper">
     
+
     
-        <h2 class="section-title">相关文章</h2>
-        <div class="related-contents">
-            <div class="flex article-list--tile">
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
                 
-                    
 <article class="has-image">
     <a href="/p/shell-chinese/">
         
@@ -357,7 +462,8 @@
                 <img src="/p/shell-chinese/00.a1387487bd6e03411167b9bf5fbfcebc_huefc9290d81713b319ab68a7f845bb37c_267518_250x150_fill_q75_box_smart1.jpg" 
                         width="250" 
                         height="150" 
-                        loading="lazy" 
+                        loading="lazy"
+                        alt="Featured image of post Ubuntu改语言为中文"
                         data-key="shell-chinese" 
                         data-hash="md5-oTh0h71uA0ERZ7m/X7/OvA==">
                 
@@ -369,8 +475,9 @@
         </div>
     </a>
 </article>
+
+            
                 
-                    
 <article class="">
     <a href="/p/linux-apt-error/">
         
@@ -381,8 +488,9 @@
         </div>
     </a>
 </article>
+
+            
                 
-                    
 <article class="">
     <a href="/p/ncat/">
         
@@ -393,8 +501,9 @@
         </div>
     </a>
 </article>
+
+            
                 
-                    
 <article class="has-image">
     <a href="/p/mcsvspeedup/">
         
@@ -403,7 +512,8 @@
                 <img src="/p/mcsvspeedup/00.2c6ef59afe74c903befe2329e8023919_hu63aa5994080ad5065e8069b1db94e92d_1600379_250x150_fill_q75_box_smart1.jpeg" 
                         width="250" 
                         height="150" 
-                        loading="lazy" 
+                        loading="lazy"
+                        alt="Featured image of post 《我的世界》服务器优化教程"
                         data-key="mcsvspeedup" 
                         data-hash="md5-LG71mv50yQO&#43;/iMp6AI5GQ==">
                 
@@ -415,8 +525,9 @@
         </div>
     </a>
 </article>
+
+            
                 
-                    
 <article class="has-image">
     <a href="/p/dstcrockpot/">
         
@@ -425,7 +536,8 @@
                 <img src="/p/dstcrockpot/00.bf744c9169afd89aa7eaa9cedd7191b7_hu59df01dd9cfb485ca1960cb6f6bf535d_181785_250x150_fill_box_smart1_3.png" 
                         width="250" 
                         height="150" 
-                        loading="lazy" 
+                        loading="lazy"
+                        alt="Featured image of post 烹饪锅食谱"
                         data-key="dstcrockpot" 
                         data-hash="md5-v3RMkWmv2Jqn6qnO3XGRtw==">
                 
@@ -437,14 +549,14 @@
         </div>
     </a>
 </article>
-                
-            </div>
+
+            
         </div>
-    
+    </div>
 </aside>
 
      
-     
+    
         
     
 
@@ -461,9 +573,10 @@
         
             <a href="https://icp.gov.moe/?keyword=20212100" target="_blank">萌ICP备20212100号</a> <br/>
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.5.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.12.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
+
 
     
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
@@ -529,11 +642,11 @@
 
 </div><script 
                 src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
-                defer="true"
+                defer
                 >
             </script><script 
                 src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
-                defer="true"
+                defer
                 >
             </script><link 
                 rel="stylesheet" 
@@ -549,7 +662,7 @@
         </div>
         <script 
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
-                defer="false"
+                
                 >
             </script><script type="text/javascript" src="/ts/main.js" defer></script>
 <script>

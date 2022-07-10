@@ -1,32 +1,50 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>hugo on ^薄荷布丁^</title>
-    <link>https://skae.top/tags/hugo/</link>
-    <description>Recent content in hugo on ^薄荷布丁^</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Sun, 04 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://skae.top/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Hugo搭建参考资料</title>
-      <link>https://skae.top/p/create-hugo/</link>
-      <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://skae.top/p/create-hugo/</guid>
-      <description>参考资料 主题： https://github.com/CaiJimmy/hugo-theme-stack
-主题官方文档： https://docs.stack.jimmycai.com/v/zh-cn/
- 安装主题后，启动一个临时服务器（不要正式使用）
-$ hugo server &amp;ndash;theme=hugo-theme-stack
- 解决无法启动问题（删除根目录config.toml即可）： https://github.com/CaiJimmy/hugo-theme-stack/issues/105
-hugo server启动模式（改端口什么的）： https://www.jianshu.com/p/2c6aa941f657
-辅助资料 官方中文文档： https://www.gohugo.org/
- 参考末尾&amp;quot;在站点根目录执行 $ hugo 命令生成最终页面，所有静态页面都会生成到 public 目录&amp;quot;
- 完全使用过程： https://zhuanlan.zhihu.com/p/126298572
- 重点参考&amp;quot;2.Hugo 安装&amp;quot;&amp;ldquo;7.编写博客文章&amp;rdquo;
- 备用资料 标题：&amp;ldquo;通过 Hugo+Nginx 部署静态网页&amp;rdquo;： https://blog.csdn.net/Homography/article/details/106168190
-完全使用过程： https://www.jianshu.com/p/f1b02e00f206
-markdown教程： https://www.runoob.com/markdown/md-tutorial.html</description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>hugo on ^薄荷布丁^</title>
+        <link>https://skae.top/tags/hugo/</link>
+        <description>Recent content in hugo on ^薄荷布丁^</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Sun, 04 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://skae.top/tags/hugo/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Hugo搭建参考资料</title>
+        <link>https://skae.top/p/create-hugo/</link>
+        <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://skae.top/p/create-hugo/</guid>
+        <description>&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
+&lt;p&gt;主题： &lt;a class=&#34;link&#34; href=&#34;https://github.com/CaiJimmy/hugo-theme-stack&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/CaiJimmy/hugo-theme-stack&lt;/a&gt;&lt;br&gt;
+主题官方文档： &lt;a class=&#34;link&#34; href=&#34;https://docs.stack.jimmycai.com/v/zh-cn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://docs.stack.jimmycai.com/v/zh-cn/&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;安装主题后，启动一个临时服务器（不要正式使用）&lt;br&gt;
+$ hugo server &amp;ndash;theme=hugo-theme-stack&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;解决无法启动问题（删除根目录config.toml即可）： &lt;a class=&#34;link&#34; href=&#34;https://github.com/CaiJimmy/hugo-theme-stack/issues/105&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/CaiJimmy/hugo-theme-stack/issues/105&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;hugo server启动模式（改端口什么的）： &lt;a class=&#34;link&#34; href=&#34;https://www.jianshu.com/p/2c6aa941f657&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.jianshu.com/p/2c6aa941f657&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;辅助资料&#34;&gt;辅助资料&lt;/h2&gt;
+&lt;p&gt;官方中文文档： &lt;a class=&#34;link&#34; href=&#34;https://www.gohugo.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.gohugo.org/&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;参考末尾&amp;quot;在站点根目录执行 $ hugo 命令生成最终页面，所有静态页面都会生成到 public 目录&amp;quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;完全使用过程： &lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/126298572&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://zhuanlan.zhihu.com/p/126298572&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;重点参考&amp;quot;2.Hugo 安装&amp;quot;&amp;ldquo;7.编写博客文章&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;备用资料&#34;&gt;备用资料&lt;/h2&gt;
+&lt;p&gt;标题：&amp;ldquo;通过 Hugo+Nginx 部署静态网页&amp;rdquo;： &lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/Homography/article/details/106168190&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://blog.csdn.net/Homography/article/details/106168190&lt;/a&gt;&lt;br&gt;
+完全使用过程： &lt;a class=&#34;link&#34; href=&#34;https://www.jianshu.com/p/f1b02e00f206&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.jianshu.com/p/f1b02e00f206&lt;/a&gt;&lt;br&gt;
+markdown教程： &lt;a class=&#34;link&#34; href=&#34;https://www.runoob.com/markdown/md-tutorial.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.runoob.com/markdown/md-tutorial.html&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

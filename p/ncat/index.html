@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='教你如何使用ncat'><title>ncat(nc) 命令使用方法</title>
 
 <link rel='canonical' href='https://skae.top/p/ncat/'>
 
-<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='ncat(nc) 命令使用方法'>
+<link rel="stylesheet" href="/scss/style.min.fe253589db5a54c99fe6b16bfbaf0243d856d34f8c07f3534613b39ed043b738.css"><meta property='og:title' content='ncat(nc) 命令使用方法'>
 <meta property='og:description' content='教你如何使用ncat'>
 <meta property='og:url' content='https://skae.top/p/ncat/'>
 <meta property='og:site_name' content='^薄荷布丁^'>
@@ -17,8 +17,8 @@
 
     </head>
     <body class="
-    article-page has-toc
-">
+    article-page
+    ">
     <script>
         (function() {
             const colorSchemeKey = 'StackColorScheme';
@@ -41,25 +41,215 @@
         }
     })();
 </script>
-<div class="container main-container flex 
-    
-        extended
-    
-">
-    
-        <div id="article-toolbar">
-            <a href="https://skae.top" class="back-home">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <polyline points="15 6 9 12 15 18" />
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/skyaerope_hub3afead531cb5db18fe0b723ec01cac5_383584_300x0_resize_q75_box.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍮</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">^薄荷布丁^</a></h1>
+            <h2 class="site-description">谁会用薄荷做布丁呢？</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/skyaerope'
+                        target="_blank"
+                        title="GitHub"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
 </svg>
 
 
 
-                <span>返回</span>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
             </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>分类</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/index.xml' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="5" cy="19" r="1" />
+  <path d="M4 4a16 16 0 0 1 16 16" />
+  <path d="M4 11a9 9 0 0 1 9 9" />
+</svg>
+
+
+
+                
+                <span>RSS源</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='https://travellings.link' target="_blank">
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-train" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M21 13c0 -3.87 -3.37 -7 -10 -7h-8" />
+  <path d="M3 15h16a2 2 0 0 0 2 -2" />
+  <path d="M3 6v5h17.5" />
+  <line x1="3" y1="10" x2="3" y2="14" />
+  <line x1="8" y1="11" x2="8" y2="6" />
+  <line x1="13" y1="11" x2="13" y2="6.5" />
+  <line x1="3" y1="19" x2="21" y2="19" />
+</svg>
+                
+                <span>开往</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
         </div>
-    
+    </ol>
+</aside>
 <main class="main full-width">
     <article class="main-article">
     <header class="article-header">
@@ -75,16 +265,38 @@
     </header>
     
 
-    <h2 class="article-title">
-        <a href="/p/ncat/">ncat(nc) 命令使用方法</a>
-    </h2>
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/ncat/">ncat(nc) 命令使用方法</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            教你如何使用ncat
+        </h3>
+        
+    </div>
 
     
-    <h3 class="article-subtitle">
-        教你如何使用ncat
-    </h3>
     <footer class="article-time">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Nov 13, 2021</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="12" cy="12" r="9" />
   <polyline points="12 7 12 12 15 15" />
@@ -92,87 +304,263 @@
 
 
 
-        <time class="article-time--published">Nov 13, 2021</time>
-    </footer></div>
+                <time class="article-time--reading">
+                    阅读时长: 4 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
 </header>
 
     <section class="article-content">
+    
+    
     <p><code>ncat</code> 或者说 <code>nc</code> 是一款功能类似 <code>cat</code> 的工具，但是是用于网络的。它是一款拥有多种功能的 <code>CLI</code> 工具，可以用来在网络上读、写以及重定向数据。 它被设计成可以被脚本或其他程序调用的可靠的后端工具。同时由于它能创建任意所需的连接，因此也是一个很好的网络调试工具。</p>
 <p><code>ncat</code>/<code>nc</code> 既是一个端口扫描工具，也是一款安全工具，还是一款监测工具，甚至可以做为一个简单的 <code>TCP</code> 代理。 由于有这么多的功能，它被誉为是网络界的瑞士军刀。 这是每个系统管理员都应该知道并且掌握它。</p>
 <p>在大多数 <code>Debian</code> 发行版中，<code>nc</code> 是默认可用的，它会在安装系统的过程中自动被安装。 但是在 <code>CentOS 7/RHEL 7</code> 的最小化安装中，<code>nc</code> 并不会默认被安装。 你需要用下列命令手工安装。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">yum install nmap-ncat -y
-</span></span></code></pre></div><p>系统管理员可以用它来审计系统安全，用它来找出开放的端口然后保护这些端口。 管理员还能用它作为客户端来审计 <code>Web</code> 服务器、<code>telnet</code> 服务器、邮件服务器等， 通过 <code>nc</code> 我们可以控制发送的每个字符，也可以查看对方的回应。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">yum install nmap-ncat -y
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>系统管理员可以用它来审计系统安全，用它来找出开放的端口然后保护这些端口。 管理员还能用它作为客户端来审计 <code>Web</code> 服务器、<code>telnet</code> 服务器、邮件服务器等， 通过 <code>nc</code> 我们可以控制发送的每个字符，也可以查看对方的回应。</p>
 <p>我们还可以用它捕获客户端发送的数据以此来了解这些客户端是做什么的。</p>
 <p>在本文中，我们会通过下面这些例子来学习如何使用 <code>nc</code> 命令。</p>
 <h2 id="1-监听入站连接">1. 监听入站连接</h2>
 <p>通过 <code>-l</code> 选项，<code>ncat</code> 可以进入监听模式，使我们可以在指定端口监听入站连接。 完整的命令是这样的：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat -l port_number
-</span></span></code></pre></div><p>比如</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat -l <span class="m">8080</span>
-</span></span></code></pre></div><p>服务器就会开始在 <code>8080</code> 端口监听入站连接。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat -l port_number
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>比如</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat -l <span class="m">8080</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>服务器就会开始在 <code>8080</code> 端口监听入站连接。</p>
 <h2 id="2-连接远程系统">2. 连接远程系统</h2>
 <p>使用下面命令可以用 <code>nc</code> 来连接远程系统</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat IP_address port_number
-</span></span></code></pre></div><p>我们来看个例子</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat 192.168.1.100 <span class="m">80</span>
-</span></span></code></pre></div><p>这会创建一个连接，连接到 IP 为 <code>192.168.1.100</code> 的服务器上的 <code>80</code> 端口，然后我们就可以向服务器发送指令了。 比如我们可以输入下面内容来获取完整的网页内容</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-http" data-lang="http"><span class="line"><span class="cl"><span class="nf">GET</span> <span class="nn">/</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-</span></span></code></pre></div><p>或者获取页面名称</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-http" data-lang="http"><span class="line"><span class="cl"><span class="nf">GET</span> <span class="nn">/</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-</span></span></code></pre></div><p>或者我们可以通过以下方式获得操作系统指纹标识</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-http" data-lang="http"><span class="line"><span class="cl"><span class="nf">HEAD</span> <span class="nn">/</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-</span></span></code></pre></div><p>这会告诉我们使用的是什么软件来运行这个 <code>web</code> 服务器的</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat IP_address port_number
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>我们来看个例子</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat 192.168.1.100 <span class="m">80</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这会创建一个连接，连接到 IP 为 <code>192.168.1.100</code> 的服务器上的 <code>80</code> 端口，然后我们就可以向服务器发送指令了。 比如我们可以输入下面内容来获取完整的网页内容</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-http" data-lang="http"><span class="line"><span class="cl"><span class="nf">GET</span> <span class="nn">/</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>或者获取页面名称</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-http" data-lang="http"><span class="line"><span class="cl"><span class="nf">GET</span> <span class="nn">/</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>或者我们可以通过以下方式获得操作系统指纹标识</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-http" data-lang="http"><span class="line"><span class="cl"><span class="nf">HEAD</span> <span class="nn">/</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这会告诉我们使用的是什么软件来运行这个 <code>web</code> 服务器的</p>
 <h2 id="3-连接-udp-端口">3. 连接 UDP 端口</h2>
 <p>默认情况下，<code>nc</code> 创建连接时只会连接 <code>TCP</code> 端口。 不过我们可以使用 <code>-u</code> 选项来连接到 <code>UDP</code> 端口</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat -l -u <span class="m">1234</span>
-</span></span></code></pre></div><p>现在我们的系统会开始监听 <code>UDP</code> 的 <code>1234</code> 端口，我们可以使用下面的 <code>netstat</code> 命令来验证这一点</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">netstat -tunlp <span class="p">|</span> grep <span class="m">1234</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat -l -u <span class="m">1234</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>现在我们的系统会开始监听 <code>UDP</code> 的 <code>1234</code> 端口，我们可以使用下面的 <code>netstat</code> 命令来验证这一点</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">netstat -tunlp <span class="p">|</span> grep <span class="m">1234</span>
 </span></span><span class="line"><span class="cl">udp           <span class="m">0</span>          <span class="m">0</span> 0.0.0.0:1234                 0.0.0.0:*               17341/nc
 </span></span><span class="line"><span class="cl">udp6          <span class="m">0</span>          <span class="m">0</span> :::1234                      :::*                    17341/nc
-</span></span></code></pre></div><p>假设我们想发送或者说测试某个远程主机 <code>UDP</code> 端口的连通性，我们可以使用下面命令</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat -v -u <span class="o">{</span>host-ip<span class="o">}</span> <span class="o">{</span>udp-port<span class="o">}</span>
-</span></span></code></pre></div><p>比如</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat -v -u 192.168.105.150 <span class="m">53</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>假设我们想发送或者说测试某个远程主机 <code>UDP</code> 端口的连通性，我们可以使用下面命令</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat -v -u <span class="o">{</span>host-ip<span class="o">}</span> <span class="o">{</span>udp-port<span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>比如</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat -v -u 192.168.105.150 <span class="m">53</span>
 </span></span><span class="line"><span class="cl">Ncat: Version 6.40 <span class="o">(</span> http://nmap.org/ncat <span class="o">)</span>
 </span></span><span class="line"><span class="cl">Ncat: Connected to 192.168.105.150:53
-</span></span></code></pre></div><h2 id="4-将-nc-作为聊天工具">4. 将 <code>nc</code> 作为聊天工具</h2>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="4-将-nc-作为聊天工具">4. 将 <code>nc</code> 作为聊天工具</h2>
 <p><code>nc</code> 也可以作为聊天工具来用，我们可以配置服务器监听某个端口，然后从远程主机上连接到服务器的这个端口，就可以开始发送消息了。 在服务器这端运行：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat -l <span class="m">8080</span>
-</span></span></code></pre></div><p>在远程客户端主机上运行：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat 192.168.1.100 <span class="m">8080</span>
-</span></span></code></pre></div><p>之后开始发送消息，这些消息会在服务器终端上显示出来。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat -l <span class="m">8080</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>在远程客户端主机上运行：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat 192.168.1.100 <span class="m">8080</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>之后开始发送消息，这些消息会在服务器终端上显示出来。</p>
 <h2 id="5-将-nc-作为代理">5. 将 <code>nc</code> 作为代理</h2>
 <p><code>nc</code> 也可以用来做代理。比如下面这个例子</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat -l <span class="m">8080</span> <span class="p">|</span> ncat 192.168.1.200 <span class="m">80</span>
-</span></span></code></pre></div><p>所有发往我们服务器 <code>8080</code> 端口的连接都会自动转发到 <code>192.168.1.200</code> 上的 <code>80</code> 端口。 不过由于我们使用了管道，数据只能被单向传输。 要同时能够接受返回的数据，我们需要创建一个双向管道。 使用下面命令可以做到这点</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">mkfifo 2way
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat -l <span class="m">8080</span> <span class="p">|</span> ncat 192.168.1.200 <span class="m">80</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>所有发往我们服务器 <code>8080</code> 端口的连接都会自动转发到 <code>192.168.1.200</code> 上的 <code>80</code> 端口。 不过由于我们使用了管道，数据只能被单向传输。 要同时能够接受返回的数据，我们需要创建一个双向管道。 使用下面命令可以做到这点</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">mkfifo 2way
 </span></span><span class="line"><span class="cl">ncat -l <span class="m">8080</span> 0&lt;2way <span class="p">|</span> ncat 192.168.1.200 <span class="m">80</span> 1&gt;2way
-</span></span></code></pre></div><p>现在你可以通过 <code>nc</code> 代理来收发数据了</p>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>现在你可以通过 <code>nc</code> 代理来收发数据了</p>
 <h2 id="6-使用-nc-拷贝文件">6. 使用 <code>nc</code> 拷贝文件</h2>
 <p><code>nc</code> 还能用来在系统间拷贝文件，虽然这么做并不推荐，因为绝大多数系统默认都安装了 <code>ssh</code>/<code>scp</code>。 不过如果你恰好遇见个没有 <code>ssh</code>/<code>scp</code> 的系统的话， 你可以用 <code>nc</code> 来作最后的努力。</p>
 <p>在要接受数据的机器上启动 <code>nc</code> 并让它进入监听模式：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat -l  <span class="m">8080</span> &gt; file.txt
-</span></span></code></pre></div><p>现在去要被拷贝数据的机器上运行下面命令：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat 192.168.1.100 <span class="m">8080</span> --send-only &lt; data.txt
-</span></span></code></pre></div><p>这里，<code>data.txt</code> 是要发送的文件。 <code>-–send-only</code> 选项会在文件拷贝完后立即关闭连接。 如果不加该选项， 我们需要手工按下 <code>ctrl+c</code> 来关闭连接。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat -l  <span class="m">8080</span> &gt; file.txt
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>现在去要被拷贝数据的机器上运行下面命令：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat 192.168.1.100 <span class="m">8080</span> --send-only &lt; data.txt
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这里，<code>data.txt</code> 是要发送的文件。 <code>-–send-only</code> 选项会在文件拷贝完后立即关闭连接。 如果不加该选项， 我们需要手工按下 <code>ctrl+c</code> 来关闭连接。</p>
 <p>我们也可以用这种方法拷贝整个磁盘分区，不过请一定要小心</p>
 <h2 id="7-通过-nc-创建后门">7. 通过 <code>nc</code> 创建后门</h2>
 <p><code>nc</code> 命令还可以用来在系统中创建后门，并且这种技术也确实被黑客大量使用。 为了保护我们的系统，我们需要知道它是怎么做的。 创建后门的命令为：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat -l <span class="m">10000</span> -e /bin/bash
-</span></span></code></pre></div><p><code>-e</code> 标志将一个 <code>bash</code> 与端口 <code>10000</code> 相连。现在客户端只要连接到服务器上的 <code>10000</code> 端口就能通过 <code>bash</code> 获取我们系统的完整访问权限：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat 192.168.1.100 <span class="m">10000</span>
-</span></span></code></pre></div><h2 id="8-通过-nc-进行端口转发">8. 通过 <code>nc</code> 进行端口转发</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat -l <span class="m">10000</span> -e /bin/bash
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><code>-e</code> 标志将一个 <code>bash</code> 与端口 <code>10000</code> 相连。现在客户端只要连接到服务器上的 <code>10000</code> 端口就能通过 <code>bash</code> 获取我们系统的完整访问权限：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat 192.168.1.100 <span class="m">10000</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="8-通过-nc-进行端口转发">8. 通过 <code>nc</code> 进行端口转发</h2>
 <p>我们通过选项 <code>-c</code> 来用 <code>nc</code> 进行端口转发，实现端口转发的语法为：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat -u -l  <span class="m">80</span> -c  <span class="s1">&#39;ncat -u -l 8080&#39;</span>
-</span></span></code></pre></div><p>这样，所有连接到 <code>80</code> 端口的连接都会转发到 <code>8080</code> 端口</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat -u -l  <span class="m">80</span> -c  <span class="s1">&#39;ncat -u -l 8080&#39;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这样，所有连接到 <code>80</code> 端口的连接都会转发到 <code>8080</code> 端口</p>
 <h2 id="9-设置连接超时">9. 设置连接超时</h2>
 <p><code>nc</code> 的监听模式会一直运行，直到手工终止。 不过我们可以通过选项 <code>-w</code> 设置超时时间:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat -w <span class="m">10</span> 192.168.1.100 <span class="m">8080</span>
-</span></span></code></pre></div><p>这会导致连接 <code>10</code> 秒后终止，不过这个选项只能用于客户端而不是服务端。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat -w <span class="m">10</span> 192.168.1.100 <span class="m">8080</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这会导致连接 <code>10</code> 秒后终止，不过这个选项只能用于客户端而不是服务端。</p>
 <h2 id="10-使用--k-选项强制-nc-待命">10. 使用 <code>-k</code> 选项强制 <code>nc</code> 待命</h2>
 <p>当客户端从服务端断开连接后，过一段时间服务端也会停止监听。 但通过选项 <code>-k</code> 我们可以强制服务器保持连接并继续监听端口。 命令如下：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat -l -k <span class="m">8080</span>
-</span></span></code></pre></div><p>现在即使来自客户端的连接断了也依然会处于待命状态</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ncat -l -k <span class="m">8080</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>现在即使来自客户端的连接断了也依然会处于待命状态</p>
 <blockquote>
 <p>本文由 <a class="link" href="http://ksria.com/simpread/"  target="_blank" rel="noopener"
     >简悦 SimpRead</a> 转码， 原文地址 <a class="link" href="https://www.cnblogs.com/ECJTUACM-873284962/p/9712882.html"  target="_blank" rel="noopener"
@@ -207,17 +595,18 @@
     </section>
     </footer>
 
+
     
         <link 
                 rel="stylesheet" 
                 href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3&#43;Aro6EYUG4&#43;cU&#43;KJWu/X"crossorigin="anonymous"
             ><script 
                 src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"integrity="sha384-g7c&#43;Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI&#43;sEnkvrMWph2EDg4"crossorigin="anonymous"
-                defer="true"
+                defer
                 >
             </script><script 
                 src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC&#43;Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa"crossorigin="anonymous"
-                defer="true"
+                defer
                 >
             </script><script>
     window.addEventListener("DOMContentLoaded", () => {
@@ -233,14 +622,16 @@
     
 </article>
 
-    <aside class="related-contents--wrapper">
     
+
     
-        <h2 class="section-title">相关文章</h2>
-        <div class="related-contents">
-            <div class="flex article-list--tile">
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
                 
-                    
 <article class="has-image">
     <a href="/p/shell-chinese/">
         
@@ -249,7 +640,8 @@
                 <img src="/p/shell-chinese/00.a1387487bd6e03411167b9bf5fbfcebc_huefc9290d81713b319ab68a7f845bb37c_267518_250x150_fill_q75_box_smart1.jpg" 
                         width="250" 
                         height="150" 
-                        loading="lazy" 
+                        loading="lazy"
+                        alt="Featured image of post Ubuntu改语言为中文"
                         data-key="shell-chinese" 
                         data-hash="md5-oTh0h71uA0ERZ7m/X7/OvA==">
                 
@@ -261,8 +653,9 @@
         </div>
     </a>
 </article>
+
+            
                 
-                    
 <article class="">
     <a href="/p/linux-apt-error/">
         
@@ -273,8 +666,9 @@
         </div>
     </a>
 </article>
+
+            
                 
-                    
 <article class="">
     <a href="/p/linux-bucket/">
         
@@ -285,8 +679,9 @@
         </div>
     </a>
 </article>
+
+            
                 
-                    
 <article class="has-image">
     <a href="/p/mcsvspeedup/">
         
@@ -295,7 +690,8 @@
                 <img src="/p/mcsvspeedup/00.2c6ef59afe74c903befe2329e8023919_hu63aa5994080ad5065e8069b1db94e92d_1600379_250x150_fill_q75_box_smart1.jpeg" 
                         width="250" 
                         height="150" 
-                        loading="lazy" 
+                        loading="lazy"
+                        alt="Featured image of post 《我的世界》服务器优化教程"
                         data-key="mcsvspeedup" 
                         data-hash="md5-LG71mv50yQO&#43;/iMp6AI5GQ==">
                 
@@ -307,8 +703,9 @@
         </div>
     </a>
 </article>
+
+            
                 
-                    
 <article class="has-image">
     <a href="/p/dstcrockpot/">
         
@@ -317,7 +714,8 @@
                 <img src="/p/dstcrockpot/00.bf744c9169afd89aa7eaa9cedd7191b7_hu59df01dd9cfb485ca1960cb6f6bf535d_181785_250x150_fill_box_smart1_3.png" 
                         width="250" 
                         height="150" 
-                        loading="lazy" 
+                        loading="lazy"
+                        alt="Featured image of post 烹饪锅食谱"
                         data-key="dstcrockpot" 
                         data-hash="md5-v3RMkWmv2Jqn6qnO3XGRtw==">
                 
@@ -329,14 +727,14 @@
         </div>
     </a>
 </article>
-                
-            </div>
+
+            
         </div>
-    
+    </div>
 </aside>
 
      
-     
+    
         
     
 
@@ -353,9 +751,10 @@
         
             <a href="https://icp.gov.moe/?keyword=20212100" target="_blank">萌ICP备20212100号</a> <br/>
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.5.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.12.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
+
 
     
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
@@ -421,11 +820,11 @@
 
 </div><script 
                 src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
-                defer="true"
+                defer
                 >
             </script><script 
                 src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
-                defer="true"
+                defer
                 >
             </script><link 
                 rel="stylesheet" 
@@ -436,11 +835,13 @@
             >
 
             </main>
-    
-        <aside class="sidebar right-sidebar sticky">
-            <section class="widget archives">
-                <div class="widget-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <line x1="5" y1="9" x2="19" y2="9" />
   <line x1="5" y1="15" x2="19" y2="15" />
@@ -450,11 +851,11 @@
 
 
 
-                </div>
-                <h2 class="widget-title section-title">目录</h2>
-                
-                <div class="widget--toc">
-                    <nav id="TableOfContents">
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
   <ol>
     <li><a href="#1-监听入站连接">1. 监听入站连接</a></li>
     <li><a href="#2-连接远程系统">2. 连接远程系统</a></li>
@@ -468,15 +869,18 @@
     <li><a href="#10-使用--k-选项强制-nc-待命">10. 使用 <code>-k</code> 选项强制 <code>nc</code> 待命</a></li>
   </ol>
 </nav>
-                </div>
-            </section>
-        </aside>
-    
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
 
         </div>
         <script 
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
-                defer="false"
+                
                 >
             </script><script type="text/javascript" src="/ts/main.js" defer></script>
 <script>

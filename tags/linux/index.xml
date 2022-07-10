@@ -1,82 +1,482 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Linux on ^薄荷布丁^</title>
-    <link>https://skae.top/tags/linux/</link>
-    <description>Recent content in Linux on ^薄荷布丁^</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Tue, 05 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://skae.top/tags/linux/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Ubuntu改语言为中文</title>
-      <link>https://skae.top/p/shell-chinese/</link>
-      <pubDate>Tue, 05 Apr 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://skae.top/p/shell-chinese/</guid>
-      <description>1. 首先安装中文字体支持的软件包 sudo apt-get install -y ttf-wqy-zenhei language-pack-zh-hant language-pack-zh-hans 2. 然后用编辑器修改/etc/environment sudo vim /etc/environment 被修改的文件没有后缀名，请注意
-你可以看到第1行有如下内容
-PATH=&amp;#34;/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games&amp;#34; 接下来要做就是，按i进入编辑模式，在这一行下面添加
-LANG=&amp;#34;zh_CN.UTF-8&amp;#34; LANGUAGE=&amp;#34;zh_CN:zh:en_US:en&amp;#34; ESC，:wq或者ZZ保存
-3. 最后执行 sudo dpkg-reconfigure locales 一直点回车，直到他那个[more]变成了你选择的提示框
-然后输入487与488 ，回车
-在第2个界面输入5，回车
-重启一下
-至此，中文语言切换完毕</description>
-    </item>
-    
-    <item>
-      <title>Linux 报错 Certificate verification failed The certificate is NOT trusted.</title>
-      <link>https://skae.top/p/linux-apt-error/</link>
-      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://skae.top/p/linux-apt-error/</guid>
-      <description>原因为未安装 ca-certificates
-可以先编辑 /etc/apt/sources.list 文件临时使用 http 源
-nano /etc/apt/sources.list 或者
-vim /etc/apt/sources.list 粘贴或者更改源（https:// 到 http://)
-deb http://mirrors.tuna.tsinghua.edu.cn/debian/ buster main contrib non-free deb http://mirrors.tuna.tsinghua.edu.cn/debian/ buster-updates main contrib non-free deb http://mirrors.tuna.tsinghua.edu.cn/debian/ buster-backports main contrib non-free deb http://mirrors.tuna.tsinghua.edu.cn/debian-security buster/updates main contrib non-free  vim使用方法请自行查资料
- 然后安装 ca-certificates 包（注意：看到有的文章将源改为http便无下文，建议继续执行以下步骤改回https，使用http将大幅度提高网络风险）
-apt update apt install ca-certificates 安装完成后编辑源 /etc/apt/sources.list
-deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster main contrib non-free deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-updates main contrib non-free deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-backports main contrib non-free deb https://mirrors.</description>
-    </item>
-    
-    <item>
-      <title>Linux中的虚拟设备/dev/null、/dev/zero、/dev/random和/dev/urandom</title>
-      <link>https://skae.top/p/linux-bucket/</link>
-      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://skae.top/p/linux-bucket/</guid>
-      <description>Unix/Linux 将每一个设备都当成一个文件，放在 / dev 目录下。这些文件有的对应着一个真实存在的物理设备；有的则代表一个虚拟设备，提供一些特定的功能。
-下面介绍三个常用的虚拟设备：
-/dev/null
-“空”设备，也有人称它为黑洞。任何输入到这个 “设备” 的数据都将被直接丢弃。最常用的用法是把不需要的输出重定向到这个文件。例如：
-$ run.sh 1&amp;gt;/dev/null 2&amp;gt;&amp;amp;1 #将标准输出和错误输出重定向到/dev/null，运行这个脚本不会输出任何信息到终端 /dev/zero
-“零” 设备，可以无限的提供空字符（0x00，ASCII 代码 NUL）。常用来生成一个特定大小的文件。例如：
-$ dd if=/dev/zero of=./output.txt bs=1024 count=1 #产生一个1k大小的文件output.txt /dev/random 和 / dev/urandom
-随机数设备，提供不间断的随机字节流。二者的区别是 / dev/random 产生随机数据依赖系统中断，当系统中断不足时，/dev/random 设备会 “挂起”，因而产生数据速度较慢，但随机性好；/dev/urandom 不依赖系统中断，数据产生速度快，但随机性较低。
-读取这两个文件的输出如下：
-$ cat /dev/random | od -x 0000000 34fa b5ea 0901 b7e0 27a9 623a 0879 d9eb 0000020 d212 4f6f d928 6637 84a4 8ec5 fc2c 4896 $ cat /dev/urandom | od -x | head -n 5 0000000 8048 4dbd 07c9 2119 02d0 221b 89ba af7f 0000020 3d6f 6a72 3752 4a09 5a47 a3fb dc98 ed9f 0000040 f3e8 e82d 6748 2e14 de80 7554 bb52 f56c 0000060 de73 0e51 262f 5a63 af69 b45c ee49 c1bf 0000100 76b4 6db5 4e5b e438 70fb d207 a28c 04a8 在上面的例子中，读取 / dev/random 文件在输出了两行之后就停住了（系统中断不足），而 / dev/urandom 产生数据速度很快，没有任何停顿。</description>
-    </item>
-    
-    <item>
-      <title>ncat(nc) 命令使用方法</title>
-      <link>https://skae.top/p/ncat/</link>
-      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://skae.top/p/ncat/</guid>
-      <description>ncat 或者说 nc 是一款功能类似 cat 的工具，但是是用于网络的。它是一款拥有多种功能的 CLI 工具，可以用来在网络上读、写以及重定向数据。 它被设计成可以被脚本或其他程序调用的可靠的后端工具。同时由于它能创建任意所需的连接，因此也是一个很好的网络调试工具。
-ncat/nc 既是一个端口扫描工具，也是一款安全工具，还是一款监测工具，甚至可以做为一个简单的 TCP 代理。 由于有这么多的功能，它被誉为是网络界的瑞士军刀。 这是每个系统管理员都应该知道并且掌握它。
-在大多数 Debian 发行版中，nc 是默认可用的，它会在安装系统的过程中自动被安装。 但是在 CentOS 7/RHEL 7 的最小化安装中，nc 并不会默认被安装。 你需要用下列命令手工安装。
-yum install nmap-ncat -y 系统管理员可以用它来审计系统安全，用它来找出开放的端口然后保护这些端口。 管理员还能用它作为客户端来审计 Web 服务器、telnet 服务器、邮件服务器等， 通过 nc 我们可以控制发送的每个字符，也可以查看对方的回应。
-我们还可以用它捕获客户端发送的数据以此来了解这些客户端是做什么的。
-在本文中，我们会通过下面这些例子来学习如何使用 nc 命令。
-1. 监听入站连接 通过 -l 选项，ncat 可以进入监听模式，使我们可以在指定端口监听入站连接。 完整的命令是这样的：
-ncat -l port_number 比如
-ncat -l 8080 服务器就会开始在 8080 端口监听入站连接。
-2. 连接远程系统 使用下面命令可以用 nc 来连接远程系统
-ncat IP_address port_number 我们来看个例子
-ncat 192.168.1.100 80 这会创建一个连接，连接到 IP 为 192.</description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>Linux on ^薄荷布丁^</title>
+        <link>https://skae.top/tags/linux/</link>
+        <description>Recent content in Linux on ^薄荷布丁^</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Tue, 05 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://skae.top/tags/linux/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Ubuntu改语言为中文</title>
+        <link>https://skae.top/p/shell-chinese/</link>
+        <pubDate>Tue, 05 Apr 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://skae.top/p/shell-chinese/</guid>
+        <description>&lt;img src="https://skae.top/p/shell-chinese/00.jpg" alt="Featured image of post Ubuntu改语言为中文" /&gt;&lt;h2 id=&#34;1-首先安装中文字体支持的软件包&#34;&gt;1. 首先安装中文字体支持的软件包&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get install -y ttf-wqy-zenhei language-pack-zh-hant language-pack-zh-hans
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;2-然后用编辑器修改etcenvironment&#34;&gt;2. 然后用编辑器修改&lt;code&gt;/etc/environment&lt;/code&gt;&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo vim /etc/environment
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;被修改的文件没有后缀名，请注意&lt;/p&gt;
+&lt;p&gt;你可以看到第1行有如下内容&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;PATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;接下来要做就是，按&lt;code&gt;i&lt;/code&gt;进入编辑模式，在这一行下面添加&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;LANG&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;zh_CN.UTF-8&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;LANGUAGE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;zh_CN:zh:en_US:en&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;ESC&lt;/code&gt;，&lt;code&gt;:wq&lt;/code&gt;或者&lt;code&gt;ZZ&lt;/code&gt;保存&lt;/p&gt;
+&lt;h2 id=&#34;3-最后执行&#34;&gt;3. 最后执行&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo dpkg-reconfigure locales
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;一直点回车，直到他那个&lt;code&gt;[more]&lt;/code&gt;变成了你选择的提示框&lt;/p&gt;
+&lt;p&gt;然后输入&lt;code&gt;487&lt;/code&gt;与&lt;code&gt;488&lt;/code&gt;  ，回车&lt;/p&gt;
+&lt;p&gt;在第2个界面输入&lt;code&gt;5&lt;/code&gt;，回车&lt;/p&gt;
+&lt;p&gt;重启一下&lt;/p&gt;
+&lt;p&gt;至此，中文语言切换完毕&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Linux 报错 Certificate verification failed The certificate is NOT trusted.</title>
+        <link>https://skae.top/p/linux-apt-error/</link>
+        <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://skae.top/p/linux-apt-error/</guid>
+        <description>&lt;p&gt;原因为未安装 ca-certificates&lt;/p&gt;
+&lt;p&gt;可以先编辑 &lt;code&gt;/etc/apt/sources.list&lt;/code&gt; 文件临时使用 http 源&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nano /etc/apt/sources.list
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;或者&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vim /etc/apt/sources.list
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;粘贴或者更改源（&lt;code&gt;https://&lt;/code&gt; 到 &lt;code&gt;http://&lt;/code&gt;)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deb http://mirrors.tuna.tsinghua.edu.cn/debian/ buster main contrib non-free
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deb http://mirrors.tuna.tsinghua.edu.cn/debian/ buster-updates main contrib non-free
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deb http://mirrors.tuna.tsinghua.edu.cn/debian/ buster-backports main contrib non-free
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deb http://mirrors.tuna.tsinghua.edu.cn/debian-security buster/updates main contrib non-free
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;vim使用方法请自行查资料&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;然后安装 ca-certificates 包（&lt;strong&gt;&lt;code&gt;注意：看到有的文章将源改为http便无下文，建议继续执行以下步骤改回https，使用http将大幅度提高网络风险&lt;/code&gt;&lt;/strong&gt;）&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apt update
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apt install ca-certificates
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;安装完成后编辑源 &lt;code&gt;/etc/apt/sources.list&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster main contrib non-free
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-updates main contrib non-free
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-backports main contrib non-free
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deb https://mirrors.tuna.tsinghua.edu.cn/debian-security buster/updates main contrib non-free
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;执行&lt;code&gt;apt update&lt;/code&gt;更新，完成&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本文由 &lt;a class=&#34;link&#34; href=&#34;http://ksria.com/simpread/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;简悦 SimpRead&lt;/a&gt; 转码， 原文地址 &lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/qq_19729599/article/details/114682507&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;blog.csdn.net&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        </item>
+        <item>
+        <title>Linux中的虚拟设备/dev/null、/dev/zero、/dev/random和/dev/urandom</title>
+        <link>https://skae.top/p/linux-bucket/</link>
+        <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://skae.top/p/linux-bucket/</guid>
+        <description>&lt;p&gt;Unix/&lt;a class=&#34;link&#34; href=&#34;https://so.csdn.net/so/search?from=pc_blog_highlight&amp;amp;q=Linux&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Linux&lt;/a&gt; 将每一个设备都当成一个文件，放在 / dev 目录下。这些文件有的对应着一个真实存在的物理设备；有的则代表一个虚拟设备，提供一些特定的功能。&lt;/p&gt;
+&lt;p&gt;下面介绍三个常用的虚拟设备：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;/dev/null&lt;/strong&gt;&lt;br&gt;
+“空”设备，也有人称它为黑洞。任何输入到这个 “设备” 的数据都将被直接丢弃。最常用的用法是把不需要的输出重定向到这个文件。例如：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ run.sh 1&amp;gt;/dev/null 2&amp;gt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;#将标准输出和错误输出重定向到/dev/null，运行这个脚本不会输出任何信息到终端&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;/dev/zero&lt;/strong&gt;&lt;br&gt;
+“零” 设备，可以无限的提供空字符（0x00，ASCII 代码 NUL）。常用来生成一个特定大小的文件。例如：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ dd &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/dev/zero &lt;span class=&#34;nv&#34;&gt;of&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;./output.txt &lt;span class=&#34;nv&#34;&gt;bs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1024&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;count&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#产生一个1k大小的文件output.txt&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;/dev/random 和 / dev/urandom&lt;/strong&gt;&lt;br&gt;
+随机数设备，提供不间断的随机字节流。二者的区别是 / dev/random 产生随机数据依赖系统中断，当系统中断不足时，/dev/random 设备会 “挂起”，因而产生数据速度较慢，但随机性好；/dev/urandom 不依赖系统中断，数据产生速度快，但随机性较低。&lt;br&gt;
+读取这两个文件的输出如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ cat /dev/random &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; od -x
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;m&#34;&gt;0000000&lt;/span&gt; 34fa b5ea &lt;span class=&#34;m&#34;&gt;0901&lt;/span&gt; b7e0 27a9 623a &lt;span class=&#34;m&#34;&gt;0879&lt;/span&gt; d9eb
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;m&#34;&gt;0000020&lt;/span&gt; d212 4f6f d928 &lt;span class=&#34;m&#34;&gt;6637&lt;/span&gt; 84a4 8ec5 fc2c &lt;span class=&#34;m&#34;&gt;4896&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ cat /dev/urandom &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; od -x &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; head -n &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;m&#34;&gt;0000000&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;8048&lt;/span&gt; 4dbd 07c9 &lt;span class=&#34;m&#34;&gt;2119&lt;/span&gt; 02d0 221b 89ba af7f
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;m&#34;&gt;0000020&lt;/span&gt; 3d6f 6a72 &lt;span class=&#34;m&#34;&gt;3752&lt;/span&gt; 4a09 5a47 a3fb dc98 ed9f
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;m&#34;&gt;0000040&lt;/span&gt; f3e8 e82d &lt;span class=&#34;m&#34;&gt;6748&lt;/span&gt; 2e14 de80 &lt;span class=&#34;m&#34;&gt;7554&lt;/span&gt; bb52 f56c
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;m&#34;&gt;0000060&lt;/span&gt; de73 0e51 262f 5a63 af69 b45c ee49 c1bf
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;m&#34;&gt;0000100&lt;/span&gt; 76b4 6db5 4e5b e438 70fb d207 a28c 04a8
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;在上面的例子中，读取 / dev/random 文件在输出了两行之后就停住了（系统中断不足），而 / dev/urandom 产生数据速度很快，没有任何停顿。&lt;/p&gt;
+&lt;p&gt;下面这个例子，利用 / dev/urandom 设备产生一个 128 位的随机字符串：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ &lt;span class=&#34;nv&#34;&gt;str&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;cat /dev/urandom &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; od -x &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; tr -d &lt;span class=&#34;s1&#34;&gt;&amp;#39; &amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; head -n 1&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;str&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;17539187d2e8b8e26d49bec90465c14d
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;本文由 &lt;a class=&#34;link&#34; href=&#34;http://ksria.com/simpread/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;简悦 SimpRead&lt;/a&gt; 转码， 原文地址 &lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/sinat_26058371/article/details/86754683&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;blog.csdn.net&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        </item>
+        <item>
+        <title>ncat(nc) 命令使用方法</title>
+        <link>https://skae.top/p/ncat/</link>
+        <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://skae.top/p/ncat/</guid>
+        <description>&lt;p&gt;&lt;code&gt;ncat&lt;/code&gt; 或者说 &lt;code&gt;nc&lt;/code&gt; 是一款功能类似 &lt;code&gt;cat&lt;/code&gt; 的工具，但是是用于网络的。它是一款拥有多种功能的 &lt;code&gt;CLI&lt;/code&gt; 工具，可以用来在网络上读、写以及重定向数据。 它被设计成可以被脚本或其他程序调用的可靠的后端工具。同时由于它能创建任意所需的连接，因此也是一个很好的网络调试工具。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ncat&lt;/code&gt;/&lt;code&gt;nc&lt;/code&gt; 既是一个端口扫描工具，也是一款安全工具，还是一款监测工具，甚至可以做为一个简单的 &lt;code&gt;TCP&lt;/code&gt; 代理。 由于有这么多的功能，它被誉为是网络界的瑞士军刀。 这是每个系统管理员都应该知道并且掌握它。&lt;/p&gt;
+&lt;p&gt;在大多数 &lt;code&gt;Debian&lt;/code&gt; 发行版中，&lt;code&gt;nc&lt;/code&gt; 是默认可用的，它会在安装系统的过程中自动被安装。 但是在 &lt;code&gt;CentOS 7/RHEL 7&lt;/code&gt; 的最小化安装中，&lt;code&gt;nc&lt;/code&gt; 并不会默认被安装。 你需要用下列命令手工安装。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;yum install nmap-ncat -y
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;系统管理员可以用它来审计系统安全，用它来找出开放的端口然后保护这些端口。 管理员还能用它作为客户端来审计 &lt;code&gt;Web&lt;/code&gt; 服务器、&lt;code&gt;telnet&lt;/code&gt; 服务器、邮件服务器等， 通过 &lt;code&gt;nc&lt;/code&gt; 我们可以控制发送的每个字符，也可以查看对方的回应。&lt;/p&gt;
+&lt;p&gt;我们还可以用它捕获客户端发送的数据以此来了解这些客户端是做什么的。&lt;/p&gt;
+&lt;p&gt;在本文中，我们会通过下面这些例子来学习如何使用 &lt;code&gt;nc&lt;/code&gt; 命令。&lt;/p&gt;
+&lt;h2 id=&#34;1-监听入站连接&#34;&gt;1. 监听入站连接&lt;/h2&gt;
+&lt;p&gt;通过 &lt;code&gt;-l&lt;/code&gt; 选项，&lt;code&gt;ncat&lt;/code&gt; 可以进入监听模式，使我们可以在指定端口监听入站连接。 完整的命令是这样的：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ncat -l port_number
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;比如&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ncat -l &lt;span class=&#34;m&#34;&gt;8080&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;服务器就会开始在 &lt;code&gt;8080&lt;/code&gt; 端口监听入站连接。&lt;/p&gt;
+&lt;h2 id=&#34;2-连接远程系统&#34;&gt;2. 连接远程系统&lt;/h2&gt;
+&lt;p&gt;使用下面命令可以用 &lt;code&gt;nc&lt;/code&gt; 来连接远程系统&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ncat IP_address port_number
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;我们来看个例子&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ncat 192.168.1.100 &lt;span class=&#34;m&#34;&gt;80&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这会创建一个连接，连接到 IP 为 &lt;code&gt;192.168.1.100&lt;/code&gt; 的服务器上的 &lt;code&gt;80&lt;/code&gt; 端口，然后我们就可以向服务器发送指令了。 比如我们可以输入下面内容来获取完整的网页内容&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;GET&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;HTTP&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1.1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;或者获取页面名称&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;GET&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;HTTP&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1.1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;或者我们可以通过以下方式获得操作系统指纹标识&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;HEAD&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;HTTP&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1.1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这会告诉我们使用的是什么软件来运行这个 &lt;code&gt;web&lt;/code&gt; 服务器的&lt;/p&gt;
+&lt;h2 id=&#34;3-连接-udp-端口&#34;&gt;3. 连接 UDP 端口&lt;/h2&gt;
+&lt;p&gt;默认情况下，&lt;code&gt;nc&lt;/code&gt; 创建连接时只会连接 &lt;code&gt;TCP&lt;/code&gt; 端口。 不过我们可以使用 &lt;code&gt;-u&lt;/code&gt; 选项来连接到 &lt;code&gt;UDP&lt;/code&gt; 端口&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ncat -l -u &lt;span class=&#34;m&#34;&gt;1234&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;现在我们的系统会开始监听 &lt;code&gt;UDP&lt;/code&gt; 的 &lt;code&gt;1234&lt;/code&gt; 端口，我们可以使用下面的 &lt;code&gt;netstat&lt;/code&gt; 命令来验证这一点&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;netstat -tunlp &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep &lt;span class=&#34;m&#34;&gt;1234&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;udp           &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;          &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; 0.0.0.0:1234                 0.0.0.0:*               17341/nc
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;udp6          &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;          &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; :::1234                      :::*                    17341/nc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;假设我们想发送或者说测试某个远程主机 &lt;code&gt;UDP&lt;/code&gt; 端口的连通性，我们可以使用下面命令&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ncat -v -u &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;host-ip&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;udp-port&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;比如&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ncat -v -u 192.168.105.150 &lt;span class=&#34;m&#34;&gt;53&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Ncat: Version 6.40 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt; http://nmap.org/ncat &lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Ncat: Connected to 192.168.105.150:53
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;4-将-nc-作为聊天工具&#34;&gt;4. 将 &lt;code&gt;nc&lt;/code&gt; 作为聊天工具&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;nc&lt;/code&gt; 也可以作为聊天工具来用，我们可以配置服务器监听某个端口，然后从远程主机上连接到服务器的这个端口，就可以开始发送消息了。 在服务器这端运行：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ncat -l &lt;span class=&#34;m&#34;&gt;8080&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;在远程客户端主机上运行：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ncat 192.168.1.100 &lt;span class=&#34;m&#34;&gt;8080&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;之后开始发送消息，这些消息会在服务器终端上显示出来。&lt;/p&gt;
+&lt;h2 id=&#34;5-将-nc-作为代理&#34;&gt;5. 将 &lt;code&gt;nc&lt;/code&gt; 作为代理&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;nc&lt;/code&gt; 也可以用来做代理。比如下面这个例子&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ncat -l &lt;span class=&#34;m&#34;&gt;8080&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; ncat 192.168.1.200 &lt;span class=&#34;m&#34;&gt;80&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;所有发往我们服务器 &lt;code&gt;8080&lt;/code&gt; 端口的连接都会自动转发到 &lt;code&gt;192.168.1.200&lt;/code&gt; 上的 &lt;code&gt;80&lt;/code&gt; 端口。 不过由于我们使用了管道，数据只能被单向传输。 要同时能够接受返回的数据，我们需要创建一个双向管道。 使用下面命令可以做到这点&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkfifo 2way
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ncat -l &lt;span class=&#34;m&#34;&gt;8080&lt;/span&gt; 0&amp;lt;2way &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; ncat 192.168.1.200 &lt;span class=&#34;m&#34;&gt;80&lt;/span&gt; 1&amp;gt;2way
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;现在你可以通过 &lt;code&gt;nc&lt;/code&gt; 代理来收发数据了&lt;/p&gt;
+&lt;h2 id=&#34;6-使用-nc-拷贝文件&#34;&gt;6. 使用 &lt;code&gt;nc&lt;/code&gt; 拷贝文件&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;nc&lt;/code&gt; 还能用来在系统间拷贝文件，虽然这么做并不推荐，因为绝大多数系统默认都安装了 &lt;code&gt;ssh&lt;/code&gt;/&lt;code&gt;scp&lt;/code&gt;。 不过如果你恰好遇见个没有 &lt;code&gt;ssh&lt;/code&gt;/&lt;code&gt;scp&lt;/code&gt; 的系统的话， 你可以用 &lt;code&gt;nc&lt;/code&gt; 来作最后的努力。&lt;/p&gt;
+&lt;p&gt;在要接受数据的机器上启动 &lt;code&gt;nc&lt;/code&gt; 并让它进入监听模式：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ncat -l  &lt;span class=&#34;m&#34;&gt;8080&lt;/span&gt; &amp;gt; file.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;现在去要被拷贝数据的机器上运行下面命令：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ncat 192.168.1.100 &lt;span class=&#34;m&#34;&gt;8080&lt;/span&gt; --send-only &amp;lt; data.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这里，&lt;code&gt;data.txt&lt;/code&gt; 是要发送的文件。 &lt;code&gt;-–send-only&lt;/code&gt; 选项会在文件拷贝完后立即关闭连接。 如果不加该选项， 我们需要手工按下 &lt;code&gt;ctrl+c&lt;/code&gt; 来关闭连接。&lt;/p&gt;
+&lt;p&gt;我们也可以用这种方法拷贝整个磁盘分区，不过请一定要小心&lt;/p&gt;
+&lt;h2 id=&#34;7-通过-nc-创建后门&#34;&gt;7. 通过 &lt;code&gt;nc&lt;/code&gt; 创建后门&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;nc&lt;/code&gt; 命令还可以用来在系统中创建后门，并且这种技术也确实被黑客大量使用。 为了保护我们的系统，我们需要知道它是怎么做的。 创建后门的命令为：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ncat -l &lt;span class=&#34;m&#34;&gt;10000&lt;/span&gt; -e /bin/bash
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;-e&lt;/code&gt; 标志将一个 &lt;code&gt;bash&lt;/code&gt; 与端口 &lt;code&gt;10000&lt;/code&gt; 相连。现在客户端只要连接到服务器上的 &lt;code&gt;10000&lt;/code&gt; 端口就能通过 &lt;code&gt;bash&lt;/code&gt; 获取我们系统的完整访问权限：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ncat 192.168.1.100 &lt;span class=&#34;m&#34;&gt;10000&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;8-通过-nc-进行端口转发&#34;&gt;8. 通过 &lt;code&gt;nc&lt;/code&gt; 进行端口转发&lt;/h2&gt;
+&lt;p&gt;我们通过选项 &lt;code&gt;-c&lt;/code&gt; 来用 &lt;code&gt;nc&lt;/code&gt; 进行端口转发，实现端口转发的语法为：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ncat -u -l  &lt;span class=&#34;m&#34;&gt;80&lt;/span&gt; -c  &lt;span class=&#34;s1&#34;&gt;&amp;#39;ncat -u -l 8080&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这样，所有连接到 &lt;code&gt;80&lt;/code&gt; 端口的连接都会转发到 &lt;code&gt;8080&lt;/code&gt; 端口&lt;/p&gt;
+&lt;h2 id=&#34;9-设置连接超时&#34;&gt;9. 设置连接超时&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;nc&lt;/code&gt; 的监听模式会一直运行，直到手工终止。 不过我们可以通过选项 &lt;code&gt;-w&lt;/code&gt; 设置超时时间:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ncat -w &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt; 192.168.1.100 &lt;span class=&#34;m&#34;&gt;8080&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这会导致连接 &lt;code&gt;10&lt;/code&gt; 秒后终止，不过这个选项只能用于客户端而不是服务端。&lt;/p&gt;
+&lt;h2 id=&#34;10-使用--k-选项强制-nc-待命&#34;&gt;10. 使用 &lt;code&gt;-k&lt;/code&gt; 选项强制 &lt;code&gt;nc&lt;/code&gt; 待命&lt;/h2&gt;
+&lt;p&gt;当客户端从服务端断开连接后，过一段时间服务端也会停止监听。 但通过选项 &lt;code&gt;-k&lt;/code&gt; 我们可以强制服务器保持连接并继续监听端口。 命令如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ncat -l -k &lt;span class=&#34;m&#34;&gt;8080&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;现在即使来自客户端的连接断了也依然会处于待命状态&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本文由 &lt;a class=&#34;link&#34; href=&#34;http://ksria.com/simpread/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;简悦 SimpRead&lt;/a&gt; 转码， 原文地址 &lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/ECJTUACM-873284962/p/9712882.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;www.cnblogs.com&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

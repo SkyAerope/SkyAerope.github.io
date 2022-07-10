@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='教你如何使用饥荒联机版中的控制台输入命令'><title>饥荒联机版中的命令</title>
 
 <link rel='canonical' href='https://skae.top/p/dstcmd/'>
 
-<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='饥荒联机版中的命令'>
+<link rel="stylesheet" href="/scss/style.min.fe253589db5a54c99fe6b16bfbaf0243d856d34f8c07f3534613b39ed043b738.css"><meta property='og:title' content='饥荒联机版中的命令'>
 <meta property='og:description' content='教你如何使用饥荒联机版中的控制台输入命令'>
 <meta property='og:url' content='https://skae.top/p/dstcmd/'>
 <meta property='og:site_name' content='^薄荷布丁^'>
@@ -18,8 +18,8 @@
 
     </head>
     <body class="
-    article-page has-toc
-">
+    article-page
+    ">
     <script>
         (function() {
             const colorSchemeKey = 'StackColorScheme';
@@ -42,25 +42,215 @@
         }
     })();
 </script>
-<div class="container main-container flex 
-    
-        extended
-    
-">
-    
-        <div id="article-toolbar">
-            <a href="https://skae.top" class="back-home">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <polyline points="15 6 9 12 15 18" />
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/skyaerope_hub3afead531cb5db18fe0b723ec01cac5_383584_300x0_resize_q75_box.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍮</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">^薄荷布丁^</a></h1>
+            <h2 class="site-description">谁会用薄荷做布丁呢？</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/skyaerope'
+                        target="_blank"
+                        title="GitHub"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
 </svg>
 
 
 
-                <span>返回</span>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
             </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>分类</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/index.xml' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="5" cy="19" r="1" />
+  <path d="M4 4a16 16 0 0 1 16 16" />
+  <path d="M4 11a9 9 0 0 1 9 9" />
+</svg>
+
+
+
+                
+                <span>RSS源</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='https://travellings.link' target="_blank">
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-train" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M21 13c0 -3.87 -3.37 -7 -10 -7h-8" />
+  <path d="M3 15h16a2 2 0 0 0 2 -2" />
+  <path d="M3 6v5h17.5" />
+  <line x1="3" y1="10" x2="3" y2="14" />
+  <line x1="8" y1="11" x2="8" y2="6" />
+  <line x1="13" y1="11" x2="13" y2="6.5" />
+  <line x1="3" y1="19" x2="21" y2="19" />
+</svg>
+                
+                <span>开往</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
         </div>
-    
+    </ol>
+</aside>
 <main class="main full-width">
     <article class="has-image main-article">
     <header class="article-header">
@@ -92,16 +282,38 @@
     </header>
     
 
-    <h2 class="article-title">
-        <a href="/p/dstcmd/">饥荒联机版中的命令</a>
-    </h2>
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/dstcmd/">饥荒联机版中的命令</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            教你如何使用饥荒联机版中的控制台输入命令
+        </h3>
+        
+    </div>
 
     
-    <h3 class="article-subtitle">
-        教你如何使用饥荒联机版中的控制台输入命令
-    </h3>
     <footer class="article-time">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jul 12, 2021</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="12" cy="12" r="9" />
   <polyline points="12 7 12 12 15 15" />
@@ -109,42 +321,56 @@
 
 
 
-        <time class="article-time--published">Jul 12, 2021</time>
-    </footer></div>
+                <time class="article-time--reading">
+                    阅读时长: 9 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
 </header>
 
     <section class="article-content">
+    
+    
     <p><strong>命令控制台</strong>默认是启用状态。如果它因为任何原因没有处于开启状态，你首先要做的就是调整你存档中的 settings.ini 文件。它可以在 &ldquo;DoNotStarveTogether&rdquo; 文件夹里被找到，位于以下路径：</p>
 <blockquote>
 <p>Windows, Mac: <!-- raw HTML omitted -->\Klei\DoNotStarveTogether\client.ini</p>
 <p>Linux:         ~/.klei/DoNotStarve/client.ini </p>
 </blockquote>
 <p>找到 settings.ini 然后用记事本打开。找到 section 部分，并确保在下面有<code>ENABLECONSOLE = true。如果它它被设置为 false</code> ，将它改为 true 并保存。然后在游戏中打开控制台，英文键盘下默认按 &ldquo;~&rdquo; 键。这可以随时在控制菜单中修改。</p>
-<p>本地命令模式<figure style="flex-grow: 784; flex-basis: 1882px">
-		<a href="/p/dstcmd/01.png" data-size="400x51"><img src="/p/dstcmd/01.png"
-				srcset="/p/dstcmd/01_hu37088104accd09b67dd9873be102cc5d_27117_480x0_resize_box_3.png 480w, /p/dstcmd/01_hu37088104accd09b67dd9873be102cc5d_27117_1024x0_resize_box_3.png 1024w"
-				width="400"
-				height="51"
-				loading="lazy"
-				>
-		</a>
-		
-	</figure></p>
+<p>本地命令模式<img src="/p/dstcmd/01.png"
+	width="400"
+	height="51"
+	srcset="/p/dstcmd/01_hu37088104accd09b67dd9873be102cc5d_27117_480x0_resize_box_3.png 480w, /p/dstcmd/01_hu37088104accd09b67dd9873be102cc5d_27117_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="784"
+		data-flex-basis="1882px"
+	
+></p>
 <p>注：   * 你在重新加载世界后必须重新输入每一个命令。</p>
 <ul>
 <li>Lua 支持可变数量参数的函数，例如，你只想生成一个野牛的预设，你可以不填 &ldquo;amount&rdquo; 参数：&ldquo;c_spawn(&lsquo;beefalo&rsquo;)&quot;。</li>
 <li>如果你不是主机（或者它是一个专用服务器，你是这个服务器的管理员），大部分命令需要远程执行。在控制台中按 Ctrl 来切换远程命令模式。一小部分命令（例如显示地图）仍然可以在本地模式下完成。</li>
 </ul>
-<p>远程命令模式<figure style="flex-grow: 740; flex-basis: 1777px">
-		<a href="/p/dstcmd/02.png" data-size="400x54"><img src="/p/dstcmd/02.png"
-				srcset="/p/dstcmd/02_huaa67f16f4482e1c5bf605554d5f89a7e_29818_480x0_resize_box_3.png 480w, /p/dstcmd/02_huaa67f16f4482e1c5bf605554d5f89a7e_29818_1024x0_resize_box_3.png 1024w"
-				width="400"
-				height="54"
-				loading="lazy"
-				>
-		</a>
-		
-	</figure></p>
+<p>远程命令模式<img src="/p/dstcmd/02.png"
+	width="400"
+	height="54"
+	srcset="/p/dstcmd/02_huaa67f16f4482e1c5bf605554d5f89a7e_29818_480x0_resize_box_3.png 480w, /p/dstcmd/02_huaa67f16f4482e1c5bf605554d5f89a7e_29818_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="740"
+		data-flex-basis="1777px"
+	
+></p>
 <p>许多<a class="link" href="https://dontstarve.fandom.com/zh/wiki/%E6%8E%A7%E5%88%B6%E5%8F%B0/%E6%8C%87%E4%BB%A4"  title="控制台/指令"
      target="_blank" rel="noopener"
     >饥荒命令</a> 仍然在 DST（多人版饥荒）中可用，因此你仍然可以阅读它。</p>
@@ -152,13 +378,27 @@
 <ul>
 <li><strong>生成实例</strong></li>
 </ul>
-<pre tabindex="0"><code>c_spawn(&#34;prefab&#34;,amount)
-</code></pre><p><em>利用 DebugSpawn(&ldquo;预设&rdquo;) 命令，在鼠标所指处生成一定数量被指定的 &ldquo;预设&rdquo;。</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">c_spawn(&#34;prefab&#34;,amount)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>利用 DebugSpawn(&ldquo;预设&rdquo;) 命令，在鼠标所指处生成一定数量被指定的 &ldquo;预设&rdquo;。</em></p>
 <ul>
 <li><strong>获得物品</strong></li>
 </ul>
-<pre tabindex="0"><code>c_give(&#34;prefab&#34;,amount)
-</code></pre><p><em>在你的物品栏中生成一定数量被指定的 &ldquo;预设&rdquo;。只适用于可以被储存在物品栏的<a class="link" href="https://dontstarve.fandom.com/zh/wiki/%E8%83%8C%E5%8C%85"  title="背包"
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">c_give(&#34;prefab&#34;,amount)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>在你的物品栏中生成一定数量被指定的 &ldquo;预设&rdquo;。只适用于可以被储存在物品栏的<a class="link" href="https://dontstarve.fandom.com/zh/wiki/%E8%83%8C%E5%8C%85"  title="背包"
      target="_blank" rel="noopener"
     >背包</a> 和<a class="link" href="https://dontstarve.fandom.com/zh/wiki/%E7%89%A9%E5%93%81"  title="物品"
      target="_blank" rel="noopener"
@@ -166,38 +406,87 @@
 <ul>
 <li><strong>脚本（未测试）</strong></li>
 </ul>
-<pre tabindex="0"><code>c_doscenario(scenario)
-</code></pre><p><em>应用一个选择的脚本并执行它。</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">c_doscenario(scenario)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>应用一个选择的脚本并执行它。</em></p>
 <ul>
 <li><strong>生命值</strong></li>
 </ul>
-<pre tabindex="0"><code>c_sethea​lth(percent)
-</code></pre><p><em>用百分比设置你的生命值。注：使用分数 0.90 = 90%</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">c_sethea​lth(percent)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>用百分比设置你的生命值。注：使用分数 0.90 = 90%</em></p>
 <ul>
 <li><strong>理智值</strong></li>
 </ul>
-<pre tabindex="0"><code>c_setsanit​y(percent)
-</code></pre><p><em>用百分比设置你的理智值。注：使用分数 0.90 = 90%</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">c_setsanit​y(percent)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>用百分比设置你的理智值。注：使用分数 0.90 = 90%</em></p>
 <ul>
 <li><strong>饥饿值</strong></li>
 </ul>
-<pre tabindex="0"><code>c_sethunger(pe​rcent)
-</code></pre><p><em>用百分比设置你的饥饿值。注：使用分数 0.90 = 90%</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">c_sethunger(pe​rcent)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>用百分比设置你的饥饿值。注：使用分数 0.90 = 90%</em></p>
 <ul>
 <li><strong>湿度</strong></li>
 </ul>
-<pre tabindex="0"><code>c_setmoisture(pe​rcent)
-</code></pre><p><em>用百分比设置你的湿度。注：使用分数 0.90 = 90%</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">c_setmoisture(pe​rcent)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>用百分比设置你的湿度。注：使用分数 0.90 = 90%</em></p>
 <ul>
 <li><strong>温度</strong></li>
 </ul>
-<pre tabindex="0"><code>c_settemperature(degrees)
-</code></pre><p><em>用百分比设置你的温度。注：使用分数 0.90 = 90%</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">c_settemperature(degrees)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>用百分比设置你的温度。注：使用分数 0.90 = 90%</em></p>
 <ul>
 <li><strong>上帝模式</strong></li>
 </ul>
-<pre tabindex="0"><code>c_godmode() 
-</code></pre><p><em>玩家的<a class="link" href="https://dontstarve.fandom.com/zh/wiki/%E7%90%86%E6%99%BA"  title="理智"
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">c_godmode() 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>玩家的<a class="link" href="https://dontstarve.fandom.com/zh/wiki/%E7%90%86%E6%99%BA"  title="理智"
      target="_blank" rel="noopener"
     >理智</a>值、<a class="link" href="https://dontstarve.fandom.com/zh/wiki/%E9%A3%A2%E9%A4%93"  title="饥饿"
      target="_blank" rel="noopener"
@@ -207,65 +496,135 @@
 <ul>
 <li><strong>超级上帝模式</strong></li>
 </ul>
-<pre tabindex="0"><code>c_supergodmode()
-</code></pre><p><em>和上帝模式一样但会将你的各项统计数据设置为满，即使你将它关闭。与 c_godmode() 相似,，它也会复活你（通过 c_supergodmode() 复活后不会将你置于上帝模式）。再次使用命令停用上帝模式。</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">c_supergodmode()
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>和上帝模式一样但会将你的各项统计数据设置为满，即使你将它关闭。与 c_godmode() 相似,，它也会复活你（通过 c_supergodmode() 复活后不会将你置于上帝模式）。再次使用命令停用上帝模式。</em></p>
 <ul>
 <li><strong>设置额外的移动速度</strong></li>
 </ul>
-<pre tabindex="0"><code>c_speedmult(multiplier)
-</code></pre><p><em>标准额外的移动速度为 1。设置为 2 使你以两倍的速度移动，设置为 20 可以让你轻松地穿过墙和 &ldquo;越过&rdquo; 水。</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">c_speedmult(multiplier)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>标准额外的移动速度为 1。设置为 2 使你以两倍的速度移动，设置为 20 可以让你轻松地穿过墙和 &ldquo;越过&rdquo; 水。</em></p>
 <p>这儿有其他一些命令，但是它们很难使用而且用处不大。</p>
 <h2 id="玩家命令">玩家命令</h2>
 <p>**注：**如果你不是管理员的客户端发送远程命令，那么大多数命令将不会有效（按 Ctrl 键切换控制台远程命令模式）。</p>
 <ul>
 <li><strong>动作预测</strong></li>
 </ul>
-<pre tabindex="0"><code>ThePlayer:EnableMovementPrediction(true)
-</code></pre><p><em>默认情况下为开启状态，将  true 改为  false  可以关闭动作预测，关闭动作预测通常对战斗有一些帮助。该命令只有客户端执行才有效，主机或服务器执行将不会有效。（<strong>必须在控制台的本地模式下执行该命令才有效，也就是必须关闭控制台的远程命令模式</strong></em>）</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ThePlayer:EnableMovementPrediction(true)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>默认情况下为开启状态，将  true 改为  false  可以关闭动作预测，关闭动作预测通常对战斗有一些帮助。该命令只有客户端执行才有效，主机或服务器执行将不会有效。（<strong>必须在控制台的本地模式下执行该命令才有效，也就是必须关闭控制台的远程命令模式</strong></em>）</p>
 <p><em>**译者注：**动作预测也可以直接在游戏设置中关闭，<strong>设置</strong> &ndash;&gt; <strong>滞后的奖励</strong>（<strong>Lag Compensation</strong>），将其修改为 <strong>无</strong>（<strong>None</strong>）就可以关闭动作预测。</em></p>
 <ul>
 <li><strong>创造模式</strong></li>
 </ul>
-<pre tabindex="0"><code>ThePlayer.components.builder:GiveAllRecipes()
-</code></pre><p><em>你可以合成任何东西。</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ThePlayer.components.builder:GiveAllRecipes()
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>你可以合成任何东西。</em></p>
 <ul>
 <li><strong>生命值上限</strong></li>
 </ul>
-<pre tabindex="0"><code>ThePlayer.components.health:SetMaxHealth(value)
-</code></pre><p><em>改变你的<a class="link" href="https://dontstarve.fandom.com/zh/wiki/%E8%A7%92%E8%89%B2"  target="_blank" rel="noopener"
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ThePlayer.components.health:SetMaxHealth(value)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>改变你的<a class="link" href="https://dontstarve.fandom.com/zh/wiki/%E8%A7%92%E8%89%B2"  target="_blank" rel="noopener"
     >角色</a> 的<a class="link" href="https://dontstarve.fandom.com/zh/wiki/%E7%94%9F%E5%91%BD"  target="_blank" rel="noopener"
     >生命</a> 值上限</em></p>
 <ul>
 <li><strong>理智值上限</strong></li>
 </ul>
-<pre tabindex="0"><code>ThePlayer.components.sanity:SetMax(value)
-</code></pre><p><em>改变你的<a class="link" href="https://dontstarve.fandom.com/zh/wiki/%E8%A7%92%E8%89%B2"  target="_blank" rel="noopener"
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ThePlayer.components.sanity:SetMax(value)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>改变你的<a class="link" href="https://dontstarve.fandom.com/zh/wiki/%E8%A7%92%E8%89%B2"  target="_blank" rel="noopener"
     >角色</a> 的<a class="link" href="https://dontstarve.fandom.com/zh/wiki/%E7%90%86%E6%99%BA"  target="_blank" rel="noopener"
     >理智</a> 值上限</em></p>
 <ul>
 <li><strong>饥饿值上限</strong></li>
 </ul>
-<pre tabindex="0"><code>ThePlayer.components.hunger:SetMax(value)
-</code></pre><p><em>改变你的<a class="link" href="https://dontstarve.fandom.com/zh/wiki/%E8%A7%92%E8%89%B2"  target="_blank" rel="noopener"
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ThePlayer.components.hunger:SetMax(value)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>改变你的<a class="link" href="https://dontstarve.fandom.com/zh/wiki/%E8%A7%92%E8%89%B2"  target="_blank" rel="noopener"
     >角色</a> 的<a class="link" href="https://dontstarve.fandom.com/zh/wiki/%E9%A5%A5%E9%A5%BF"  target="_blank" rel="noopener"
     >饥饿</a> 值上限</em></p>
 <ul>
 <li><strong>暂停饥饿</strong></li>
 </ul>
-<pre tabindex="0"><code>ThePlayer.components.hunger:Pause(true)
-</code></pre><p><em>你的<a class="link" href="https://dontstarve.fandom.com/zh/wiki/%E8%A7%92%E8%89%B2"  target="_blank" rel="noopener"
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ThePlayer.components.hunger:Pause(true)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>你的<a class="link" href="https://dontstarve.fandom.com/zh/wiki/%E8%A7%92%E8%89%B2"  target="_blank" rel="noopener"
     >角色</a> 不再降低饥饿值。</em></p>
 <ul>
 <li><strong>伤害倍数</strong></li>
 </ul>
-<pre tabindex="0"><code>ThePlayer.components.combat.damagemultiplier = value
-</code></pre><p><em>改变你的<a class="link" href="https://dontstarve.fandom.com/zh/wiki/%E8%A7%92%E8%89%B2"  target="_blank" rel="noopener"
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ThePlayer.components.combat.damagemultiplier = value
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>改变你的<a class="link" href="https://dontstarve.fandom.com/zh/wiki/%E8%A7%92%E8%89%B2"  target="_blank" rel="noopener"
     >角色</a> 的伤害倍数</em></p>
 <ul>
 <li><strong>海狸</strong></li>
 </ul>
-<pre tabindex="0"><code>ThePlayer.components.beaverness:SetPercent(.01)
-</code></pre><p><em>把<a class="link" href="https://dontstarve.fandom.com/zh/wiki/%E4%BC%8D%E8%BF%AA"  target="_blank" rel="noopener"
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ThePlayer.components.beaverness:SetPercent(.01)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>把<a class="link" href="https://dontstarve.fandom.com/zh/wiki/%E4%BC%8D%E8%BF%AA"  target="_blank" rel="noopener"
     >伍迪</a> 变成<a class="link" href="https://dontstarve.fandom.com/zh/wiki/%E4%BC%8D%E8%BF%AA#%E6%B5%B7%E7%8B%B8"  target="_blank" rel="noopener"
     >海狸</a> 。把 .01 改为 1 可以让你变回伍迪。</em></p>
 <h2 id="其他玩家命令">其他玩家命令</h2>
@@ -273,162 +632,389 @@
 <ul>
 <li><strong>列出所有玩家的用户名和编号</strong></li>
 </ul>
-<pre tabindex="0"><code>c_listallplayers()
-</code></pre><ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">c_listallplayers()
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
 <li><strong>取一个玩家</strong></li>
 </ul>
-<pre tabindex="0"><code>AllPlayers[number]
-</code></pre><p><em>AllPlayers[1] 取的是主机玩家。其他玩家的编号显示在记分板上（某些情况下编号有可能是错的，你可以先用 c_listallplayers() 来查看每个用户编号的用户名和角色）。大部分玩家命令可以用 AllPlayers[number] 代替 ThePlayer。</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">AllPlayers[number]
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>AllPlayers[1] 取的是主机玩家。其他玩家的编号显示在记分板上（某些情况下编号有可能是错的，你可以先用 c_listallplayers() 来查看每个用户编号的用户名和角色）。大部分玩家命令可以用 AllPlayers[number] 代替 ThePlayer。</em></p>
 <ul>
 <li><strong>对所有玩家使用同一命令</strong></li>
 </ul>
-<pre tabindex="0"><code>for k,v in pairs(AllPlayers) do command end
-</code></pre><p><em>只修改 command，用其他命令代替 command，使用 &ldquo;v&rdquo; 代替命令中的 AllPlayers[number]。例如， &ldquo;for k,v in pairs(AllPlayers) do c_move(v) end&rdquo; 将会把所有玩家都移动到鼠标所指的位置。</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">for k,v in pairs(AllPlayers) do command end
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>只修改 command，用其他命令代替 command，使用 &ldquo;v&rdquo; 代替命令中的 AllPlayers[number]。例如， &ldquo;for k,v in pairs(AllPlayers) do c_move(v) end&rdquo; 将会把所有玩家都移动到鼠标所指的位置。</em></p>
 <ul>
 <li><strong>移动一个玩家</strong></li>
 </ul>
-<pre tabindex="0"><code>c_move(AllPlayers[number])
-</code></pre><p><em>移动玩家到鼠标所指的位置。</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">c_move(AllPlayers[number])
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>移动玩家到鼠标所指的位置。</em></p>
 <ul>
 <li><strong>杀死一个玩家</strong></li>
 </ul>
-<pre tabindex="0"><code>AllPlayers[number]:PushEvent(&#39;death&#39;)
-</code></pre><p><em>杀死玩家。</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">AllPlayers[number]:PushEvent(&#39;death&#39;)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>杀死玩家。</em></p>
 <ul>
 <li><strong>复活玩家</strong></li>
 </ul>
-<pre tabindex="0"><code>AllPlayers[number]:PushEvent(&#39;respawnfromghost&#39;)
-</code></pre><p><em>复活玩家。</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">AllPlayers[number]:PushEvent(&#39;respawnfromghost&#39;)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>复活玩家。</em></p>
 <ul>
 <li><strong>传送至玩家</strong></li>
 </ul>
-<pre tabindex="0"><code>c_goto(AllPlayers[number])
-</code></pre><p><em>传送到对应编号的玩家，玩家编号可以通过 c_listallplayers() 获取。</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">c_goto(AllPlayers[number])
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>传送到对应编号的玩家，玩家编号可以通过 c_listallplayers() 获取。</em></p>
 <ul>
 <li><strong>丢掉玩家物品栏的物品</strong></li>
 </ul>
-<pre tabindex="0"><code>AllPlayers[number].components.inventory:DropEverything()
-</code></pre><p><em>丢掉对应编号的玩家物品栏的所有物品，玩家编号可以通过 c_listallplayers() 获取。</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">AllPlayers[number].components.inventory:DropEverything()
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>丢掉对应编号的玩家物品栏的所有物品，玩家编号可以通过 c_listallplayers() 获取。</em></p>
 <ul>
 <li><strong>让玩家重新选择角色</strong></li>
 </ul>
-<pre tabindex="0"><code>c_despawn(AllPlayers[number])
-</code></pre><p><em>使用该命令将会删除玩家物品栏的物品而不会掉落，所以推荐你先让玩家的物品丢掉他们的物品，或者使用上一条命令 DropEverthing()。</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">c_despawn(AllPlayers[number])
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>使用该命令将会删除玩家物品栏的物品而不会掉落，所以推荐你先让玩家的物品丢掉他们的物品，或者使用上一条命令 DropEverthing()。</em></p>
 <p>截至 2016 年 6 月 25 日，增加了一个新的命令来指定玩家。你可以通过一个玩家名 UserToPlayer(&lsquo;玩家名&rsquo;) 来指定一个玩家而不是使用玩家编号。例如，杀死一名叫做 &ldquo;PlayerA&rdquo; 的玩家，他的用户编号为 5，你可以执行：</p>
-<pre tabindex="0"><code>AllPlayers[5]:PushEvent(&#39;death&#39;)
-</code></pre><p><em>但在此之前你必须先运行 c_listallplayers() 来知道玩家编号，十分麻烦。</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">AllPlayers[5]:PushEvent(&#39;death&#39;)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>但在此之前你必须先运行 c_listallplayers() 来知道玩家编号，十分麻烦。</em></p>
 <p>为了简单一点地执行命令，你可以把命令改成：</p>
-<pre tabindex="0"><code>UserToPlayer(&#39;PlayerA&#39;):PushEvent(&#39;death&#39;)
-</code></pre><h2 id="世界命令">世界命令</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">UserToPlayer(&#39;PlayerA&#39;):PushEvent(&#39;death&#39;)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="世界命令">世界命令</h2>
 <ul>
 <li><strong>传送到预设</strong></li>
 </ul>
-<pre tabindex="0"><code>c_gonext(&#34;prefab&#34;)
-</code></pre><p><em>输入该命令后，你将被传送到第一个预设的实体. 如果存在多个预设的实体，控制台日志将会显示实体数量的列表，再次执行相同的命令将会传送玩家到下一个在世界中生成的预设的实体。</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">c_gonext(&#34;prefab&#34;)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>输入该命令后，你将被传送到第一个预设的实体. 如果存在多个预设的实体，控制台日志将会显示实体数量的列表，再次执行相同的命令将会传送玩家到下一个在世界中生成的预设的实体。</em></p>
 <ul>
 <li><strong>删除鼠标下的实体</strong></li>
 </ul>
-<pre tabindex="0"><code>ConsoleWorldEntityUnderMouse():Remove()
-c_select():Remove() 
-</code></pre><p><em>输入该命令后，将会删除你鼠标下的物品。在专用服务器上使用第二个命令，因为第一个不能在专用服务器上使用。</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ConsoleWorldEntityUnderMouse():Remove()
+</span></span><span class="line"><span class="cl">c_select():Remove() 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>输入该命令后，将会删除你鼠标下的物品。在专用服务器上使用第二个命令，因为第一个不能在专用服务器上使用。</em></p>
 <ul>
 <li><strong>显示地图</strong></li>
 </ul>
-<pre tabindex="0"><code>minimap = TheSim:FindFirstEntityWithTag(&#34;mini­map&#34;)
-TheWorld.minimap.MiniMap:ShowArea (0,0,0,10000)
-</code></pre><p><em>这是一个本地命令，且客户端不可用。</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">minimap = TheSim:FindFirstEntityWithTag(&#34;mini­map&#34;)
+</span></span><span class="line"><span class="cl">TheWorld.minimap.MiniMap:ShowArea (0,0,0,10000)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>这是一个本地命令，且客户端不可用。</em></p>
 <ul>
 <li><strong>跳过一天</strong></li>
 </ul>
-<pre tabindex="0"><code>TheWorld:PushEvent(&#34;ms_nextcycle&#34;)
-</code></pre><ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">TheWorld:PushEvent(&#34;ms_nextcycle&#34;)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
 <li><strong>跳过时间</strong></li>
 </ul>
-<pre tabindex="0"><code>TheWorld.net.components.clock:OnUpdate(16*30*x) 
-</code></pre><p><em>跳过 x 天。将 x 修改为所要跳的天数（例如，16<em>30</em>4.5 为跳过 4.5 天）</em>  _<strong>警告</strong>：_数值太大可能会冻结游戏。（<strong>取决于电脑的运算速度</strong>）</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">TheWorld.net.components.clock:OnUpdate(16*30*x) 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>跳过 x 天。将 x 修改为所要跳的天数（例如，16<em>30</em>4.5 为跳过 4.5 天）</em>  _<strong>警告</strong>：_数值太大可能会冻结游戏。（<strong>取决于电脑的运算速度</strong>）</p>
 <ul>
 <li><strong>跳过时间单元并更新</strong></li>
 </ul>
-<pre tabindex="0"><code>LongUpdate(X)
-</code></pre><p><em>对世界对象执行 &ldquo;LongUpdate&rdquo; 事件并跳过 X 个时间单元</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">LongUpdate(X)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>对世界对象执行 &ldquo;LongUpdate&rdquo; 事件并跳过 X 个时间单元</em></p>
 <p>_<strong>注：</strong>_每一个时间部分有 30 个时间单元。想要跳过一天可以使用 LongUpdate(480) 或者用乘法计算，例如 LongUpdate(X<em>16</em>30) 或者 LongUpdate(X*TUNING.TOTAL_DAY_TIME) X 为想要跳过的天数。</p>
 <p>_<strong>译者注：</strong>_每天有 16 个小部分，每部分有 30 个时间单元，每单元为现实中的一秒，所以一天为现实中的 8 分钟。（详见日夜周期 ）</p>
 <ul>
 <li><strong>跳过时钟阶段</strong></li>
 </ul>
-<pre tabindex="0"><code>TheWorld:PushEvent(&#34;ms_nextphase&#34;)
-</code></pre><p><em>跳过当前时钟阶段。</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">TheWorld:PushEvent(&#34;ms_nextphase&#34;)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>跳过当前时钟阶段。</em></p>
 <ul>
 <li><strong>设置时钟阶段</strong></li>
 </ul>
-<pre tabindex="0"><code>TheWorld:PushEvent(&#34;ms_setclocksegs&#34;, {day=x,dusk=y,night=z})
-</code></pre><p><em>设置每个时钟阶段的时间部分的数量。如果 x + y + z 加起来超过 16 将会产生错误。注意这样的修改第二天会复原。</em><br>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">TheWorld:PushEvent(&#34;ms_setclocksegs&#34;, {day=x,dusk=y,night=z})
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>设置每个时钟阶段的时间部分的数量。如果 x + y + z 加起来超过 16 将会产生错误。注意这样的修改第二天会复原。</em><br>
 例子：</p>
-<pre tabindex="0"><code>TheWorld:PushEvent(&#34;ms_setclocksegs&#34;, {day=14,dusk=1,night=1})
-</code></pre><p><em>非常长的白天，非常短的黄昏和夜晚（只给黄昏一个时间部分和夜晚一个时间部分）</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">TheWorld:PushEvent(&#34;ms_setclocksegs&#34;, {day=14,dusk=1,night=1})
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>非常长的白天，非常短的黄昏和夜晚（只给黄昏一个时间部分和夜晚一个时间部分）</em></p>
 <ul>
 <li><strong>设置季节的时钟阶段</strong></li>
 </ul>
-<pre tabindex="0"><code>TheWorld:PushEvent(&#34;ms_setseasonclocksegs&#34;, {summer={day=sx,dusk=sy,night=sz}, winter={day=wx,dusk=wy,night=wz}}) 
-</code></pre><p><em>为指定季节设置每个时钟阶段的时间部分的数量。如果 x + y + z 加起来超过 16 将会产生错误。不像设置时钟阶段一样，该设置是永久性的。</em><br>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">TheWorld:PushEvent(&#34;ms_setseasonclocksegs&#34;, {summer={day=sx,dusk=sy,night=sz}, winter={day=wx,dusk=wy,night=wz}}) 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>为指定季节设置每个时钟阶段的时间部分的数量。如果 x + y + z 加起来超过 16 将会产生错误。不像设置时钟阶段一样，该设置是永久性的。</em><br>
 例子：</p>
-<pre tabindex="0"><code>TheWorld:PushEvent(&#34;ms_setseasonclocksegs&#34;, {summer={day=14,dusk=1,night=1}, winter={day=13,dusk=1,night=2}})
-</code></pre><p><em>非常长的白天，非常短的黄昏和夜晚（夏天：只给黄昏一个时间部分和夜晚一个时间部分，冬天：只给黄昏一个时间部分和夜晚两个个时间部分）</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">TheWorld:PushEvent(&#34;ms_setseasonclocksegs&#34;, {summer={day=14,dusk=1,night=1}, winter={day=13,dusk=1,night=2}})
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>非常长的白天，非常短的黄昏和夜晚（夏天：只给黄昏一个时间部分和夜晚一个时间部分，冬天：只给黄昏一个时间部分和夜晚两个个时间部分）</em></p>
 <ul>
 <li><strong>设置季节长度</strong></li>
 </ul>
-<pre tabindex="0"><code>TheWorld:PushEvent(&#34;ms_setseasonlength&#34;, {season=&#34;summer&#34;, length=15})
-</code></pre><p><em>设置季节的长度。</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">TheWorld:PushEvent(&#34;ms_setseasonlength&#34;, {season=&#34;summer&#34;, length=15})
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>设置季节的长度。</em></p>
 <ul>
 <li><strong>进入夏季</strong></li>
 </ul>
-<pre tabindex="0"><code>TheWorld:PushEvent(&#34;ms_setseason&#34;, &#34;summer&#34;)
-</code></pre><p><em>进入夏季</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">TheWorld:PushEvent(&#34;ms_setseason&#34;, &#34;summer&#34;)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>进入夏季</em></p>
 <ul>
 <li><strong>进入冬季</strong></li>
 </ul>
-<pre tabindex="0"><code>TheWorld:PushEvent(&#34;ms_setseason&#34;, &#34;winter&#34;)
-</code></pre><p><em>进入冬季</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">TheWorld:PushEvent(&#34;ms_setseason&#34;, &#34;winter&#34;)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>进入冬季</em></p>
 <p><em>当添加了巨人的统治 DLC，会有额外的命令 TheWorld:PushEvent(&ldquo;ms_setseason&rdquo;, &ldquo;spring&rdquo;)​ 和 TheWorld:PushEvent(&ldquo;ms_setseason&rdquo;, &ldquo;autumn&rdquo;)​</em></p>
 <ul>
 <li><strong>开始下雨</strong></li>
 </ul>
-<pre tabindex="0"><code>TheWorld:PushEvent(&#34;ms_forceprecipitation&#34;)
-</code></pre><p><em>开始下雨</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">TheWorld:PushEvent(&#34;ms_forceprecipitation&#34;)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>开始下雨</em></p>
 <ul>
 <li><strong>停止下雨</strong></li>
 </ul>
-<pre tabindex="0"><code>TheWorld:PushEvent(&#34;ms_forceprecipitation&#34;, false) 
-</code></pre><p><em>停止下雨。这包括<a class="link" href="https://dontstarve.fandom.com/zh/wiki/%E9%9B%A8%E5%A4%A9#.E9.9D.92.E8.9B.99.E9.9B.A8"  title="雨天"
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">TheWorld:PushEvent(&#34;ms_forceprecipitation&#34;, false) 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>停止下雨。这包括<a class="link" href="https://dontstarve.fandom.com/zh/wiki/%E9%9B%A8%E5%A4%A9#.E9.9D.92.E8.9B.99.E9.9B.A8"  title="雨天"
      target="_blank" rel="noopener"
     >青蛙雨</a> 。</em></p>
 <ul>
 <li><strong>生成闪电</strong></li>
 </ul>
-<pre tabindex="0"><code>TheWorld:PushEvent(&#34;ms_sendlightningstrike&#34;, ConsoleWorldPosition())
-</code></pre><p><em>闪电击中玩家，如果靠近避雷针的话，则击中避雷针。</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">TheWorld:PushEvent(&#34;ms_sendlightningstrike&#34;, ConsoleWorldPosition())
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>闪电击中玩家，如果靠近避雷针的话，则击中避雷针。</em></p>
 <ul>
 <li><strong>陨星撞击</strong></li>
 </ul>
-<pre tabindex="0"><code>c_spawn(&#34;shadowmeteor&#34;, 1)
-</code></pre><p><em>陨星撞击在鼠标的位置。随机生成不同类型的岩石。</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">c_spawn(&#34;shadowmeteor&#34;, 1)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>陨星撞击在鼠标的位置。随机生成不同类型的岩石。</em></p>
 <ul>
 <li><strong>激活所有的事件</strong></li>
 </ul>
-<pre tabindex="0"><code>for k, v in pairs(SPECIAL_EVENTS) do if v ~= SPECIAL_EVENTS.NONE then local tech = TECH[k] if tech ~= nil then tech.SCIENCE = 0 end end end function IsSpecialEventActive(event) return true end
-</code></pre><p><em>同一事件内激活所有事件 。</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">for k, v in pairs(SPECIAL_EVENTS) do if v ~= SPECIAL_EVENTS.NONE then local tech = TECH[k] if tech ~= nil then tech.SCIENCE = 0 end end end function IsSpecialEventActive(event) return true end
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>同一事件内激活所有事件 。</em></p>
 <ul>
 <li><strong>测量距离</strong></li>
 </ul>
-<pre tabindex="0"><code>print(math.sqrt(ThePlayer:GetDistanceSqToInst(ConsoleWorldEntityUnderMouse())))
-</code></pre><p><em>在控制台日志中输出玩家和鼠标指着的物体的距离（默认情况下按 Ctrl + L 显示控制台日志）。</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">print(math.sqrt(ThePlayer:GetDistanceSqToInst(ConsoleWorldEntityUnderMouse())))
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>在控制台日志中输出玩家和鼠标指着的物体的距离（默认情况下按 Ctrl + L 显示控制台日志）。</em></p>
 <h2 id="网络--服务器命令">网络 / 服务器命令</h2>
 <ul>
 <li><strong>踢 / 封禁一个玩家</strong></li>
 </ul>
-<pre tabindex="0"><code>TheNet:Kick(userid)
-TheNet:Ban(userid)
-</code></pre><p><em>注意，这可以通过记分板更简单得完成。userid 可以通过 AllPlayers 表来获取，先找到你想要踢出服务器的玩家的编号（见上面的<a class="link" href="https://dontstarve.fandom.com/zh/wiki/%E6%8E%A7%E5%88%B6%E5%8F%B0/%E5%A4%9A%E4%BA%BA%E7%89%88%E9%A5%A5%E8%8D%92%E4%B8%AD%E7%9A%84%E5%91%BD%E4%BB%A4#.E5.85.B6.E4.BB.96.E7.8E.A9.E5.AE.B6.E5.91.BD.E4.BB.A4"  title="控制台/多人版饥荒中的命令"
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">TheNet:Kick(userid)
+</span></span><span class="line"><span class="cl">TheNet:Ban(userid)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>注意，这可以通过记分板更简单得完成。userid 可以通过 AllPlayers 表来获取，先找到你想要踢出服务器的玩家的编号（见上面的<a class="link" href="https://dontstarve.fandom.com/zh/wiki/%E6%8E%A7%E5%88%B6%E5%8F%B0/%E5%A4%9A%E4%BA%BA%E7%89%88%E9%A5%A5%E8%8D%92%E4%B8%AD%E7%9A%84%E5%91%BD%E4%BB%A4#.E5.85.B6.E4.BB.96.E7.8E.A9.E5.AE.B6.E5.91.BD.E4.BB.A4"  title="控制台/多人版饥荒中的命令"
      target="_blank" rel="noopener"
     >其他玩家命令</a> 部分），然后使用 AllPlayers[#].userid。</em></p>
 <p><em>例子：</em></p>
@@ -436,72 +1022,170 @@ TheNet:Ban(userid)
 [1] (KU_aabbccdd) Player1 <!-- raw HTML omitted --></em></p>
 <p><em>[2] (KU_AABBCCDD) Player2 <!-- raw HTML omitted --></em></p>
 <p><em>如果想要在服务器上封禁 Player2，控制台中输入命令</em></p>
-<pre tabindex="0"><code>_TheNet:Ban(AllPlayers[2].userid)_
-</code></pre><p><em>或者</em></p>
-<pre tabindex="0"><code>_TheNet:Ban(&#34;KU_AABBCCDD&#34;)_
-</code></pre><ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">_TheNet:Ban(AllPlayers[2].userid)_
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>或者</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">_TheNet:Ban(&#34;KU_AABBCCDD&#34;)_
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
 <li><strong>临时封禁一个玩家</strong></li>
 </ul>
-<pre tabindex="0"><code>TheNet:BanForTime(userid,time_in_seconds)
-</code></pre><p><em>可以短时间内封禁玩家。userid 为将要被封禁的玩家的 KU id。获取到它后，它可以被放到这种格式里：</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">TheNet:BanForTime(userid,time_in_seconds)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>可以短时间内封禁玩家。userid 为将要被封禁的玩家的 KU id。获取到它后，它可以被放到这种格式里：</em></p>
 <p>TheNet:BanForTime(<em>&ldquo;KU_aabbccdd&rdquo;</em>, 120).</p>
 <p><em>执行后会封禁相应 KU id 的玩家 120 秒。如果你的服务器拥有多个世界（洞穴和上层世界），这个命令需要在两个服务端都输入。</em></p>
 <ul>
 <li><strong>连接服务器</strong></li>
 </ul>
-<pre tabindex="0"><code>c_connect(&#34;IP address&#34;, port, &#34;password&#34;)
-</code></pre><p><em>如果无法进行常规的连接，可以使用该命令直接连接一个 IP 地址。默认情况下，端口是 10999。如果服务器没有密码的话，你可以不填密码参数：c_connect(&ldquo;10.0.0.8&rdquo;, 10999)</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">c_connect(&#34;IP address&#34;, port, &#34;password&#34;)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>如果无法进行常规的连接，可以使用该命令直接连接一个 IP 地址。默认情况下，端口是 10999。如果服务器没有密码的话，你可以不填密码参数：c_connect(&ldquo;10.0.0.8&rdquo;, 10999)</em></p>
 <ul>
 <li><strong>重新加载世界</strong></li>
 </ul>
-<pre tabindex="0"><code>c_reset()
-</code></pre><p><em>不保存游戏并重载世界（也就是重载到上一个储存点）。如果你是一个客户端的话，该命令可能会造成你的游戏崩溃（除非你用远程命令模式发送该命令）。</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">c_reset()
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>不保存游戏并重载世界（也就是重载到上一个储存点）。如果你是一个客户端的话，该命令可能会造成你的游戏崩溃（除非你用远程命令模式发送该命令）。</em></p>
 <ul>
 <li><strong>重新生成世界</strong></li>
 </ul>
-<pre tabindex="0"><code>c_regenerateworld()
-</code></pre><p><em>重生生成世界。</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">c_regenerateworld()
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>重生生成世界。</em></p>
 <ul>
 <li><strong>重新生成世界碎片</strong></li>
 </ul>
-<pre tabindex="0"><code>c_regenerateshard()
-</code></pre><p><em>重新生成世界碎片。</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">c_regenerateshard()
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>重新生成世界碎片。</em></p>
 <ul>
 <li><strong>保存</strong></li>
 </ul>
-<pre tabindex="0"><code>c_save()
-</code></pre><p><em>强制服务器立即保存。（服务器通常在夜晚结束的时候自动保存）</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">c_save()
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>强制服务器立即保存。（服务器通常在夜晚结束的时候自动保存）</em></p>
 <ul>
 <li><strong>关闭服务器</strong></li>
 </ul>
-<pre tabindex="0"><code>c_shutdown( true / false)
-</code></pre><p><em>true 会保存游戏，false 不会保存游戏。 c_shutdown() 和 c_shutdown(true) 是一样的。</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">c_shutdown( true / false)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>true 会保存游戏，false 不会保存游戏。 c_shutdown() 和 c_shutdown(true) 是一样的。</em></p>
 <ul>
 <li><strong>回档</strong></li>
 </ul>
-<pre tabindex="0"><code>c_rollback(count)
-</code></pre><p><em>回档服务器一定次数。 c_rollback() 会回档一次，c_rollback(3) 会回档三次。</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">c_rollback(count)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>回档服务器一定次数。 c_rollback() 会回档一次，c_rollback(3) 会回档三次。</em></p>
 <ul>
 <li><strong>启用 / 禁用新玩家加入</strong></li>
 </ul>
-<pre tabindex="0"><code>TheNet:SetAllowIncomingConnections( true / false )
-</code></pre><p><em>默认情况下设置为 true （新玩家可以加入）。设置为 false 将禁止玩家进入。</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">TheNet:SetAllowIncomingConnections( true / false )
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>默认情况下设置为 true （新玩家可以加入）。设置为 false 将禁止玩家进入。</em></p>
 <ul>
 <li><strong>发送一个服务器公告</strong></li>
 </ul>
-<pre tabindex="0"><code>c_announce(&#34;announcement&#34;)
-</code></pre><p><em>可以发送一个公告给玩家，例如即将关闭 / 重启服务器，让玩家知道即将断线。</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">c_announce(&#34;announcement&#34;)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>可以发送一个公告给玩家，例如即将关闭 / 重启服务器，让玩家知道即将断线。</em></p>
 <h2 id="杂项命令">杂项命令</h2>
 <ul>
 <li><strong>清空停尸间（讣告）</strong></li>
 </ul>
-<pre tabindex="0"><code>ErasePersistentString(&#34;morgue&#34;)
-</code></pre><p><em>清空停尸间，需要关闭并重启游戏才能看到清空效果。</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ErasePersistentString(&#34;morgue&#34;)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>清空停尸间，需要关闭并重启游戏才能看到清空效果。</em></p>
 <ul>
 <li><strong>计算预设的数量</strong></li>
 </ul>
-<pre tabindex="0"><code>c_countprefabs(&#34;prefab&#34;)
-</code></pre><p><em>在专用服务器上计数结果将会输出在控制台上</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">c_countprefabs(&#34;prefab&#34;)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>在专用服务器上计数结果将会输出在控制台上</em></p>
 <ul>
 <li><strong>生成虫洞</strong></li>
 </ul>
@@ -516,8 +1200,15 @@ TheNet:Ban(userid)
 <ul>
 <li><strong>生成一只被驯化了的牛</strong></li>
 </ul>
-<pre tabindex="0"><code>local beef = c_spawn(&#34;beefalo&#34;); beef.components.hunger:DoDelta(400); beef.components.domesticatable:DeltaTendency(&#34;DEFAULT&#34;, 1); beef:SetTendency(); beef.components.domesticatable.domestication = 1; beef.components.domesticatable:BecomeDomesticated(); 
-</code></pre><p>_用下面的值替换 DEFAULT 来改变牛的特征。&quot;_RIDER&rdquo;,&ldquo;ORNERY&rdquo;,&ldquo;PUDGY&rdquo;</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">local beef = c_spawn(&#34;beefalo&#34;); beef.components.hunger:DoDelta(400); beef.components.domesticatable:DeltaTendency(&#34;DEFAULT&#34;, 1); beef:SetTendency(); beef.components.domesticatable.domestication = 1; beef.components.domesticatable:BecomeDomesticated(); 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>_用下面的值替换 DEFAULT 来改变牛的特征。&quot;_RIDER&rdquo;,&ldquo;ORNERY&rdquo;,&ldquo;PUDGY&rdquo;</p>
 <blockquote>
 <p>参考资料：
 <a class="link" href="https://dontstarve.fandom.com/zh/wiki/%E6%8E%A7%E5%88%B6%E5%8F%B0/%E5%A4%9A%E4%BA%BA%E7%89%88%E9%A5%91%E8%8D%92%E4%B8%AD%E7%9A%84%E5%91%BD%E4%BB%A4"  target="_blank" rel="noopener"
@@ -552,17 +1243,18 @@ TheNet:Ban(userid)
     </section>
     </footer>
 
+
     
         <link 
                 rel="stylesheet" 
                 href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3&#43;Aro6EYUG4&#43;cU&#43;KJWu/X"crossorigin="anonymous"
             ><script 
                 src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"integrity="sha384-g7c&#43;Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI&#43;sEnkvrMWph2EDg4"crossorigin="anonymous"
-                defer="true"
+                defer
                 >
             </script><script 
                 src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC&#43;Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa"crossorigin="anonymous"
-                defer="true"
+                defer
                 >
             </script><script>
     window.addEventListener("DOMContentLoaded", () => {
@@ -578,14 +1270,16 @@ TheNet:Ban(userid)
     
 </article>
 
-    <aside class="related-contents--wrapper">
     
+
     
-        <h2 class="section-title">相关文章</h2>
-        <div class="related-contents">
-            <div class="flex article-list--tile">
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
                 
-                    
 <article class="has-image">
     <a href="/p/dstcrockpot/">
         
@@ -594,7 +1288,8 @@ TheNet:Ban(userid)
                 <img src="/p/dstcrockpot/00.bf744c9169afd89aa7eaa9cedd7191b7_hu59df01dd9cfb485ca1960cb6f6bf535d_181785_250x150_fill_box_smart1_3.png" 
                         width="250" 
                         height="150" 
-                        loading="lazy" 
+                        loading="lazy"
+                        alt="Featured image of post 烹饪锅食谱"
                         data-key="dstcrockpot" 
                         data-hash="md5-v3RMkWmv2Jqn6qnO3XGRtw==">
                 
@@ -606,8 +1301,9 @@ TheNet:Ban(userid)
         </div>
     </a>
 </article>
+
+            
                 
-                    
 <article class="has-image">
     <a href="/p/shell-chinese/">
         
@@ -616,7 +1312,8 @@ TheNet:Ban(userid)
                 <img src="/p/shell-chinese/00.a1387487bd6e03411167b9bf5fbfcebc_huefc9290d81713b319ab68a7f845bb37c_267518_250x150_fill_q75_box_smart1.jpg" 
                         width="250" 
                         height="150" 
-                        loading="lazy" 
+                        loading="lazy"
+                        alt="Featured image of post Ubuntu改语言为中文"
                         data-key="shell-chinese" 
                         data-hash="md5-oTh0h71uA0ERZ7m/X7/OvA==">
                 
@@ -628,8 +1325,9 @@ TheNet:Ban(userid)
         </div>
     </a>
 </article>
+
+            
                 
-                    
 <article class="has-image">
     <a href="/p/mcsvspeedup/">
         
@@ -638,7 +1336,8 @@ TheNet:Ban(userid)
                 <img src="/p/mcsvspeedup/00.2c6ef59afe74c903befe2329e8023919_hu63aa5994080ad5065e8069b1db94e92d_1600379_250x150_fill_q75_box_smart1.jpeg" 
                         width="250" 
                         height="150" 
-                        loading="lazy" 
+                        loading="lazy"
+                        alt="Featured image of post 《我的世界》服务器优化教程"
                         data-key="mcsvspeedup" 
                         data-hash="md5-LG71mv50yQO&#43;/iMp6AI5GQ==">
                 
@@ -650,8 +1349,9 @@ TheNet:Ban(userid)
         </div>
     </a>
 </article>
+
+            
                 
-                    
 <article class="">
     <a href="/p/linux-apt-error/">
         
@@ -662,8 +1362,9 @@ TheNet:Ban(userid)
         </div>
     </a>
 </article>
+
+            
                 
-                    
 <article class="">
     <a href="/p/linux-bucket/">
         
@@ -674,14 +1375,14 @@ TheNet:Ban(userid)
         </div>
     </a>
 </article>
-                
-            </div>
+
+            
         </div>
-    
+    </div>
 </aside>
 
      
-     
+    
         
     
 
@@ -698,9 +1399,10 @@ TheNet:Ban(userid)
         
             <a href="https://icp.gov.moe/?keyword=20212100" target="_blank">萌ICP备20212100号</a> <br/>
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.5.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.12.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
+
 
     
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
@@ -766,11 +1468,11 @@ TheNet:Ban(userid)
 
 </div><script 
                 src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
-                defer="true"
+                defer
                 >
             </script><script 
                 src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
-                defer="true"
+                defer
                 >
             </script><link 
                 rel="stylesheet" 
@@ -781,11 +1483,13 @@ TheNet:Ban(userid)
             >
 
             </main>
-    
-        <aside class="sidebar right-sidebar sticky">
-            <section class="widget archives">
-                <div class="widget-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <line x1="5" y1="9" x2="19" y2="9" />
   <line x1="5" y1="15" x2="19" y2="15" />
@@ -795,11 +1499,11 @@ TheNet:Ban(userid)
 
 
 
-                </div>
-                <h2 class="widget-title section-title">目录</h2>
-                
-                <div class="widget--toc">
-                    <nav id="TableOfContents">
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
   <ol>
     <li><a href="#简单命令">简单命令</a></li>
     <li><a href="#玩家命令">玩家命令</a></li>
@@ -809,15 +1513,18 @@ TheNet:Ban(userid)
     <li><a href="#杂项命令">杂项命令</a></li>
   </ol>
 </nav>
-                </div>
-            </section>
-        </aside>
-    
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
 
         </div>
         <script 
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
-                defer="false"
+                
                 >
             </script><script type="text/javascript" src="/ts/main.js" defer></script>
 <script>

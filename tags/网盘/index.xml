@@ -1,38 +1,51 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>网盘 on ^薄荷布丁^</title>
-    <link>https://skae.top/tags/%E7%BD%91%E7%9B%98/</link>
-    <description>Recent content in 网盘 on ^薄荷布丁^</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Sat, 10 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://skae.top/tags/%E7%BD%91%E7%9B%98/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>布丁盘盘</title>
-      <link>https://skae.top/p/dibox/</link>
-      <pubDate>Sat, 10 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://skae.top/p/dibox/</guid>
-      <description>https://box.sllzy.top/
-注册送5G
- 不限速 分享文件等基本功能 离线下载 在线压缩 在线解压 打包下载 WebDav  </description>
-    </item>
-    
-    <item>
-      <title>TeraCLOUD网盘，免费10G，支持webdav</title>
-      <link>https://skae.top/p/teracloud/</link>
-      <pubDate>Sun, 14 Feb 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://skae.top/p/teracloud/</guid>
-      <description>网址：https://teracloud.jp/en/
-有点卡所以要多等一会
- 注册填写邀请码【WN8WP】可以多得5G空间
-  webdav地址：https://ena.teracloud.jp/dav/
-账号是你的User ID
-密码是你的Password
-可以被挂载到“此电脑”中
-服务器在国外所以体验不是很棒</description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>网盘 on ^薄荷布丁^</title>
+        <link>https://skae.top/tags/%E7%BD%91%E7%9B%98/</link>
+        <description>Recent content in 网盘 on ^薄荷布丁^</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Sat, 10 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://skae.top/tags/%E7%BD%91%E7%9B%98/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>布丁盘盘</title>
+        <link>https://skae.top/p/dibox/</link>
+        <pubDate>Sat, 10 Apr 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://skae.top/p/dibox/</guid>
+        <description>&lt;img src="https://skae.top/p/dibox/main-slide-img2.png" alt="Featured image of post 布丁盘盘" /&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://box.sllzy.top/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://box.sllzy.top/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;注册送5G&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不限速&lt;/li&gt;
+&lt;li&gt;分享文件等基本功能&lt;/li&gt;
+&lt;li&gt;离线下载&lt;/li&gt;
+&lt;li&gt;在线压缩&lt;/li&gt;
+&lt;li&gt;在线解压&lt;/li&gt;
+&lt;li&gt;打包下载&lt;/li&gt;
+&lt;li&gt;WebDav&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>TeraCLOUD网盘，免费10G，支持webdav</title>
+        <link>https://skae.top/p/teracloud/</link>
+        <pubDate>Sun, 14 Feb 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://skae.top/p/teracloud/</guid>
+        <description>&lt;img src="https://skae.top/p/teracloud/logo2.svg" alt="Featured image of post TeraCLOUD网盘，免费10G，支持webdav" /&gt;&lt;p&gt;网址：&lt;a class=&#34;link&#34; href=&#34;https://teracloud.jp/en/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://teracloud.jp/en/&lt;/a&gt;&lt;br&gt;
+有点卡所以要多等一会&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注册填写邀请码【WN8WP】可以多得5G空间&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;webdav地址：https://ena.teracloud.jp/dav/&lt;br&gt;
+账号是你的User ID&lt;br&gt;
+密码是你的Password&lt;/p&gt;
+&lt;p&gt;可以被挂载到“此电脑”中&lt;/p&gt;
+&lt;p&gt;服务器在国外所以体验不是很棒&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

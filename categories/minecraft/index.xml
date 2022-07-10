@@ -1,22 +1,186 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Minecraft on ^薄荷布丁^</title>
-    <link>https://skae.top/categories/minecraft/</link>
-    <description>Recent content in Minecraft on ^薄荷布丁^</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Tue, 05 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://skae.top/categories/minecraft/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>《我的世界》服务器优化教程</title>
-      <link>https://skae.top/p/mcsvspeedup/</link>
-      <pubDate>Tue, 05 Apr 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://skae.top/p/mcsvspeedup/</guid>
-      <description>系统的选择 　（网页后台可以跳过本段）关于系统的选择，Linux 类系统（Centos、Redhat 等）固然高效、稳定，但选择系统也一定要考虑到自己的熟悉程度和学习能力。不要盲目为了高效而选择一个自己完全不熟悉甚至从未使用过的系统，一旦出现了突发情况，原本只需要几分钟解决的问题由于不熟悉系统的操作用几个小时来解决，这样真的合适么？在内存足够使用的情况下，Windows 和 Linux 开服的性能差距几乎可以忽略。但是如果你熟悉 Linux 的操作，我依然会推荐你使用 Linux 系统，毕竟大服需要的 Mysql、Redis 在 Linux 下的性能往往高过 Windows 不少。如果你有较强的学习能力，打算入坑 Linux 开服，我会推荐你使用 Centos6.6（稳定性突出、可靠性不俗、大量教程和文档）。
-JVM 版本的选择 　（网页后台可以跳过本段）JVM（Java Virtual Machine）也就是 Java 虚拟机，俗称 Java 运行环境。关于选择 JRE 还是 JDK 的选择，我推荐使用 JDK，JDK 包括运行环境（JRE），在此基础上增加了一些性能调优工具如 VisualVM。而 JVM 的版本，非常不推荐使用 Java6，因为有不少插件已经放弃了 Java6 的支持。Java7 和 Java8 则是不错的选择，如果不是模组服务器，推荐使用 Java8，Java8 相比 Java7 主要的性能提升便在于 HashMap 上，而无论 Minecraft 服务端本身还是插件都大量使用了 HashMap。所以对于 Minecraft 服务器来说，使用 Java8 带来的性能提升还是比较可观的。
-服务端的选择 　从服务端的选择开始就注定了性能优劣的起步水平，现在依然有不少人认为 CraftBukkit（水桶服）的兼容性、稳定性要远远好于 Spigot（水龙头）。然而这是一个误区，Spigot 是在 CraftBukkit 基础上优化而来的，几乎 100% 兼容原有的插件 API，所以可以认为只要同版本水桶服能用的插件就可以在 Spigot 上运行。如果你选择使用 1.</description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>Minecraft on ^薄荷布丁^</title>
+        <link>https://skae.top/categories/minecraft/</link>
+        <description>Recent content in Minecraft on ^薄荷布丁^</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Tue, 05 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://skae.top/categories/minecraft/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>《我的世界》服务器优化教程</title>
+        <link>https://skae.top/p/mcsvspeedup/</link>
+        <pubDate>Tue, 05 Apr 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://skae.top/p/mcsvspeedup/</guid>
+        <description>&lt;img src="https://skae.top/p/mcsvspeedup/00.jpeg" alt="Featured image of post 《我的世界》服务器优化教程" /&gt;&lt;h2 id=&#34;系统的选择&#34;&gt;系统的选择&lt;/h2&gt;
+&lt;p&gt;　　（网页后台可以跳过本段）关于系统的选择，Linux 类系统（Centos、Redhat 等）固然高效、稳定，但选择系统也一定要考虑到自己的熟悉程度和学习能力。不要盲目为了高效而选择一个自己完全不熟悉甚至从未使用过的系统，一旦出现了突发情况，原本只需要几分钟解决的问题由于不熟悉系统的操作用几个小时来解决，这样真的合适么？在内存足够使用的情况下，Windows 和 Linux 开服的性能差距几乎可以忽略。但是如果你熟悉 Linux 的操作，我依然会推荐你使用 Linux 系统，毕竟大服需要的 Mysql、Redis 在 Linux 下的性能往往高过 Windows 不少。如果你有较强的学习能力，打算入坑 Linux 开服，我会推荐你使用 Centos6.6（稳定性突出、可靠性不俗、大量教程和文档）。&lt;/p&gt;
+&lt;h2 id=&#34;jvm-版本的选择&#34;&gt;JVM 版本的选择&lt;/h2&gt;
+&lt;p&gt;　　（网页后台可以跳过本段）JVM（Java Virtual Machine）也就是 Java 虚拟机，俗称 Java 运行环境。关于选择 JRE 还是 JDK 的选择，我推荐使用 JDK，JDK 包括运行环境（JRE），在此基础上增加了一些性能调优工具如 VisualVM。而 JVM 的版本，非常不推荐使用 Java6，因为有不少插件已经放弃了 Java6 的支持。Java7 和 Java8 则是不错的选择，如果不是模组服务器，推荐使用 Java8，Java8 相比 Java7 主要的性能提升便在于 HashMap 上，而无论 Minecraft 服务端本身还是插件都大量使用了 HashMap。所以对于 Minecraft 服务器来说，使用 Java8 带来的性能提升还是比较可观的。&lt;/p&gt;
+&lt;h2 id=&#34;服务端的选择&#34;&gt;服务端的选择&lt;/h2&gt;
+&lt;p&gt;　　从服务端的选择开始就注定了性能优劣的起步水平，现在依然有不少人认为 CraftBukkit（水桶服）的兼容性、稳定性要远远好于 Spigot（水龙头）。然而这是一个误区，Spigot 是在 CraftBukkit 基础上优化而来的，几乎 100% 兼容原有的插件 API，所以可以认为只要同版本水桶服能用的插件就可以在 Spigot 上运行。如果你选择使用 1.7.10 以下的版本开服（纯净服），强烈推荐你使用 Spigot 服务端，Spigot 相比水桶服拥有近百项的优化，例如异步加载、读取区块，限制实体的活动范围，修复一些内存泄露的问题等等。所以同版本下可以很容易感受到 Spigot 有着更出色的性能和更低的内存占用。如果你开服的版本在 1.8+，我会推荐你使用 PaperSpigot 服务端，这款服务端是在 Spigot 基础上优化而来的，相比 Spigot 有着显著的性能提升（Tiles 几乎不再消耗 CPU 时间，爆炸算法优化，红石不再卡服，流水算法优化，区块压缩节约内存，优化 Spigot 自带的 Anti X-ray 等等），并且有许多可自定义项目（船损坏依然掉落船，各种地形生成的开关等等）。在最后需要提醒的是，如果没有特殊原因，建议使用最新版本的服务端，最新版本的服务端往往修复了目前已知的绝大多数 BUG 和有着更多的性能提升。例如目前的 1.8.8 版本就比 1.8.7 多修复了数个可以卡服、蹦服的 BUG（利用旗帜样式堆叠卡服等）。&lt;/p&gt;
+&lt;h2 id=&#34;启动脚本&#34;&gt;启动脚本&lt;/h2&gt;
+&lt;p&gt;　　（网页后台可以跳过本段）越多的启动参数反而导致越多的性能损耗。在不了解 JVM 工作原理的情况下，不要随随便便增加一大堆无用的启动参数。一般情况下指定最小内存、最大内存即可，Java7 还需要指定一个大于等于 128MB 的 MaxPermSize。GC 回收模式等等参数都应该由 JVM 自动选择，例如国外论坛流传的使用 G1GC 可以优化 MC 性能，的确，G1GC 减少了 Full GC 的时间，但是会额外增加 10%~30% 的 CPU 时间占用，完全得不偿失。还有流传很广的设置 MaxGCPauseMillis 参数。这个参数的含义是控制 GC 垃圾回收的最大时间。设置一个很小的数值的确从表面来看服务器没有瞬卡的问题了，但是这样会导致每次垃圾回收都不够深入和全面，这样的结果就是服务端运行时间越久越卡，而且很可能出现 OOM（内存不够了）直接蹦服。
+　　&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;前面加点为需要注意的项目&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;　　例如 Java7 的开服参数可以是（大型插件非常多，MaxPermSize 可以设置得更高）：&lt;/p&gt;
+&lt;p&gt;　　-Xms 最小内存 -Xmx 最大内存 &lt;code&gt;-XX:MaxPermSize=128M -XX:+AggressiveOpts -XX:+UseCompressedOops&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;　　Java8 的参数可以是：&lt;/p&gt;
+&lt;p&gt;　　-Xms 最小内存 -Xmx 最大内存 &lt;code&gt;-XX:+AggressiveOpts -XX:+UseCompressedOops&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;-XX:+AggressiveOpts&lt;/code&gt; 的含义是尽可能的使用更多对性能有帮助的优化功能&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;-XX:+UseCompressedOops&lt;/code&gt; 的含义是指针压缩，可以减少一定的内存占用（64 位才支持）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;参数的优化&#34;&gt;参数的优化&lt;/h2&gt;
+&lt;p&gt;　　不要小瞧参数的修改带来的优化空间，有时候只修改一个参数，就是在线 100 人 TPS19 和 TPS16 的差距。参数的调整分别为 &lt;code&gt;server.properties&lt;/code&gt;(原版服务器就有)，&lt;code&gt;bukkit.yml&lt;/code&gt;（水桶服或者衍生版就有），&lt;code&gt;spigot.yml&lt;/code&gt;（Spigot 或者衍生版就有），&lt;code&gt;paper.yml&lt;/code&gt;(PaperSpigot 才有)。&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;前面加点为需要注意的项目&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;serverproperties-中可以优化性能的参数&#34;&gt;&lt;code&gt;server.properties&lt;/code&gt; 中可以优化性能的参数：&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;view-distance&lt;/code&gt;，视距，默认值是 10。含义是玩家的视距也就是加载的区块范围，默认是 10 个区块，视距 10 加载的区块是视距 5 的四倍。加载更多的区块则需要更多的内存和运算能力。推荐将这个值设置在 5 或者 6，如果在线人数非常多可以设置为 4。降低视距可以有效减少内存的占用，也能有效提高 TPS，还可以减少宽带的使用量。这个参数对性能提升是立竿见影的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;generate-structures&lt;/code&gt;，默认值是 true。含义是生成和计算一些特殊的环境，例如女巫塔、村民到达数量生成铁傀儡等等。设置为 false 可以减少这些特殊环境生成和周期性检查带来的开销。这个参数很少被提起，但是对性能的提升有着不少的帮助。例如我的服务器生存子服有 130 人左右在线，TPS 在 17 左右，关闭这个功能后提高到了 19 左右。需要彻底关闭这个参数，还需要在 spigot.yml 中把 save-structure-info 设置为 false。并且关服后手动删除每个世界（例如 world、world_nether、world_the_end）下的 data 文件夹里的 Fortress.dat、Mineshaft.dat、Stronghold.dat、Temple.dat、Village.dat 文件。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;　　&lt;code&gt;network-compression-threshold&lt;/code&gt;，默认值是 256。这个参数只有 1.8 的服务端才有，含义是网络封包压缩的阀值。例如设置为 16，代表封包大于 16 才被压缩，设置成 256 代表着封包大于 256 才被压缩。设置的值越小则会压缩更多的封包，可以使得宽带使用减少，提高网络流畅程度，但是也会增加性能的开销。如果性能够用可以设置为 128，使得更多通讯封包被压缩，一定程度上减少宽带使用率又不会带来太多的性能开销。设置的值太小，例如小于等于 32 会明显增加对性能的开销，不建议这么做。&lt;/p&gt;
+&lt;h3 id=&#34;bukkityml-中可以优化性能的参数&#34;&gt;&lt;code&gt;bukkit.yml&lt;/code&gt; 中可以优化性能的参数：&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;spawn-limits&lt;/code&gt;，意思是限制实体的生成。这个并不是限制一个区块生成多少实体，而是针对一个人可以生成多少实体。例如 monsters: 70，在线人数只有 10 个人，则最多只能生成 700 个怪物实体（僵尸、骷髅、蜘蛛等等），适当的设置这些参数可以减少实体对性能的影响。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;chunk-gc&lt;/code&gt;，控制着区块的回收，单位是 Tick（1/20 秒），period-in-ticks 是指每过多少 tick 回收一次需要回收的区块，设置的太小会导致回收过于频繁而影响性能，设置的太大会导致需要回收的区块迟迟不回收使得内存占用过大。合理的数值一般是 300~400。load-threshold 是指达到多少需要回收的区块的时候才进行回收。例如设置成 300，只有当需要回收的区块到达 300 以上才进行回收，合理的设置这个数值可以使得额外只多占用一丁点内存却使得区块回收的性能开销可以被无视。一般设置为 300~600 比较合适。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;　　&lt;code&gt;autosave&lt;/code&gt;，自动保存存档（地图、玩家数据等）的周期，单位是 Tick（1/20 秒），如果你使用了定时保存的插件，例如 Saveit、AutoSave 等等，你可以将他设置为 0，即关闭这个功能。这样可以减少服务器瞬卡发生的可能。&lt;/p&gt;
+&lt;h3 id=&#34;spigotyml-中可以优化性能的参数&#34;&gt;&lt;code&gt;spigot.yml&lt;/code&gt; 中可以优化性能的参数：&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;user-cache-size&lt;/code&gt;，1.7.5 以上版本才有，其控制用户缓存的大小，如果你的服务器玩家很多，可以设置的更大一些，例如 5000。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;save-user-cache-on-stop-only&lt;/code&gt;，1.7.5 以上版本才有，其含义是是否只在服务器关闭 / 重启的时候保存用户缓存，设置为 true 可以提高性能。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;view-distance&lt;/code&gt;，同 server.properties 里的 view-distance 一样。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;chunks-per-tick&lt;/code&gt;，是指每 tick（1/20 秒）扫描计算多少区块，计算的内容是作物的生长。默认值是 650，可以设置成 350 来提高性能。极端的情况可以设置成 150，但是会使得作物生长的速度明显变慢。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;max-tick-time&lt;/code&gt;:  （仅较新的版本有该参数，如 1.8.3+）是指每 tick，实体和 tile 最多可以用的时间（单位是毫秒），要明白其含义首先要解释什么是 TPS，TPS 的意思是每秒有多少 tick，最大值是 20，也就是每秒 tick20 次，每次 50 毫秒。如果运算量过大导致每 tick 计算了超过了 50 毫秒，那么 TPS 就会下降，一旦 TPS 低于 15 就会产生明显的卡顿。在这参数中 tile 代表着熔炉、箱子、牌子、骷髅头等等所能占用的最大时间，entity 是指的实体，例如动物、怪物、村民、展示框、掉落物、船、矿车等等。设置 tile 和 entity 的总和小于等于 30 则能明显降低 tile 和 entity 对 TPS 的影响，而服务器运算资源几乎一大半都是由这两者消耗的。设置 tile 为 10，entity 为 20 比较合适，如果实体非常多，还可以设置 tile 为 6，entity 为 24。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;anti-xray&lt;/code&gt;，服务端自带的反透视功能，俗称假矿。这个功能相比插件版的假矿来说，额外内存占用极少，少到可以忽略，并且矿物的变动计算是异步进行的，对 TPS 的影响很小。engine-mode 为 1 则是隐藏矿物，engine-mode 为 2 则是将非矿物也伪装成矿物，engine-mode 设置为 2 的效果最好，但是会额外吃一定的性能和宽带，但是 engine-mode 设置为 1 无法防御矿追。具体如何权衡请自行决定。如果你不需要本功能，例如你是纯 RPG 服务器，可以直接把 enabled 设置为 false 关闭这个功能，提高性能。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;　　&lt;code&gt;nerf-spawner-mobs&lt;/code&gt;，简单来说就是让刷怪笼生成的怪物变成白痴，直观感受就是刷怪笼刷出的怪不能攻击了。默认为 false，意思是不开启。设置为 true 可以获得一定的性能提升。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;entity-activation-range&lt;/code&gt;，这个参数是控制实体的活跃范围，例如 monsters: 32 意思是在玩家附近 32 格范围内的怪物才会活跃（被计算 AI 等），减少这个数值可以明显提升性能，但是设置得过小会使得游戏难度大幅降低。一般可以把 monsters 设置为 24，animals 设置为 12，misc 设置为 2（misc 主要是掉落物，设置 2 可以使得掉落物几乎不再卡服）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;　　&lt;code&gt;entity-tracking-range&lt;/code&gt;，这个参数是控制实体的可见范围，这个参数不会影响性能，对宽带的影响也极小。不建议修改这个参数，但是适当的降低数值可以减少客户端的卡顿。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;random-light-updates&lt;/code&gt;，随机的光照更新，设置为 true 的话服务器会随机更新光照，并且在区块加载的第一个 tick 运算光照逻辑。设置为 false 可以提高不少性能。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;save-structure-info&lt;/code&gt;，在前面已经介绍了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;　　&lt;code&gt;max-bulk-chunks&lt;/code&gt;，1.7.10 + 才有这个参数，意思是每个数据封包里塞多少个区块。适当提高这个数值，例如从 10 提高到 15 可以减少网络卡顿和客户端读取区块的速度，但是设置得过高会导致客户端崩溃。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;max-entity-collisions&lt;/code&gt;，实体碰撞箱的阀值。建议设置为 2，可以减少密集卡服的问题。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;max-tnt-per-tick&lt;/code&gt;，每 tick（1/20 秒）最多计算多少 TNT 爆炸，设置为 20 可以显著防御 TNT 蹦服。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;paperyml-中可以优化性能的参数&#34;&gt;　&lt;code&gt;paper.yml&lt;/code&gt; 中可以优化性能的参数：&lt;/h3&gt;
+&lt;p&gt;　　&lt;code&gt;keep-spawn-loaded&lt;/code&gt;，spawn 区块是否常驻内存，设置为 false 可以减少一定的内存占用和计算量&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;tick-next-tick-list-cap&lt;/code&gt;，每 tick 最大的运算量，减少数值可以提高 TPS，例如设置为 8000&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;tick-next-tick-list-cap-ignores-redstone&lt;/code&gt;，达到上面的运算阀值是否无视红石运算，设置为 true 可以显著减少红石对服务器性能的影响。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;optimize-explosions&lt;/code&gt;，是否开启爆炸算法优化，设置为 true 可以提升一定的服务器性能&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;use-async-lighting&lt;/code&gt;，是否让光照的逻辑运算异步化，设置为 true 可以使得光照运算不再影响 TPS，强烈推荐设置为 true&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;cache-chunk-maps&lt;/code&gt;，是否缓存 chunkmaps，可以让区块的数据更多得被复用，可以一定程度提高性能，推荐设置为 true&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;fast-drain&lt;/code&gt;，快速液体流动运算，推荐设置为 true，可以减少液体流动运算对服务器性能的影响&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;优化插件的选择和一些插件建议&#34;&gt;优化插件的选择和一些插件建议&lt;/h2&gt;
+&lt;p&gt;　　服务器的主要性能开销在于实体的运算（往往占用了一半的 CPU 时间），所以定时清理实体（怪物、动物等）和限制密集卡服的插件对性能的帮助是最大的。&lt;/p&gt;
+&lt;p&gt;　　很多插件都支持使用 Mysql 来存储数据，例如 CoreProtect、QucikShop、LWC 等等，如果条件允许的话，请使用 Mysql 来代替文本数据库和 Sqlite。这么做可以一定程度的提高服务器的流畅程度。&lt;/p&gt;
+&lt;p&gt;　　安装插件的时候也不要太懒使用网页后台现成的插件或者使用论坛上搬运的网盘地址下载。请到 bukkit 或者 spigot 官网看看插件有无新版本。举个例子，RPG 服常用插件 MythicMobs 很多服务器还在使用 1.* 的版本，然而目前最新版本为 2.0.6。2.0.0 相比 1.* 就有着不少的性能提升。2.0.5 版本相比老版本的改动在于修复 bug 和大幅提高性能，2.0.6 更是使得怪物技能和扫描异步化，明显提高了性能。所以说往往新版本的插件都意味着性能的提升和 bug 的修复，如果版本兼容，尽可能使用最新稳定版的插件。&lt;/p&gt;
+&lt;h2 id=&#34;玩法也对性能有帮助&#34;&gt;玩法也对性能有帮助&lt;/h2&gt;
+&lt;p&gt;　　官方设置一些玩家的聚居点（类似新手村）可以让一部分玩家集中在一起，可以使得加载的区块数量减少（玩家共享了视野），也能减少玩家跑图带来的性能开销。提供公共的刷怪场也能减少玩家自建刷怪场的几率，可以一定程度上使得服务器更为流畅，提供公共的农场饲养动物也有类似的效果。&lt;/p&gt;
+&lt;h2 id=&#34;找出卡服的真凶&#34;&gt;找出卡服的真凶&lt;/h2&gt;
+&lt;h3 id=&#34;1-如何使用-timing&#34;&gt;1. 如何使用 Timing&lt;/h3&gt;
+&lt;p&gt;　　&lt;code&gt;Timing&lt;/code&gt; 是 &lt;code&gt;Bukkit&lt;/code&gt; 和其衍生服务端版本（Spigot、MCPC+、PaperSpigot 等）自带的一种性能诊断工具，可以很方便的查看服务端的性能是由那些部分所消耗的，以图表形式还能直观的查看重点性能消耗大户，对于腐竹来说可以很方便的定位卡服的插件或者卡服的原因，对于插件开发者来说可以直接定位到性能不佳的程序方法（Function），方便优化插件性能。为了确保真实性，下面的演示全部在真实的服务器上操作，为了保护玩家隐私和密码安全，已打码处理。&lt;/p&gt;
+&lt;p&gt;　　要使用这个功能，首先你需要在服务器内或者直接在后台内输入指令 —— &lt;code&gt;timings on&lt;/code&gt; 开启统计，具体如图所示：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://skae.top/p/mcsvspeedup/image001_S.jpg&#34;
+	width=&#34;550&#34;
+	height=&#34;365&#34;
+	srcset=&#34;https://skae.top/p/mcsvspeedup/image001_S_hu53107301cb39b41634afc18f88dc8ed8_66752_480x0_resize_q75_box.jpg 480w, https://skae.top/p/mcsvspeedup/image001_S_hu53107301cb39b41634afc18f88dc8ed8_66752_1024x0_resize_q75_box.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;150&#34;
+		data-flex-basis=&#34;361px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;　　为了得到准确的统计结果，建议等待至少 15 分钟，如果是在瞬间卡顿的峰值附近，建议至少等待 5 分钟。&lt;/p&gt;
+&lt;p&gt;　　在等待足够的时间后，输入指令 —— &lt;code&gt;timings paste&lt;/code&gt; 稍等片刻，会生成一串网址，记下这个网址（图片已打码）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://skae.top/p/mcsvspeedup/image002_S.jpg&#34;
+	width=&#34;550&#34;
+	height=&#34;365&#34;
+	srcset=&#34;https://skae.top/p/mcsvspeedup/image002_S_hu786f70d14a683c1bf14e7662e7ab8b59_65798_480x0_resize_q75_box.jpg 480w, https://skae.top/p/mcsvspeedup/image002_S_hu786f70d14a683c1bf14e7662e7ab8b59_65798_1024x0_resize_q75_box.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;150&#34;
+		data-flex-basis=&#34;361px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;　　现在打开图中的网址，即可查看服务端的『性能分析报告』了。需要注意的时候，不需要使用的时候请使用 &lt;code&gt;timings off&lt;/code&gt; 指令关闭性能统计，否则会带来不必要的性能损耗。&lt;/p&gt;
+&lt;h3 id=&#34;2-如何读懂-timing&#34;&gt;2. 如何读懂 Timing&lt;/h3&gt;
+&lt;p&gt;　　首先，我们打开刚刚生成的网址，我们先从基础的信息开始阅读。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://skae.top/p/mcsvspeedup/image003_S.jpg&#34;
+	width=&#34;550&#34;
+	height=&#34;31&#34;
+	srcset=&#34;https://skae.top/p/mcsvspeedup/image003_S_huecdf45cccf63bec1db95cdc3513882f6_6913_480x0_resize_q75_box.jpg 480w, https://skae.top/p/mcsvspeedup/image003_S_huecdf45cccf63bec1db95cdc3513882f6_6913_1024x0_resize_q75_box.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;1774&#34;
+		data-flex-basis=&#34;4258px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;　　&lt;code&gt;Total&lt;/code&gt; 是指从统计开始一共服务端运行的时间（由 Ticks 推算），&lt;code&gt;Sample Time&lt;/code&gt; 是指统计总时长。后面紧跟着的是服务端的版本信息，例如我的是 &lt;code&gt;PaperSpigot1.8.8&lt;/code&gt;，&lt;code&gt;Average Entitys&lt;/code&gt; 是平均实体的数量，表示形式是 活跃实体数量 / 总实体数量。一般而言只有活跃实体才会消耗 CPU 时间。&lt;code&gt;Average Players&lt;/code&gt; 是统计时间内平均这个服务端在线的人数（注意，是单个服务端的在线人数），例如我的是 105.81 人。&lt;code&gt;Average TPS&lt;/code&gt; 是统计时段内平均的 TPS，例如我的是 19.44。&lt;code&gt;Server Load&lt;/code&gt; 是指服务端负载水平。超过 100% 则意味着 TPS 会开始低于 20 的水平，一般超过 150% 就会有明显卡顿了。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='加速服务器资源开销，让服务器运转如飞'><title>《我的世界》服务器优化教程</title>
 
 <link rel='canonical' href='https://skae.top/p/mcsvspeedup/'>
 
-<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='《我的世界》服务器优化教程'>
+<link rel="stylesheet" href="/scss/style.min.fe253589db5a54c99fe6b16bfbaf0243d856d34f8c07f3534613b39ed043b738.css"><meta property='og:title' content='《我的世界》服务器优化教程'>
 <meta property='og:description' content='加速服务器资源开销，让服务器运转如飞'>
 <meta property='og:url' content='https://skae.top/p/mcsvspeedup/'>
 <meta property='og:site_name' content='^薄荷布丁^'>
@@ -18,8 +18,8 @@
 
     </head>
     <body class="
-    article-page has-toc
-">
+    article-page
+    ">
     <script>
         (function() {
             const colorSchemeKey = 'StackColorScheme';
@@ -42,25 +42,215 @@
         }
     })();
 </script>
-<div class="container main-container flex 
-    
-        extended
-    
-">
-    
-        <div id="article-toolbar">
-            <a href="https://skae.top" class="back-home">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <polyline points="15 6 9 12 15 18" />
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/skyaerope_hub3afead531cb5db18fe0b723ec01cac5_383584_300x0_resize_q75_box.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍮</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">^薄荷布丁^</a></h1>
+            <h2 class="site-description">谁会用薄荷做布丁呢？</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/skyaerope'
+                        target="_blank"
+                        title="GitHub"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
 </svg>
 
 
 
-                <span>返回</span>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
             </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>分类</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/index.xml' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="5" cy="19" r="1" />
+  <path d="M4 4a16 16 0 0 1 16 16" />
+  <path d="M4 11a9 9 0 0 1 9 9" />
+</svg>
+
+
+
+                
+                <span>RSS源</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='https://travellings.link' target="_blank">
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-train" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M21 13c0 -3.87 -3.37 -7 -10 -7h-8" />
+  <path d="M3 15h16a2 2 0 0 0 2 -2" />
+  <path d="M3 6v5h17.5" />
+  <line x1="3" y1="10" x2="3" y2="14" />
+  <line x1="8" y1="11" x2="8" y2="6" />
+  <line x1="13" y1="11" x2="13" y2="6.5" />
+  <line x1="3" y1="19" x2="21" y2="19" />
+</svg>
+                
+                <span>开往</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
         </div>
-    
+    </ol>
+</aside>
 <main class="main full-width">
     <article class="has-image main-article">
     <header class="article-header">
@@ -92,16 +282,38 @@
     </header>
     
 
-    <h2 class="article-title">
-        <a href="/p/mcsvspeedup/">《我的世界》服务器优化教程</a>
-    </h2>
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/mcsvspeedup/">《我的世界》服务器优化教程</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            加速服务器资源开销，让服务器运转如飞
+        </h3>
+        
+    </div>
 
     
-    <h3 class="article-subtitle">
-        加速服务器资源开销，让服务器运转如飞
-    </h3>
     <footer class="article-time">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Apr 05, 2022</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="12" cy="12" r="9" />
   <polyline points="12 7 12 12 15 15" />
@@ -109,11 +321,21 @@
 
 
 
-        <time class="article-time--published">Apr 05, 2022</time>
-    </footer></div>
+                <time class="article-time--reading">
+                    阅读时长: 13 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
 </header>
 
     <section class="article-content">
+    
+    
     <h2 id="系统的选择">系统的选择</h2>
 <p>　　（网页后台可以跳过本段）关于系统的选择，Linux 类系统（Centos、Redhat 等）固然高效、稳定，但选择系统也一定要考虑到自己的熟悉程度和学习能力。不要盲目为了高效而选择一个自己完全不熟悉甚至从未使用过的系统，一旦出现了突发情况，原本只需要几分钟解决的问题由于不熟悉系统的操作用几个小时来解决，这样真的合适么？在内存足够使用的情况下，Windows 和 Linux 开服的性能差距几乎可以忽略。但是如果你熟悉 Linux 的操作，我依然会推荐你使用 Linux 系统，毕竟大服需要的 Mysql、Redis 在 Linux 下的性能往往高过 Windows 不少。如果你有较强的学习能力，打算入坑 Linux 开服，我会推荐你使用 Centos6.6（稳定性突出、可靠性不俗、大量教程和文档）。</p>
 <h2 id="jvm-版本的选择">JVM 版本的选择</h2>
@@ -239,41 +461,47 @@
 <h3 id="1-如何使用-timing">1. 如何使用 Timing</h3>
 <p>　　<code>Timing</code> 是 <code>Bukkit</code> 和其衍生服务端版本（Spigot、MCPC+、PaperSpigot 等）自带的一种性能诊断工具，可以很方便的查看服务端的性能是由那些部分所消耗的，以图表形式还能直观的查看重点性能消耗大户，对于腐竹来说可以很方便的定位卡服的插件或者卡服的原因，对于插件开发者来说可以直接定位到性能不佳的程序方法（Function），方便优化插件性能。为了确保真实性，下面的演示全部在真实的服务器上操作，为了保护玩家隐私和密码安全，已打码处理。</p>
 <p>　　要使用这个功能，首先你需要在服务器内或者直接在后台内输入指令 —— <code>timings on</code> 开启统计，具体如图所示：</p>
-<p><figure style="flex-grow: 150; flex-basis: 361px">
-		<a href="/p/mcsvspeedup/image001_S.jpg" data-size="550x365"><img src="/p/mcsvspeedup/image001_S.jpg"
-				srcset="/p/mcsvspeedup/image001_S_hu53107301cb39b41634afc18f88dc8ed8_66752_480x0_resize_q75_box.jpg 480w, /p/mcsvspeedup/image001_S_hu53107301cb39b41634afc18f88dc8ed8_66752_1024x0_resize_q75_box.jpg 1024w"
-				width="550"
-				height="365"
-				loading="lazy"
-				>
-		</a>
-		
-	</figure></p>
+<p><img src="/p/mcsvspeedup/image001_S.jpg"
+	width="550"
+	height="365"
+	srcset="/p/mcsvspeedup/image001_S_hu53107301cb39b41634afc18f88dc8ed8_66752_480x0_resize_q75_box.jpg 480w, /p/mcsvspeedup/image001_S_hu53107301cb39b41634afc18f88dc8ed8_66752_1024x0_resize_q75_box.jpg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="150"
+		data-flex-basis="361px"
+	
+></p>
 <p>　　为了得到准确的统计结果，建议等待至少 15 分钟，如果是在瞬间卡顿的峰值附近，建议至少等待 5 分钟。</p>
 <p>　　在等待足够的时间后，输入指令 —— <code>timings paste</code> 稍等片刻，会生成一串网址，记下这个网址（图片已打码）</p>
-<p><figure style="flex-grow: 150; flex-basis: 361px">
-		<a href="/p/mcsvspeedup/image002_S.jpg" data-size="550x365"><img src="/p/mcsvspeedup/image002_S.jpg"
-				srcset="/p/mcsvspeedup/image002_S_hu786f70d14a683c1bf14e7662e7ab8b59_65798_480x0_resize_q75_box.jpg 480w, /p/mcsvspeedup/image002_S_hu786f70d14a683c1bf14e7662e7ab8b59_65798_1024x0_resize_q75_box.jpg 1024w"
-				width="550"
-				height="365"
-				loading="lazy"
-				>
-		</a>
-		
-	</figure></p>
+<p><img src="/p/mcsvspeedup/image002_S.jpg"
+	width="550"
+	height="365"
+	srcset="/p/mcsvspeedup/image002_S_hu786f70d14a683c1bf14e7662e7ab8b59_65798_480x0_resize_q75_box.jpg 480w, /p/mcsvspeedup/image002_S_hu786f70d14a683c1bf14e7662e7ab8b59_65798_1024x0_resize_q75_box.jpg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="150"
+		data-flex-basis="361px"
+	
+></p>
 <p>　　现在打开图中的网址，即可查看服务端的『性能分析报告』了。需要注意的时候，不需要使用的时候请使用 <code>timings off</code> 指令关闭性能统计，否则会带来不必要的性能损耗。</p>
 <h3 id="2-如何读懂-timing">2. 如何读懂 Timing</h3>
 <p>　　首先，我们打开刚刚生成的网址，我们先从基础的信息开始阅读。</p>
-<p><figure style="flex-grow: 1774; flex-basis: 4258px">
-		<a href="/p/mcsvspeedup/image003_S.jpg" data-size="550x31"><img src="/p/mcsvspeedup/image003_S.jpg"
-				srcset="/p/mcsvspeedup/image003_S_huecdf45cccf63bec1db95cdc3513882f6_6913_480x0_resize_q75_box.jpg 480w, /p/mcsvspeedup/image003_S_huecdf45cccf63bec1db95cdc3513882f6_6913_1024x0_resize_q75_box.jpg 1024w"
-				width="550"
-				height="31"
-				loading="lazy"
-				>
-		</a>
-		
-	</figure></p>
+<p><img src="/p/mcsvspeedup/image003_S.jpg"
+	width="550"
+	height="31"
+	srcset="/p/mcsvspeedup/image003_S_huecdf45cccf63bec1db95cdc3513882f6_6913_480x0_resize_q75_box.jpg 480w, /p/mcsvspeedup/image003_S_huecdf45cccf63bec1db95cdc3513882f6_6913_1024x0_resize_q75_box.jpg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="1774"
+		data-flex-basis="4258px"
+	
+></p>
 <p>　　<code>Total</code> 是指从统计开始一共服务端运行的时间（由 Ticks 推算），<code>Sample Time</code> 是指统计总时长。后面紧跟着的是服务端的版本信息，例如我的是 <code>PaperSpigot1.8.8</code>，<code>Average Entitys</code> 是平均实体的数量，表示形式是 活跃实体数量 / 总实体数量。一般而言只有活跃实体才会消耗 CPU 时间。<code>Average Players</code> 是统计时间内平均这个服务端在线的人数（注意，是单个服务端的在线人数），例如我的是 105.81 人。<code>Average TPS</code> 是统计时段内平均的 TPS，例如我的是 19.44。<code>Server Load</code> 是指服务端负载水平。超过 100% 则意味着 TPS 会开始低于 20 的水平，一般超过 150% 就会有明显卡顿了。</p>
 
 </section>
@@ -308,17 +536,18 @@
     </section>
     </footer>
 
+
     
         <link 
                 rel="stylesheet" 
                 href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3&#43;Aro6EYUG4&#43;cU&#43;KJWu/X"crossorigin="anonymous"
             ><script 
                 src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"integrity="sha384-g7c&#43;Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI&#43;sEnkvrMWph2EDg4"crossorigin="anonymous"
-                defer="true"
+                defer
                 >
             </script><script 
                 src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC&#43;Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa"crossorigin="anonymous"
-                defer="true"
+                defer
                 >
             </script><script>
     window.addEventListener("DOMContentLoaded", () => {
@@ -334,14 +563,16 @@
     
 </article>
 
-    <aside class="related-contents--wrapper">
     
+
     
-        <h2 class="section-title">相关文章</h2>
-        <div class="related-contents">
-            <div class="flex article-list--tile">
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
                 
-                    
 <article class="has-image">
     <a href="/p/shell-chinese/">
         
@@ -350,7 +581,8 @@
                 <img src="/p/shell-chinese/00.a1387487bd6e03411167b9bf5fbfcebc_huefc9290d81713b319ab68a7f845bb37c_267518_250x150_fill_q75_box_smart1.jpg" 
                         width="250" 
                         height="150" 
-                        loading="lazy" 
+                        loading="lazy"
+                        alt="Featured image of post Ubuntu改语言为中文"
                         data-key="shell-chinese" 
                         data-hash="md5-oTh0h71uA0ERZ7m/X7/OvA==">
                 
@@ -362,8 +594,9 @@
         </div>
     </a>
 </article>
+
+            
                 
-                    
 <article class="">
     <a href="/p/linux-apt-error/">
         
@@ -374,8 +607,9 @@
         </div>
     </a>
 </article>
+
+            
                 
-                    
 <article class="">
     <a href="/p/linux-bucket/">
         
@@ -386,8 +620,9 @@
         </div>
     </a>
 </article>
+
+            
                 
-                    
 <article class="">
     <a href="/p/ncat/">
         
@@ -398,8 +633,9 @@
         </div>
     </a>
 </article>
+
+            
                 
-                    
 <article class="has-image">
     <a href="/p/dstcrockpot/">
         
@@ -408,7 +644,8 @@
                 <img src="/p/dstcrockpot/00.bf744c9169afd89aa7eaa9cedd7191b7_hu59df01dd9cfb485ca1960cb6f6bf535d_181785_250x150_fill_box_smart1_3.png" 
                         width="250" 
                         height="150" 
-                        loading="lazy" 
+                        loading="lazy"
+                        alt="Featured image of post 烹饪锅食谱"
                         data-key="dstcrockpot" 
                         data-hash="md5-v3RMkWmv2Jqn6qnO3XGRtw==">
                 
@@ -420,14 +657,14 @@
         </div>
     </a>
 </article>
-                
-            </div>
+
+            
         </div>
-    
+    </div>
 </aside>
 
      
-     
+    
         
     
 
@@ -444,9 +681,10 @@
         
             <a href="https://icp.gov.moe/?keyword=20212100" target="_blank">萌ICP备20212100号</a> <br/>
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.5.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.12.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
+
 
     
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
@@ -512,11 +750,11 @@
 
 </div><script 
                 src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
-                defer="true"
+                defer
                 >
             </script><script 
                 src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
-                defer="true"
+                defer
                 >
             </script><link 
                 rel="stylesheet" 
@@ -527,11 +765,13 @@
             >
 
             </main>
-    
-        <aside class="sidebar right-sidebar sticky">
-            <section class="widget archives">
-                <div class="widget-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <line x1="5" y1="9" x2="19" y2="9" />
   <line x1="5" y1="15" x2="19" y2="15" />
@@ -541,11 +781,11 @@
 
 
 
-                </div>
-                <h2 class="widget-title section-title">目录</h2>
-                
-                <div class="widget--toc">
-                    <nav id="TableOfContents">
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
   <ol>
     <li><a href="#系统的选择">系统的选择</a></li>
     <li><a href="#jvm-版本的选择">JVM 版本的选择</a></li>
@@ -569,15 +809,18 @@
     </li>
   </ol>
 </nav>
-                </div>
-            </section>
-        </aside>
-    
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
 
         </div>
         <script 
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
-                defer="false"
+                
                 >
             </script><script type="text/javascript" src="/ts/main.js" defer></script>
 <script>
